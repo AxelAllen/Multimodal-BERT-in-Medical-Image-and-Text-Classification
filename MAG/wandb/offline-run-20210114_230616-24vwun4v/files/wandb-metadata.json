@@ -1,0 +1,35 @@
+{
+    "os": "Darwin-19.6.0-x86_64-i386-64bit",
+    "python": "3.7.9",
+    "heartbeatAt": "2021-01-14T22:06:22.570204",
+    "startedAt": "2021-01-14T22:06:16.765097",
+    "docker": null,
+    "cpu_count": 4,
+    "cuda": null,
+    "args": [
+        "--max_seq_length",
+        "20",
+        "--train_batch_size",
+        "12",
+        "--dev_batch_size",
+        "48",
+        "--test_batch_size",
+        "48",
+        "--n_epoch",
+        "1",
+        "--model",
+        "bert-base-uncased"
+    ],
+    "state": "running",
+    "codePath": "multimodal_driver.py",
+    "program": "multimodal_driver.py",
+    "git": {
+        "remote": "https://github.com/pokarats/BERT_multimodal_transformer.git",
+        "commit": "da63195ab8db82588cb06acfd8ce6b7d6d41e867"
+    },
+    "email": "noonsky.noon@gmail.com",
+    "root": "/Users/noonscape/Documents/LAP/MAG/BERT_multimodal_transformer",
+    "host": "Suruthais-MacBook-Pro.local",
+    "username": "noonscape",
+    "executable": "/Users/noonscape/opt/anaconda3/envs/pyHF/bin/python"
+}
