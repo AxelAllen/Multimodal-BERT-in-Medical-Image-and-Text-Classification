@@ -17,7 +17,9 @@ KEYWORDS = ['emphysema', 'cardiomegaly', 'borderline', 'mild', 'chronic', 'minim
             'aneurysmal', 'granuloma', 'fracture', 'severe', 'concerns', 'fibrosis', 'scarring', 'crowding', 'opacities',
             'persistent', 'ectatic', 'hyperinflation', 'moderate', 'opacity', 'calcified', 'effusions', 'edema',
             'continued', 'low lung volume', 'pacing lead', 'resection', 'dilated', 'left', 'right', 'bilateral',
-            'hyperexpanded', 'calcification', 'concerning', 'concern', 'enlargement', 'lines', 'tubes']
+            'hyperexpanded', 'calcification', 'concerning', 'concern', 'enlargement', 'lines', 'tubes', 'Emphysema',
+            'Hyperexpanded', 'advanced', 'Advanced', 'tortuosity']
+
 
 with open('normal.txt', mode='r', encoding='utf-8') as f, open('abnormal.txt', mode='r', encoding='utf-8') as af:
     for line in f:
