@@ -1,4 +1,4 @@
-# Multi-Modal Text and Image Classification in Sparse Medical Data
+# Pre-Trained Multi-Modal Text and Image Classification in Sparse Medical Data Application
 
 TODO:
 
