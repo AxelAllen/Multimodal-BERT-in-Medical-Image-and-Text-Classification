@@ -3,7 +3,7 @@
 ## Supervised Multimodal BiTransformers for Classifying Images and Text (MMBT)
 
 In our project, we are experiment with the Supervised Multimodal BiTransformers for Classifying Images and Text
-(MMBT) presented by Kiela et al. (2020). This is a BERT-based model that can accommodate multi-modal inputs.
+(MMBT) presented by Kiela et al. (2020). This is a BERT-based model (Devlin et al., 2019) that can accommodate multi-modal inputs.
 The model aims to fuse the multiple modalities as the input data are introduced to the Transformers
 architecture so that the model's attention mechanism can be applied to the multimodal inputs. This is
 based on the idea supported by other works that multimodal fusion yields better performance
@@ -40,7 +40,7 @@ This directory contains the following python scripts:
 implementation and Huggingface's implementation. 
 * mmbt_config.py contains MMBTConfig class to specify MMBTModel instantiation
 * mmbt_utils.py contains the JsonlDataset class to define torch Dataset, and dataset related utility functions for 
-  batching 
+  batching
   
 ## Bibliography 
 

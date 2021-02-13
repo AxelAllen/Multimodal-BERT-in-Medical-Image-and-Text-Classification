@@ -1,5 +1,11 @@
 # Pre-Trained Multi-Modal Text and Image Classification in Sparse Medical Data Application
 
+TODO:
+
+* Preprocess reports and classify them into binary labels (0,1) in a separate file.
+* Preprocess images into vector embeddings and label images according to report labels.
+* Implement MMBT.
+
 ## Supervised Multimodal BiTransformers for Classifying Images and Text (MMBT)
 
 In our project, we are experiment with the Supervised Multimodal BiTransformers for Classifying Images and Text
@@ -31,7 +37,7 @@ modifies the pre-trained ResNet51/DenseNet121 to extract feautures prior to the 
 described in Kiela et al. (2020). We also modified this image encoder submodule to accept intermediary
 fine-tuned weights from the ChexNet14 Chest X-ray experiment (Rajpurkar, 2017).
 
-## This Directry File Organization
+## This Directory File Organization
 
 This directory contains the following python scripts:
 
