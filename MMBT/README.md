@@ -1,5 +1,16 @@
 # Pre-Trained Multi-Modal Text and Image Classification in Sparse Medical Data Application
 
+## This Directry File Organization
+
+This directory contains the following python scripts:
+
+* image.py contains the modified implementation of the ImageEncoder submodule based on DenseNet121
+* mmbt.py implements Kiela et al. (2020) MMBT Model, following the original
+  implementation and Huggingface's implementation.
+* mmbt_config.py contains MMBTConfig class to specify MMBTModel instantiation
+* mmbt_utils.py contains the JsonlDataset class to define torch Dataset, and dataset related utility functions for
+  batching
+
 ## Supervised Multimodal BiTransformers for Classifying Images and Text (MMBT)
 
 In our project, we are experiment with the Supervised Multimodal BiTransformers for Classifying Images and Text
@@ -30,17 +41,6 @@ model instead to be comparable to the best model used in Aydin et al. (2019). Th
 modifies the pre-trained ResNet51/DenseNet121 to extract feautures prior to the final pooling layer as
 described in Kiela et al. (2020). We also modified this image encoder submodule to accept intermediary
 fine-tuned weights from the ChexNet14 Chest X-ray experiment (Rajpurkar, 2017).
-
-## This Directry File Organization
-
-This directory contains the following python scripts:
-
-* image.py contains the modified implementation of the ImageEncoder submodule based on DenseNet121
-* mmbt.py implements Kiela et al. (2020) MMBT Model, following the original
-implementation and Huggingface's implementation. 
-* mmbt_config.py contains MMBTConfig class to specify MMBTModel instantiation
-* mmbt_utils.py contains the JsonlDataset class to define torch Dataset, and dataset related utility functions for 
-  batching
   
 ## Bibliography 
 
@@ -51,7 +51,6 @@ implementation and Huggingface's implementation.
 >Devlin, J., Chang, M.-W., Lee, K., & Toutanova, K. (2019).   
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. ArXiv:1810.04805.   
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://arxiv.org/abs/1810.04805
-
 
 >Kiela, D., Bhooshan, S., Firooz, H., Perez, E., & Testuggine, D. (2020).     
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Supervised Multimodal Bitransformers for Classifying Images and Text. ArXiv:1909.02950.  
