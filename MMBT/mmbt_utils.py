@@ -29,10 +29,16 @@ import torchvision
 import torch.nn.functional as F
 from PIL import Image
 from torch.utils.data import Dataset
-
+from torchvision.transforms import transforms
 
 logger = logging.get_logger(__name__)
 
+# directories and data filenames
+JSONL_DATA_DIR = 'json'
+IMG_DATA_DIR = '"NLMCXR_png_frontal"'
+VAL_FILE = "image_labels_both_frontal_val.jsonl"
+TEST_FILE = "image_labels_both_frontal_test.jsonl"
+TRAIN_FILE = "image_labels_both_frontal_train.jsonl"
 
 # mapping number of image embeddings to AdaptiveAvgPool2d output size
 POOLING_BREAKDOWN = {1: (1, 1), 2: (2, 1), 3: (3, 1), 4: (2, 2), 5: (5, 1), 6: (3, 2), 7: (7, 1), 8: (4, 2), 9: (3, 3)}
@@ -153,3 +159,50 @@ def collate_fn(batch):
     img_end_token = torch.stack([row["image_end_token"] for row in batch])
 
     return text_tensor, mask_tensor, img_tensor, img_start_token, img_end_token, tgt_tensor
+
+
+def get_labels():
+    """
+    0: normal
+    1: abnormal
+
+    :return: label classes
+    """
+
+    return [0, 1]
+
+
+def get_image_transforms():
+    """
+    Transforms image tensor, resize, center, and normalize according to the Mean and Std specific to the DenseNet model
+    :return: None
+    """
+    return transforms.Compose(
+        [
+            transforms.Resize(256),
+            transforms.CenterCrop(224),
+            transforms.ToTensor(),
+            transforms.Normalize(
+                mean=[0.485, 0.456, 0.406],
+                std=[0.229, 0.224, 0.225]
+            )
+        ]
+    )
+
+
+def load_examples(tokenizer, max_seq_len, num_image_embeds, evaluate=False, test=False, data_dir=JSONL_DATA_DIR,
+                  img_dir=IMG_DATA_DIR):
+    if evaluate and not test:
+        path = os.path.join(data_dir, VAL_FILE)
+    elif evaluate and test:
+        path = os.path.join(data_dir, TEST_FILE)
+    elif not evaluate and not test:
+        path = os.path.join(data_dir, TRAIN_FILE)
+    else:
+        # shouldn't get here not evaluate and test?
+        raise ValueError("invalid data file option!!")
+
+    img_transforms = get_image_transforms()
+    labels = get_labels()
+    dataset = JsonlDataset(path, img_dir, tokenizer, img_transforms, labels, max_seq_len - num_image_embeds - 2)
+    return dataset

@@ -1,7 +1,10 @@
 # LAP-final-project
 
-TODO:
+MMBT: Model
 
-* Preprocess reports and classify them into binary labels (0,1) in a separate file.
-* Preprocess images into vector embeddings and label images according to report labels.
-* Implement baseline MAG-BERT architecture.
+
+* mmbt.py implements Kiela et al. (2020) Supervised Multimodal BiTransformer Model, following the original
+implementation and Huggingface. 
+* mmbt_config.py contains MMBTConfig class to specify MMBTModel instantiation
+* mmbt_utils.py contains the modified implementatin of the ImageEncoder submodule based on DenseNet, 
+  JsonlDataset class to define torch Dataset, and dataset related utility functions for batching 
