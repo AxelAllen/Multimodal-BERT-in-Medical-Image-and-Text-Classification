@@ -1,5 +1,10 @@
 # Pre-Trained Multi-Modal Text and Image Classification in Sparse Medical Data Application
 
+FYI - Work in Progress.
+
+This will be merged with other branched 'master' readme outside of subdirectory's readme.md to form part of the main
+README.md file in the master branch.
+
 TODO:
 
 * image submodule documentation
