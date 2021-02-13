@@ -44,5 +44,23 @@ implementation and Huggingface's implementation.
   
 ## Bibliography 
 
+>Aydin, F., Zhang, M., Ananda-Rajah, M., & Haffari, G. (2019).  
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Medical Multimodal Classifiers Under Scarce Data Condition. ArXiv:1902.08888.  
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://arxiv.org/abs/1902.08888
+
+>Devlin, J., Chang, M.-W., Lee, K., & Toutanova, K. (2019).   
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. ArXiv:1810.04805.   
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://arxiv.org/abs/1810.04805
+
+
+>Kiela, D., Bhooshan, S., Firooz, H., Perez, E., & Testuggine, D. (2020).     
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Supervised Multimodal Bitransformers for Classifying Images and Text. ArXiv:1909.02950.  
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://arxiv.org/abs/1909.02950  
+
+>Rajpurkar, P., Irvin, J., Zhu, K., Yang, B., Mehta, H., Duan, T., Ding, D., Bagul, A., Langlotz, C., Shpanskaya, K.,
+> Lungren, M. P., & Ng, A. Y. (2017).  
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CheXNet: Radiologist-Level Pneumonia Detection on Chest X-Rays with Deep Learning. ArXiv:1711.05225.  
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://arxiv.org/abs/1711.05225
+
 
 
