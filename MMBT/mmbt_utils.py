@@ -24,9 +24,6 @@ from collections import Counter
 import logging
 
 import torch
-import torch.nn as nn
-import torchvision
-import torch.nn.functional as F
 from PIL import Image
 from torch.utils.data import Dataset
 from torchvision.transforms import transforms
@@ -39,60 +36,6 @@ IMG_DATA_DIR = '"NLMCXR_png_frontal"'
 VAL_FILE = "image_labels_both_frontal_val.jsonl"
 TEST_FILE = "image_labels_both_frontal_test.jsonl"
 TRAIN_FILE = "image_labels_both_frontal_train.jsonl"
-
-# mapping number of image embeddings to AdaptiveAvgPool2d output size
-POOLING_BREAKDOWN = {1: (1, 1), 2: (2, 1), 3: (3, 1), 4: (2, 2), 5: (5, 1), 6: (3, 2), 7: (7, 1), 8: (4, 2), 9: (3, 3)}
-
-# module assumes that the directory where the saved chexnet weight is in the same level as this module
-models_dir = "models"
-saved_chexnet = "saved_chexnet.pt"
-
-
-class ImageEncoderDenseNet(nn.Module):
-    def __init__(self, num_image_embeds, saved_model=True, path=os.path.join(models_dir, saved_chexnet)):
-        """
-
-        :type num_image_embeds: int
-        :param num_image_embeds: number of image embeddings to generate; 1-9 as they map to specific numbers of pooling
-        output shape in the 'POOLING_BREAKDOWN'
-        :param saved_model: True to load saved pre-trained model False to use torch pre-trained model
-        :param path: path to the saved .pt model file
-        """
-        super().__init__()
-        if saved_model:
-            # loading pre-trained weight, e.g. ChexNet
-            # the model here expects the weight to be regular Tensors and NOT cuda Tensor
-            model = torch.load(path)
-        else:
-            model = torchvision.models.densenet121(pretrained=True)
-
-        # DenseNet architecture last layer is the classifier; we only want everything before that
-        modules = list(model.children())[:-1]
-        self.model = nn.Sequential(*modules)
-        # self.model same as original DenseNet self.features part of the forward function
-        self.pool = nn.AdaptiveAvgPool2d(POOLING_BREAKDOWN[num_image_embeds])
-
-    def forward(self, input_modal):
-        """
-        B = batch
-        N = number of image embeddings
-        1024 DenseNet embedding size, this can be changed when instantiating MMBTconfig for modal_hidden_size
-
-        Bx3x224x224 (this is input shape) -> Bx1024x7x7 (this is shape after DenseNet CNN layers before the last layer)
-        -> Bx1024xN (this is after torch.flatten step in this function below) -> BxNx1024 (this is the shape of the
-        output tensor)
-
-        :param input_modal: image tensor
-        :return:
-        """
-        # Bx3x224x224 -> Bx1024x7x7 -> Bx1024xN -> BxNx1024
-        features = self.model(input_modal)
-        out = F.relu(features, inplace=True)
-        out = self.pool(out)
-        out = torch.flatten(out, start_dim=2)
-        out = out.transpose(1, 2).contiguous()
-
-        return out  # BxNx1024
 
 
 class JsonlDataset(Dataset):
