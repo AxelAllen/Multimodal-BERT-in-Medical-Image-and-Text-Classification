@@ -6,29 +6,10 @@ The changes were made in the MMBTModel, ModalEmbedding, and MMBTforClassificatio
 in the mmbt_config.py
 
 """
-import json
-import os
-from collections import Counter
-import numpy as np
-from matplotlib.pyplot import imshow
+import logging
 
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
-import torchvision
-import torchvision.transforms as transforms
-from PIL import Image
-from torch.utils.data import Dataset
-
-from transformers import (
-    WEIGHTS_NAME,
-    AdamW,
-    AutoConfig,
-    AutoModel,
-    AutoTokenizer,
-    get_linear_schedule_with_warmup,
-)
-
 from torch.nn import CrossEntropyLoss, MSELoss
 from transformers.modeling_outputs import BaseModelOutputWithPooling, SequenceClassifierOutput
 from transformers.modeling_utils import ModuleUtilsMixin
@@ -36,6 +17,8 @@ from transformers.models.bert.modeling_bert import BertPreTrainedModel
 from transformers.file_utils import add_start_docstrings, add_start_docstrings_to_model_forward, \
     replace_return_docstrings
 from transformers import MMBTConfig
+
+logger = logging.get_logger(__name__)
 
 _CONFIG_FOR_DOC = "MMBTConfig"
 

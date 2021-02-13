@@ -21,6 +21,7 @@ def forward(self, x):
 import json
 import os
 from collections import Counter
+import logging
 
 import torch
 import torch.nn as nn
@@ -28,6 +29,9 @@ import torchvision
 import torch.nn.functional as F
 from PIL import Image
 from torch.utils.data import Dataset
+
+
+logger = logging.get_logger(__name__)
 
 
 # mapping number of image embeddings to AdaptiveAvgPool2d output size
