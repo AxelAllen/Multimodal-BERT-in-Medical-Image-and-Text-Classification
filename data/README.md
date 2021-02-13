@@ -64,13 +64,13 @@ format that can be readily loaded in the current PyTorch version (1.7).
 ## Bibliography
 
 >Aydin, F., Zhang, M., Ananda-Rajah, M., & Haffari, G. (2019).  
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Medical Multimodal Classifiers Under Scarce Data Condition. ArXiv:1902.08888.
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Medical Multimodal Classifiers Under Scarce Data Condition. ArXiv:1902.08888.  
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://arxiv.org/abs/1902.08888
 
->Rajpurkar, P., Irvin, J., Zhu, K., Yang, B., Mehta, H., Duan, T., Ding, D., Bagul, A., Langlotz, C., Shpanskaya, K., 
+>Rajpurkar, P., Irvin, J., Zhu, K., Yang, B., Mehta, H., Duan, T., Ding, D., Bagul, A., Langlotz, C., Shpanskaya, K.,
 > Lungren, M. P., & Ng, A. Y. (2017).  
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CheXNet: Radiologist-Level Pneumonia Detection on Chest X-Rays with Deep   
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Learning. ArXiv:1711.05225. http://arxiv.org/abs/1711.05225
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CheXNet: Radiologist-Level Pneumonia Detection on Chest X-Rays with Deep Learning. ArXiv:1711.05225.  
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://arxiv.org/abs/1711.05225
 
 
 
