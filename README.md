@@ -1,4 +1,4 @@
-# LAP-final-project
+# Multi-Modal Text and Image Classification in Sparse Medical Data
 
 TODO:
 

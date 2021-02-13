@@ -1,4 +1,4 @@
-# LAP-Final-Project: Dataset Preparation
+# Dataset Preparation
 
 ## Current Directory File Organization:
 
