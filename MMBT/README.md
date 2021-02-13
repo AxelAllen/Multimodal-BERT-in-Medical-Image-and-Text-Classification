@@ -19,9 +19,9 @@ our experiments to Aydin's (2020) work for the following reasons:
 3. Aydin's (2020) model provides a contrastive baseline for the multimodal concatenation approach to our
 early fusion approach
 
-The text module in MMBT is the standard BERT pre-trained model; we use the `'bert-base-uncased'` model. The other
-modalities are encoded as 'embedded tokens' generated from the pre-trained image encoder submodule that are then
-projected to the same the dimensionality size as in the BERT text embeddings.
+The text module in MMBT is the standard BERT pre-trained model (Devlin et al., 2019); we use the `'bert-base-uncased'` 
+model. The other modalities are encoded as 'embedded tokens' generated from the pre-trained image encoder submodule 
+that are then projected to the same the dimensionality size as in the BERT text embeddings.
 
 In the case of an image input modality, the image encoder is a pre-trained image
 model. While the original model in Kiela et al. (2020) utilized a pre-trained ResNet51
@@ -41,3 +41,8 @@ implementation and Huggingface's implementation.
 * mmbt_config.py contains MMBTConfig class to specify MMBTModel instantiation
 * mmbt_utils.py contains the JsonlDataset class to define torch Dataset, and dataset related utility functions for 
   batching 
+  
+## Bibliography 
+
+
+
