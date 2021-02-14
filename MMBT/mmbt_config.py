@@ -6,7 +6,6 @@ https://github.com/huggingface/transformers/blob/8ea412a86faa8e9edeeb6b5c46b08de
 
 import logging
 
-
 logger = logging.get_logger(__name__)
 
 

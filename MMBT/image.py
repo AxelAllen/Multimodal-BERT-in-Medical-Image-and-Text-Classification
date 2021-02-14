@@ -31,12 +31,14 @@ import torch.nn.functional as F
 POOLING_BREAKDOWN = {1: (1, 1), 2: (2, 1), 3: (3, 1), 4: (2, 2), 5: (5, 1), 6: (3, 2), 7: (7, 1), 8: (4, 2), 9: (3, 3)}
 
 # module assumes that the directory where the saved chexnet weight is in the same level as this module
-models_dir = "models"
-saved_chexnet = "saved_chexnet.pt"
+MMBT_DIR_PARENT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_DIR = os.path.join(MMBT_DIR_PARENT, "data")
+MODELS_DIR = os.path.join(DATA_DIR, "models")
+SAVED_CHEXNET = os.path.join(MODELS_DIR, "SAVED_CHEXNET.pt")
 
 
 class ImageEncoderDenseNet(nn.Module):
-    def __init__(self, num_image_embeds, saved_model=True, path=os.path.join(models_dir, saved_chexnet)):
+    def __init__(self, num_image_embeds, saved_model=True, path=os.path.join(MODELS_DIR, SAVED_CHEXNET)):
         """
 
         :type num_image_embeds: int
