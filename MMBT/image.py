@@ -21,11 +21,14 @@ def forward(self, x):
     return out
 """
 import os
+import logging
 import torch
 import torch.nn as nn
 import torchvision
 import torch.nn.functional as F
 
+
+logger = logging.getLogger(__name__)
 
 # mapping number of image embeddings to AdaptiveAvgPool2d output size
 POOLING_BREAKDOWN = {1: (1, 1), 2: (2, 1), 3: (3, 1), 4: (2, 2), 5: (5, 1), 6: (3, 2), 7: (7, 1), 8: (4, 2), 9: (3, 3)}
@@ -52,6 +55,7 @@ class ImageEncoderDenseNet(nn.Module):
             # loading pre-trained weight, e.g. ChexNet
             # the model here expects the weight to be regular Tensors and NOT cuda Tensor
             model = torch.load(path)
+            logger.info(f"Saved model loaded from: {path}")
         else:
             model = torchvision.models.densenet121(pretrained=True)
 
