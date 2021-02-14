@@ -4,6 +4,7 @@
 
 This directory contains the following python scripts:
 
+* __init__.py is necessary to make files in this directory importable to script files outside of this directory
 * image.py contains the modified implementation of the ImageEncoder submodule based on DenseNet121
 * mmbt.py implements Kiela et al. (2020) MMBT Model, following the original
   implementation and Huggingface's implementation.
