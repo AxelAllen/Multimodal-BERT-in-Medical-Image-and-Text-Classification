@@ -16,7 +16,7 @@ class MMBTConfig(object):
 
     """
 
-    def __init__(self, transformer, encoder, num_labels=None, modal_hidden_size=1024):
+    def __init__(self, transformer, encoder, num_labels=2, modal_hidden_size=1024):
         """
         :param transformer: underlying Transformer models
         :param encoder: pre-trained image submodule
