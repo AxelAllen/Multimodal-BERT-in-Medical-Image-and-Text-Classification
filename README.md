@@ -7,21 +7,37 @@ README.md file in the master branch.
 
 TODO:
 
-* image submodule documentation
-* run instructions and yaml files
-* make MMBT importable as modules
-* train/eval functions as imported modules
+* upload runs/ directory for Tensorboard
+* upload tensorboard notebook
+* upload run_mmbt notebook
+* upload run_text only notebook
 
 ## This Directory File Organization
+
+FYI: this should be the en organization of the directories and files for the entire project, right?
 
 This project repository is organized as follows:
 
 * **Pre-Trained Multi-Modal Text and Image Classifier in Sparse Data Application**: the parent project directory
-* **data**: contains data files subdirectories and data preparation scripts
-* **MMBT**: contains MMBT model src codes and related utility functions
-* **runs**: saved Tensorboards for displaying models' performance 
-* run_mmbt.py
-* run_text_only.py
+    * this README.md file
+    * **data/**: contains data files subdirectories and data preparation scripts
+        * **json/**
+        * **csv/**
+        * **image_labels_csv/**
+        * **models/**
+        * **NLCXR_front_png/**
+    * **MMBT/**: contains MMBT model src codes and related utility functions
+    * **runs/**: saved Tensorboards for displaying models' performance
+    * **integrated_gradients/**: 
+        * main.py what does this code do?
+        * there's notebook image_submodule notebook here?
+    * run_mmbt.py or notebook
+    * run_text_only.py or notebook
+    * image_only notebook
+    * experiment_results notebook: tensorboard graphs
+    
+*Note:* The NLCXR_front_png directory is NOT provided; please make this directory after cloning the repo and obtain the
+image files according to the instruction in the **/data** directory
 
 ## Supervised Multimodal BiTransformers for Classifying Images and Text (MMBT)
 
