@@ -7,10 +7,30 @@ Part of the Software Project "Language, Action and Perception".
 
 ### Requirements
 
+* The project scripts were tested on Python 3.6 and 3.7. on Mac OS and Linux.
+* We tested in Anaconda python virtual environment.
+* Notebooks were tested on Google Colab and experiments were run on Google Colab when GPU is required.
+* GPU is necessary to run the experiment. A single GPU is sufficient.
+* Approximate runtime/experiment: 5-15 minutes.
 
 ### Instructions
 
+1. Please create a virtual environment with the provided .yml file `LAP_environment.yml` 
+2. Clone this repository
+3. Download image files according to the instructions in the *Dataset* section.
+4. The notebooks can be run in any order, with the exception that the `baseline_experiments_results.ipynb` notebook will
+only reflect new runs if you run it afterward. You can view previously executed runs in that notebook, however.
+5. To change hyperparameters for the text-only and MMBT notebooks, simply change the default values in the first cell
+containing the Argument parser.  
+   
+    5.1 These notebooks can simply be run as is according to the default arguments.  
+    5.2 To specify the experiment to be run, simply change the filenames of the desired datafile and specify the output
+   directory, otherwise results will simply be written over the existing output directory.
+   
+6. Anything else?
 
+
+   
 ## Notebooks
 
 The notebooks in this directory con tain the codes to run the experiments. Please see each individual notebook for
