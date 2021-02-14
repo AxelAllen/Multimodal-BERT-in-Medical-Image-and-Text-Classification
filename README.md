@@ -13,6 +13,13 @@ Part of the Software Project "Language, Action and Perception".
 
 ## Notebooks
 
+The notebooks in this directory con tain the codes to run the experiments. Please see each individual notebook for
+more detailed explanations. When GPU is needed, we did our experiments on Google Colab.
+
+* **baseline_experiments_results.ipynb** shows the Tensorboard from the experiments with the textonly BERT
+model and the MMBT model
+  
+* **image_submodel.ipynb** 
 
 ## Dataset
 
@@ -37,7 +44,14 @@ to be created as part of the preparation steps to reproduce the experiments.
 
 ## Preprocess
 
-You can basically ignore the preprocess folder, since it's not relevant for running the any parts of the model. It includes various scripts that were used in extracting the labels from the dataset, checking that the created files match with the content of the reports and images they were created from and also filtering the frontal images from the rest.
+You can basically ignore the **preprocess/ folder**, since it's not relevant for running the any parts of the model. 
+It includes various scripts that were used in extracting the labels from the dataset, checking that the created files 
+match with the content of the reports and images they were created from and also filtering the frontal images from the 
+rest.  
+
+This directory will be updated with more explanations for the final submission. There are some details that
+we need to work out after meeting with Aydin, F., one of the authors of the Aydin et al. (2019) paper to verify some
+information regarding the dataset. 
 
 ## Integrated Gradients
 
