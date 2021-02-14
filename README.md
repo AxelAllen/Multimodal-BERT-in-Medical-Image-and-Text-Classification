@@ -1,5 +1,18 @@
 # Pre-Trained Multi-Modal Text and Image Classification in Sparse Medical Data Application
 
+Part of the Software Project "Language, Action and Perception".
+
+## Overview
+
+
+### Requirements
+
+
+### Instructions
+
+
+## Notebooks
+
 
 ## Dataset
 
@@ -21,3 +34,15 @@ the **./data/** directory.
 
 Please note that these 2 subdirectories are **NOT** included in this repo and will need
 to be created as part of the preparation steps to reproduce the experiments.
+
+## Preprocess
+
+You can basically ignore the preprocess folder, since it's not relevant for running the any parts of the model. It includes various scripts that were used in extracting the labels from the dataset, checking that the created files match with the content of the reports and images they were created from and also filtering the frontal images from the rest.
+
+## Integrated Gradients
+
+
+
+## References
+
+
