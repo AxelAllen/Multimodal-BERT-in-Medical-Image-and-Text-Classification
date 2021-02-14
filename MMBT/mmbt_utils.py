@@ -28,14 +28,14 @@ from PIL import Image
 from torch.utils.data import Dataset
 from torchvision.transforms import transforms
 
-logger = logging.get_logger(__name__)
+
+logger = logging.getLogger(__name__)
 
 # directories and data filenames
-JSONL_DATA_DIR = 'json'
-IMG_DATA_DIR = '"NLMCXR_png_frontal"'
-VAL_FILE = "image_labels_both_frontal_val.jsonl"
-TEST_FILE = "image_labels_both_frontal_test.jsonl"
-TRAIN_FILE = "image_labels_both_frontal_train.jsonl"
+MMBT_DIR_PARENT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_DIR = os.path.join(MMBT_DIR_PARENT, "data")
+JSONL_DATA_DIR = os.path.join(DATA_DIR, "json")
+IMG_DATA_DIR = os.path.join(DATA_DIR, "NLMCXR_png_frontal")
 
 
 class JsonlDataset(Dataset):
@@ -133,14 +133,33 @@ def get_image_transforms():
     )
 
 
-def load_examples(tokenizer, max_seq_len, num_image_embeds, evaluate=False, test=False, data_dir=JSONL_DATA_DIR,
-                  img_dir=IMG_DATA_DIR):
+def load_examples(tokenizer,
+                  max_seq_len,
+                  num_image_embeds,
+                  wandb_config,
+                  evaluate=False,
+                  test=False,
+                  data_dir=JSONL_DATA_DIR,
+                  img_dir=IMG_DATA_DIR
+                  ):
+    """
+
+    :param tokenizer: BERT tokenizer of choice
+    :param max_seq_len: BERT max_seq_leng, max is 512
+    :param num_image_embeds: number of image embeddings to generate with ImageEncoder submodule [1-9]
+    :param wandb_config: wandb.config, which needs to contain file names of validation, test, and train files
+    :param evaluate: True if loading Dataset for evaluating on validation or test set, False for Training
+    :param test: True ONLY if loading Test Dataset, False if evaluating on validation set; if evaluate = False, test has to be False
+    :param data_dir: Path to jsonl data directory e.g. "data/json"
+    :param img_dir: Path to image directory e.g. "NLMCXR_png_frontal"
+    :return: JasonlDataset derived from Torch Dataset class
+    """
     if evaluate and not test:
-        path = os.path.join(data_dir, VAL_FILE)
+        path = os.path.join(data_dir, wandb_config.val_file)
     elif evaluate and test:
-        path = os.path.join(data_dir, TEST_FILE)
+        path = os.path.join(data_dir, wandb_config.test_file)
     elif not evaluate and not test:
-        path = os.path.join(data_dir, TRAIN_FILE)
+        path = os.path.join(data_dir, wandb_config.train_file)
     else:
         # shouldn't get here not evaluate and test?
         raise ValueError("invalid data file option!!")
@@ -148,4 +167,7 @@ def load_examples(tokenizer, max_seq_len, num_image_embeds, evaluate=False, test
     img_transforms = get_image_transforms()
     labels = get_labels()
     dataset = JsonlDataset(path, img_dir, tokenizer, img_transforms, labels, max_seq_len - num_image_embeds - 2)
+
+    logger.info(f"JsonlDataset from {path}\n")
+
     return dataset

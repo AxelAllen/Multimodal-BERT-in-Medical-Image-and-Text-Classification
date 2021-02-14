@@ -1,9 +1,10 @@
 # Pre-Trained Multi-Modal Text and Image Classification in Sparse Medical Data Application
 
-## This Directry File Organization
+## This Directory File Organization
 
 This directory contains the following python scripts:
 
+* __init__.py is necessary to make files in this directory importable to script files outside of this directory
 * image.py contains the modified implementation of the ImageEncoder submodule based on DenseNet121
 * mmbt.py implements Kiela et al. (2020) MMBT Model, following the original
   implementation and Huggingface's implementation.
@@ -13,7 +14,7 @@ This directory contains the following python scripts:
 
 ## Supervised Multimodal BiTransformers for Classifying Images and Text (MMBT)
 
-In our project, we are experiment with the Supervised Multimodal BiTransformers for Classifying Images and Text
+In our project, we experiment with the Supervised Multimodal BiTransformers for Classifying Images and Text
 (MMBT) presented by Kiela et al. (2020). This is a BERT-based model (Devlin et al., 2019) that can accommodate multi-modal inputs.
 The model aims to fuse the multiple modalities as the input data are introduced to the Transformers
 architecture so that the model's attention mechanism can be applied to the multimodal inputs. This is

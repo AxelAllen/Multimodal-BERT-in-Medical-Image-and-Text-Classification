@@ -6,8 +6,7 @@ https://github.com/huggingface/transformers/blob/8ea412a86faa8e9edeeb6b5c46b08de
 
 import logging
 
-
-logger = logging.get_logger(__name__)
+logger = logging.getLogger(__name__)
 
 
 class MMBTConfig(object):
@@ -17,7 +16,7 @@ class MMBTConfig(object):
 
     """
 
-    def __init__(self, transformer, encoder, num_labels=None, modal_hidden_size=1024):
+    def __init__(self, transformer, encoder, num_labels=2, modal_hidden_size=1024):
         """
         :param transformer: underlying Transformer models
         :param encoder: pre-trained image submodule
@@ -33,3 +32,5 @@ class MMBTConfig(object):
         self.modal_hidden_size = modal_hidden_size
         if num_labels:
             self.num_labels = num_labels
+
+        logger.info(f"MMBTConfig: num_labels={num_labels}, modal_hidden_size={modal_hidden_size}")
