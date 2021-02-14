@@ -21,7 +21,7 @@ KEYWORDS = ['emphysema', 'cardiomegaly', 'borderline', 'mild', 'chronic', 'minim
             'Hyperexpanded', 'advanced', 'Advanced', 'tortuosity']
 
 
-with open('normal.txt', mode='r', encoding='utf-8') as f, open('abnormal.txt', mode='r', encoding='utf-8') as af:
+with open('files/normal.txt', mode='r', encoding='utf-8') as f, open('files/abnormal.txt', mode='r', encoding='utf-8') as af:
     for line in f:
         xml, *label_text = line.split()
         ids.append(xml)
@@ -129,14 +129,14 @@ ab_normal_df = ab_normal_df[cols]
 print(ab_normal_df.head())
 
 # writing to csv
-normal_df.to_csv('normal_with_stable.csv', index=False)
-ab_normal_df.to_csv('abnormal.csv', index=False)
+normal_df.to_csv('files/normal_with_stable.csv', index=False)
+ab_normal_df.to_csv('files/abnormal.csv', index=False)
 
 # consider class 2 as abnormal and add to abnormal, save to csv sorted descending by 'xml id'
 normal_strict_df = normal_df.loc[normal_df['label'] == 0]
 normal_strict_df = normal_strict_df.sort_values(by='xmlId',
                                                 key=lambda x: np.argsort(index_natsorted(normal_strict_df['xmlId'])))
-normal_strict_df.to_csv('normal.csv', index=False)
+normal_strict_df.to_csv('files/normal.csv', index=False)
 
 chronic_df = normal_df.loc[normal_df['label'] != 0].copy()
 chronic_df['label'] = 1
@@ -144,5 +144,5 @@ abnormal_extended_df = pd.concat([chronic_df, ab_normal_df])
 abnormal_extended_df = abnormal_extended_df.sort_values(by='xmlId',
                                                         key=lambda x:
                                                         np.argsort(index_natsorted(abnormal_extended_df['xmlId'])))
-abnormal_extended_df.to_csv('abnormal_extended.csv', index=False)
+abnormal_extended_df.to_csv('files/abnormal_extended.csv', index=False)
 print(abnormal_extended_df)

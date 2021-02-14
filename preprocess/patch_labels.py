@@ -4,8 +4,9 @@ from natsort import index_natsorted
 import numpy as np
 from preprocess import *
 
+
 # label the need_labels.csv file to 0 or 1
-df = pd.read_csv('need_labels.csv')
+df = pd.read_csv('files/need_labels.csv')
 df['Label'] = df['LabelText']
 print(df.head())
 
@@ -23,5 +24,5 @@ patch_abnormal_df['Label'] = 1
 
 patch_normal_df = df.loc[df['Label'] == 0].copy()
 
-patch_normal_df.to_csv('patch_normal.csv', index=False)
-patch_abnormal_df.to_csv('patch_abnormal.csv', index=False)
+patch_normal_df.to_csv('files/patch_normal.csv', index=False)
+patch_abnormal_df.to_csv('files/patch_abnormal.csv', index=False)
