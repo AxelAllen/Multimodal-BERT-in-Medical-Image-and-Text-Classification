@@ -79,6 +79,8 @@ information regarding the dataset.
 
 The integrated gradients is a way to visualize and extract explanations from the images. The basic idea behind it is that we can make use of the learned weights, which allow us to take the partial derivatives w/ respect to the inputs (the pixels) and visualize gradients that have highest activations with respect to some threshold value. The integrated gradients module is a fork from this repository <https://github.com/TianhongDai/integrated-gradient-pytorch> and it comes with an open source MIT license. We have slightly modified the original implementation to work with our data. For more information consult the original paper ["Axiomatic Attribution for Deep Networks"](https://arxiv.org/pdf/1703.01365.pdf). Also consult the **image_submodel.ipynb** notebook for more details on how it was used in our experiment.
 
+Otherwise, the **integrated_gradients/ folder** itself can be safely ignored in terms of running the experiments. 
+
 ## References
 
 Aydin, F., Zhang, M., Ananda-Rajah, M., & Haffari, G. (2019). Medical Multimodal Classifiers Under Scarce Data Condition. ArXiv:1902.08888 [Cs,
