@@ -138,11 +138,18 @@ experiment results.
 
 We have created a [shared Google Drive - LAP_MMBT](https://drive.google.com/drive/folders/1gwgx4ZApTKz5fN6SG9YkiVjVCZ0WNGeH?usp=sharing) 
 for this project where all the scripts, data, and Jupyter/Colab Notebooks in this repo have been uploaded. 
-You can simply test our codes there.
+Simply download this drive and re-upload to your own Google Drive for testing. (i.e. you can only _view_ files
+in this Drive and comment, but you cannot edit them.)
 
-Caveats: we reserve the ability to modify this Drive from time to time; particularly to manage storage. We may delete
-or write over files in this shared Drive without notice and access is provided for your convenience.
-   
+**IMPORTANT:** If you choose to test our project this way, please be aware that you may still need to update the 
+path to the 'LAP' directory to reflect its location in your 'MyDrive'. Your `pwd` should always be the 'LAP'
+directory for the codes to work as intended.
+
+
+Caveats:We reserve the ability to modify this Drive from time to time; particularly to manage storage. 
+We may delete or write over files in this shared Drive without notice and access is only provided for your convenience.
+
+ 
 ### Notebooks
 
 The notebooks in this directory contain the code to run the experiments. Please see each individual notebook for
