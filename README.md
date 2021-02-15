@@ -16,10 +16,19 @@ This project repository is organized as follows:
         * **models/**
         * **NLCXR_front_png/**
     * **MMBT/**: contains MMBT model src codes and related utility functions
+        * image.py
+        * mmbt.py
+        * mmbt_config.py
+        * mmbt_utils.py
     * **runs/**: saved Tensorboards for displaying models' performance
-    * **integrated_gradients/**: 
-        * main.py 
-        * there's notebook image_submodule notebook here?
+    * **integrated_gradients/**:
+        * **examples/**
+        * **figures/**
+        * **results/**
+        * integrated_gradients.py
+        * main.py
+        * utils.py
+        * visualization.py
     * *run_mmbt.ipynb* notebook
     * *run_bert_text_only.ipynb* notebook
     * *image_submodel.ipynb* notebook
