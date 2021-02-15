@@ -10,7 +10,7 @@ Part of the Software Project "Language, Action and Perception".
 * The project scripts were tested on Python 3.6 and 3.7. on Mac OS and Linux.
 * We tested in Anaconda python virtual environment.
 * Notebooks were tested on Google Colab and experiments were run on Google Colab when GPU is required.
-* GPU is necessary to run the experiment. A single GPU is sufficient.
+* GPU is recommended to run the experiment. A single GPU is sufficient.
 * Approximate runtime/experiment: 5-15 minutes.
 
 ### Instructions
@@ -33,8 +33,8 @@ containing the Argument parser.
    
 ## Notebooks
 
-The notebooks in this directory con tain the codes to run the experiments. Please see each individual notebook for
-more detailed explanations. When GPU is needed, we did our experiments on Google Colab.
+The notebooks in this directory contain the code to run the experiments. Please see each individual notebook for
+more detailed explanations. Using Google Colab is recommended since they were created and tested on Colab and running the models without GPU can take a long time. If you have access to a GPU outside of Colab, it is possible of course to run the experiments on an environment of your choice but the notebooks cannot be guaranteed to work on every possible setting.
 
 * **baseline_experiments_results.ipynb** shows the Tensorboard from the experiments with the textonly BERT
 model and the MMBT model
@@ -75,7 +75,7 @@ information regarding the dataset.
 
 ## Integrated Gradients
 
-
+The integrated gradients is a way to visualize and extract explanations from the images. The basic idea behind it is that we can make use of the learned weights, which allow us to take the partial derivatives w/ respect to the inputs (the pixels) and visualize gradients that have highest activations with respect to some threshold value. The integrated gradients module is a fork from this repository <https://github.com/TianhongDai/integrated-gradient-pytorch> and it comes with an open source MIT license. We have slightly modified the original implementation to work with our data. For more information consult the original paper ["Axiomatic Attribution for Deep Networks"](https://arxiv.org/pdf/1703.01365.pdf) 
 
 ## References
 
