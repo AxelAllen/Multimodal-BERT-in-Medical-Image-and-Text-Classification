@@ -3,6 +3,8 @@
 
 This project is part of the Software Project "Language, Action and Perception" at University of Saarland, WS 2021.
 
+The repository is still a work in progress as the project goes on.
+
 ## This Directory File Organization
 
 This project repository is organized as follows:
