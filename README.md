@@ -1,8 +1,47 @@
 # Pre-Trained Multi-Modal Text and Image Classification in Sparse Medical Data Application
 
-Part of the Software Project "Language, Action and Perception".
+
+This project is part of the Software Project "Language, Action and Perception" at University of Saarland, WS 2021.
+
+## This Directory File Organization
+
+This project repository is organized as follows:
+
+* **Pre-Trained Multi-Modal Text and Image Classifier in Sparse Data Application**: the parent project directory
+    * this README.md file
+    * **data/**: contains data files subdirectories and data preparation scripts
+        * **json/**
+        * **csv/**
+        * **image_labels_csv/**
+        * **models/**
+        * **NLCXR_front_png/**
+    * **MMBT/**: contains MMBT model src codes and related utility functions
+    * **runs/**: saved Tensorboards for displaying models' performance
+    * **integrated_gradients/**: 
+        * main.py 
+        * there's notebook image_submodule notebook here?
+    * *run_mmbt.ipynb* notebook
+    * *run_bert_text_only.ipynb* notebook
+    * *image_submodel.ipynb* notebook
+    * *baseline_experiments_results.ipynb* notebook
+    
+*Note:* The NLCXR_front_png directory is NOT provided; please make this directory after cloning the repo and obtain the
+image files according to the instruction in the **/data** directory.  
+
+*Note2:* Previous run's outputs and checkpoints are omitted due to large file size. When new experiments are run, the notebooks
+will make a new directory in this parent directory. the **runs/** directory will also be updated during each experiment (text-only
+and MMBT).
 
 ## Overview
+
+
+### Supervised Multimodal BiTransformers for Classifying Images and Text (MMBT)
+
+In our project, we are experimenting with the Supervised Multimodal BiTransformers for Classifying Images and Text
+(MMBT) presented by Kiela et al. (2020). This is a BERT-based model that can accommodate multi-modal inputs.
+The model aims to fuse the multiple modalities as the input data are introduced to the Transformers
+architecture so that the model's attention mechanism can be applied to the multimodal inputs. For more information
+regarding the model, please refer to the documentation in the **MMBT** directory.
 
 
 ### Requirements
@@ -11,6 +50,8 @@ Part of the Software Project "Language, Action and Perception".
 * We tested in Anaconda python virtual environment.
 * Notebooks were tested on Google Colab and experiments were run on Google Colab when GPU is required.
 * GPU is recommended to run the experiment. A single GPU is sufficient.
+    * the MMBT experiments will run out of standard CPU memory in Google Colab unless GPU is available.
+    * to run multiple experiments, it may be necessary to reset the runtime from time to time.
 * Approximate runtime/experiment: 5-15 minutes.
 
 ### Instructions
@@ -20,27 +61,31 @@ Part of the Software Project "Language, Action and Perception".
 3. Download image files according to the instructions in the *Dataset* section.
 4. The notebooks can be run in any order, with the exception that the `baseline_experiments_results.ipynb` notebook will
 only reflect new runs if you run it afterward. You can view previously executed runs in that notebook, however.
-5. To change hyperparameters for the text-only and MMBT notebooks, simply change the default values in the first cell
+5. To change hyperparameters for the text-only and MMBT notebooks, simply change the default values in the cell
 containing the Argument parser.  
    
     5.1 These notebooks can simply be run as is according to the default arguments.  
     5.2 To specify the experiment to be run, simply change the filenames of the desired datafile and specify the output
    directory, otherwise results will simply be written over the existing output directory.
    
-6. Anything else?
-
-
+6. The loaded Tensoboard in the **baseline_experiments_results.ipynb** can be re-launched to reflect new
+experiment results.
    
 ## Notebooks
 
 The notebooks in this directory contain the code to run the experiments. Please see each individual notebook for
-more detailed explanations. Using Google Colab is recommended since they were created and tested on Colab and running the models without GPU can take a long time. If you have access to a GPU outside of Colab, it is possible of course to run the experiments on an environment of your choice but the notebooks cannot be guaranteed to work on every possible setting.
+more detailed explanations. Using Google Colab is recommended since they were created and tested on Colab and running the models without GPU can take a long time. 
+If you have access to a GPU outside of Colab, it is possible of course to run the experiments on an environment of your choice but the notebooks cannot be guaranteed 
+to work on every possible setting.
 
 * **baseline_experiments_results.ipynb** shows the Tensorboard from the experiments with the textonly BERT
 model and the MMBT model
   
 
 * **run_bert_text_only.ipynb** shows the end-to-end pipeline for running the text-only experiments
+
+
+* **run_mmbt.ipynb* notebook** shows the end-to-end MMBT experiment pipeline
   
   
 * **image_submodel.ipynb** This notebook details the Image-only model and how we obtained our results from that experiment.
@@ -82,9 +127,13 @@ information regarding the dataset.
 
 ## Integrated Gradients
 
-The integrated gradients is a way to visualize and extract explanations from the images. The basic idea behind it is that we can make use of the learned weights, which allow us to take the partial derivatives w/ respect to the inputs (the pixels) and visualize gradients that have highest activations with respect to some threshold value. The integrated gradients module is a fork from this repository <https://github.com/TianhongDai/integrated-gradient-pytorch> and it comes with an open source MIT license. We have slightly modified the original implementation to work with our data. For more information consult the original paper ["Axiomatic Attribution for Deep Networks"](https://arxiv.org/pdf/1703.01365.pdf). Also consult the **image_submodel.ipynb** notebook for more details on how it was used in our experiment.
+The integrated gradients is a way to visualize and extract explanations from the images. The basic idea behind it is that we can make use of the learned weights, 
+which allow us to take the partial derivatives w/ respect to the inputs (the pixels) and visualize gradients that have highest activations with respect to some threshold value. 
+The integrated gradients module is a fork from this repository <https://github.com/TianhongDai/integrated-gradient-pytorch> and it comes with an open source MIT license. 
+We have slightly modified the original implementation to work with our data. For more information consult the original paper ["Axiomatic Attribution for Deep Networks"](https://arxiv.org/pdf/1703.01365.pdf). 
+Also consult the **image_submodel.ipynb** notebook for more details on how it was used in our experiment.
 
-Otherwise, the **integrated_gradients/ folder** itself can be safely ignored in terms of running the experiments. 
+Otherwise, the **integrated_gradients/** directory itself can be safely ignored in terms of running the experiments. 
 
 ## References
 
