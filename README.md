@@ -34,6 +34,36 @@ and MMBT).
 
 ## Overview
 
+This repo presents our baseline model, its submodules, and the experiments we performed to answer our research 
+questions. Our main focus of the project is to try to answer the following questions:
+
+
+* Can multimodal  embeddings  improve  transfer learning performance in  low-data  classification  tasks over 
+  unimodal embeddings?
+* Related works show improvements in classification and similarity tasks when combining visual and text modalities. 
+  Does this effect carry over to the medical domain?   
+* How does the multimodal representation contribute to the improved performance?
+* How do different approaches to combining modalities affect performance?
+    * Specifically, does having a more integrated fusion approach between the text and visual modalities perform 
+      better in downstream tasks than simply concatenating vectors representing the two modalities?
+
+
+The experiments we ran on the baseline models are as follows:
+
+1. Image-only classification
+2. Text-only classification
+   2.1 3 text data options:  
+        2.1.1 'impression' metadata text  
+        2.1.2 'findings' metadata text  
+        2.1.3 'both' impression and findings metadata texts
+3. Multimodal classification: text and image inputs
+   3.1 3 text data options:  
+        3.1.1 'impression' metadata text  
+        3.1.2 'findings' metadata text  
+        3.1.3 'both' impression and findings metadata texts
+   
+In addition, we also present the *Integrated Gradient* to visualize and extract explanations from the images.
+
 
 ### Supervised Multimodal BiTransformers for Classifying Images and Text (MMBT)
 
@@ -43,6 +73,29 @@ The model aims to fuse the multiple modalities as the input data are introduced 
 architecture so that the model's attention mechanism can be applied to the multimodal inputs. For more information
 regarding the model, please refer to the documentation in the **MMBT** directory.
 
+### Dataset
+
+For more information regarding the dataset utilized in the project and the
+preparation steps, please consult the information in the **data** directory.
+
+Before proceeding to train and test the model, the frontal X-ray image files used in the
+experiments can be obtained via the link to this [Shared Google Drive](https://drive.google.com/drive/folders/1VmpB1kNLESDMGL5eoglMtlsgj32zkR9P?usp=sharing).
+
+For access to all X-ray images, include non-frontal images, please refer to
+this [Other Shared Google Drive](https://drive.google.com/drive/folders/1OP6aPLMF4ib2kTCTp9YeG0b6zVVorfKW?usp=sharing).
+
+
+The frontal images should be saved to the **data/NLMCXR_png_frontal** subdirectory inside
+the **./data/** directory.
+
+The X-ray images from the other shared Google Drive should be saved to the **data/NLMCXR_png** subdirectory inside
+the **./data/** directory.
+
+Please note that these 2 subdirectories are **NOT** included in this repo and will need
+to be created as part of the preparation steps to reproduce the experiments.
+
+For reference, here's also a link to the original dataset of the 
+[Indiana University Chest X-ray](https://openi.nlm.nih.gov/detailedresult?img=CXR111_IM-0076-1001&req=4).
 
 ### Requirements
 
@@ -52,7 +105,7 @@ regarding the model, please refer to the documentation in the **MMBT** directory
 * GPU is recommended to run the experiment. A single GPU is sufficient.
     * the MMBT experiments will run out of standard CPU memory in Google Colab unless GPU is available.
     * to run multiple experiments, it may be necessary to reset the runtime from time to time.
-* Approximate runtime/experiment: 5-15 minutes.
+* Approximate runtime/experiment: 5-30 minutes.
 
 ### Instructions
 
@@ -71,7 +124,7 @@ containing the Argument parser.
 6. The loaded Tensoboard in the **baseline_experiments_results.ipynb** can be re-launched to reflect new
 experiment results.
    
-## Notebooks
+### Notebooks
 
 The notebooks in this directory contain the code to run the experiments. Please see each individual notebook for
 more detailed explanations. Using Google Colab is recommended since they were created and tested on Colab and running the models without GPU can take a long time. 
@@ -91,30 +144,7 @@ model and the MMBT model
 * **image_submodel.ipynb** This notebook details the Image-only model and how we obtained our results from that experiment.
 
 
-## Dataset
-
-For more information regarding the dataset utilized in the project and the
-preparation steps, please consult the information in the **data** directory.  
-
-Before proceeding to train and test the model, the frontal X-ray image files used in the 
-experiments can be obtained via the link to this [Shared Google Drive](https://drive.google.com/drive/folders/1VmpB1kNLESDMGL5eoglMtlsgj32zkR9P?usp=sharing).
-
-For access to all X-ray images, include non-frontal images, please refer to
-this [Other Shared Google Drive](https://drive.google.com/drive/folders/1OP6aPLMF4ib2kTCTp9YeG0b6zVVorfKW?usp=sharing).
-
-
-The frontal images should be saved to the **data/NLMCXR_png_frontal** subdirectory inside
-the **./data/** directory.  
-
-The X-ray images from the other shared Google Drive should be saved to the **data/NLMCXR_png** subdirectory inside
-the **./data/** directory.  
-
-Please note that these 2 subdirectories are **NOT** included in this repo and will need
-to be created as part of the preparation steps to reproduce the experiments.
-
-For reference, here's also a link to the original dataset of the Indiana University Chest X-ray (https://openi.nlm.nih.gov/detailedresult?img=CXR111_IM-0076-1001&req=4).
-
-## Preprocess
+### Preprocess
 
 You can basically ignore the **preprocess/ folder**, since it's not relevant for running the any parts of the model. 
 It includes various scripts that were used in extracting the labels from the dataset, checking that the created files 
@@ -125,7 +155,7 @@ This directory will be updated with more explanations for the final submission. 
 we need to work out after meeting with Aydin, F., one of the authors of the Aydin et al. (2019) paper to verify some
 information regarding the dataset. 
 
-## Integrated Gradients
+### Integrated Gradients
 
 The integrated gradients is a way to visualize and extract explanations from the images. The basic idea behind it is that we can make use of the learned weights, 
 which allow us to take the partial derivatives w/ respect to the inputs (the pixels) and visualize gradients that have highest activations with respect to some threshold value. 
