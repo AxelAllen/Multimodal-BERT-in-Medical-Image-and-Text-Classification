@@ -79,4 +79,18 @@ The integrated gradients is a way to visualize and extract explanations from the
 
 ## References
 
-
+Aydin, F., Zhang, M., Ananda-Rajah, M., & Haffari, G. (2019). Medical Multimodal Classifiers Under Scarce Data Condition. ArXiv:1902.08888 [Cs,
+Stat]. http://arxiv.org/abs/1902.08888
+Demner-Fushman, D., Kohli, M. D., Rosenman, M. B., Shooshan, S. E., Rodriguez, L., Antani, S., Thoma, G. R., & McDonald, C. J. (2016). Preparing
+a collection of radiology examinations for distribution and retrieval. Journal of the American Medical Informatics Association : JAMIA, 23(2),
+304–310. https://doi.org/10.1093/jamia/ocv080
+Hessel, J., & Lee, L. (2020). Does my multimodal model learn cross-modal interactions? It’s harder to tell than you might think! Proceedings of
+the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP), 861–877.
+https://www.aclweb.org/anthology/2020.emnlp-main.62
+Kiela, D., Bhooshan, S., Firooz, H., Perez, E., & Testuggine, D. (2020). Supervised Multimodal Bitransformers for Classifying Images and Text.
+ArXiv:1909.02950 [Cs, Stat]. http://arxiv.org/abs/1909.02950
+Rajpurkar, P., Irvin, J., Zhu, K., Yang, B., Mehta, H., Duan, T., Ding, D., Bagul, A., Langlotz, C., Shpanskaya, K., Lungren, M. P., & Ng, A. Y. (2017).
+CheXNet: Radiologist-Level Pneumonia Detection on Chest X-Rays with Deep Learning. ArXiv:1711.05225 [Cs, Stat].
+http://arxiv.org/abs/1711.05225
+Sundararajan, Mukund., Taly, Ankur., Yan, Qiqi. (2017). Axiomatic Attribution for Deep Networks. ArXiv:1703.01365 [Cs, Stat].
+https://arxiv.org/pdf/1703.01365.pdf
