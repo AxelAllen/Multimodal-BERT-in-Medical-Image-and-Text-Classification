@@ -58,7 +58,7 @@ questions. Our main focus of the project is to try to answer the following quest
       better in downstream tasks than simply concatenating vectors representing the two modalities?
 
 
-The experiments we ran on the baseline models are as follows:
+The experiments we ran on the baseline model are as follows:
 
 1. Image-only classification
 2. Text-only classification
