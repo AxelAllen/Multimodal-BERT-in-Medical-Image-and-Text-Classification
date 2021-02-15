@@ -62,6 +62,8 @@ the **./data/** directory.
 Please note that these 2 subdirectories are **NOT** included in this repo and will need
 to be created as part of the preparation steps to reproduce the experiments.
 
+For reference, here's also a link to the original dataset of the Indiana University Chest X-ray (https://openi.nlm.nih.gov/detailedresult?img=CXR111_IM-0076-1001&req=4).
+
 ## Preprocess
 
 You can basically ignore the **preprocess/ folder**, since it's not relevant for running the any parts of the model. 
