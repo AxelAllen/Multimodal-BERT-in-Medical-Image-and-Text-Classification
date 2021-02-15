@@ -89,7 +89,7 @@ For more information regarding the dataset utilized in the project and the
 preparation steps, please consult the information in the **data** directory.
 
 Before proceeding to train and test the model, the frontal X-ray image files used in the
-experiments can be obtained via the link to this [Shared Google Drive](https://drive.google.com/drive/folders/1VmpB1kNLESDMGL5eoglMtlsgj32zkR9P?usp=sharing).
+experiments can be obtained via the link to this [Shared Google Drive](https://drive.google.com/drive/folders/1d_Axy6ePY-ETJLIns67PDk1NvDyrgsMj?usp=sharing).
 
 For access to all X-ray images, include non-frontal images, please refer to
 this [Other Shared Google Drive](https://drive.google.com/drive/folders/1OP6aPLMF4ib2kTCTp9YeG0b6zVVorfKW?usp=sharing).
@@ -131,8 +131,17 @@ containing the Argument parser.
     5.2 To specify the experiment to be run, simply change the filenames of the desired datafile and specify the output
    directory, otherwise results will simply be written over the existing output directory.
    
-6. The loaded Tensoboard in the **baseline_experiments_results.ipynb** can be re-launched to reflect new
+6. The loaded Tensorboard in the **baseline_experiments_results.ipynb** can be re-launched to reflect new
 experiment results.
+   
+#### Alternative Instructions
+
+We have created a [shared Google Drive - LAP_MMBT] (https://drive.google.com/drive/folders/1gwgx4ZApTKz5fN6SG9YkiVjVCZ0WNGeH?usp=sharing) 
+for this project where all the scripts, data, and Jupyter/Colab Notebooks in this repo have been uploaded. 
+You can simply test our codes there.
+
+Caveats: we reserve the ability to modify this Drive from time to time; particularly to manage storage. We may delete
+or write over files in this shared Drive without notice and access is provided for your convenience.
    
 ### Notebooks
 
