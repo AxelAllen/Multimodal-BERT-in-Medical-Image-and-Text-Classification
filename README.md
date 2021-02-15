@@ -136,7 +136,7 @@ experiment results.
    
 #### Alternative Instructions
 
-We have created a [shared Google Drive - LAP_MMBT] (https://drive.google.com/drive/folders/1gwgx4ZApTKz5fN6SG9YkiVjVCZ0WNGeH?usp=sharing) 
+We have created a [shared Google Drive - LAP_MMBT](https://drive.google.com/drive/folders/1gwgx4ZApTKz5fN6SG9YkiVjVCZ0WNGeH?usp=sharing) 
 for this project where all the scripts, data, and Jupyter/Colab Notebooks in this repo have been uploaded. 
 You can simply test our codes there.
 
