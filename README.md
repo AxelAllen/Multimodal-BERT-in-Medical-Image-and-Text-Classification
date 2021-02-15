@@ -1,17 +1,5 @@
 # Pre-Trained Multi-Modal Text and Image Classification in Sparse Medical Data Application
 
-FYI - Work in Progress.
-
-This will be merged with other branched 'master' readme outside of subdirectory's readme.md to form part of the main
-README.md file in the master branch.
-
-TODO:
-
-* upload runs/ directory for Tensorboard
-* upload tensorboard notebook
-* upload run_mmbt notebook
-* upload run_text only notebook
-
 ## This Directory File Organization
 
 FYI: this should be the en organization of the directories and files for the entire project, right?

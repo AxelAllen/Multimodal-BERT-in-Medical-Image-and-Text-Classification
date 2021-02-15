@@ -133,20 +133,10 @@ def get_image_transforms():
     )
 
 
-def load_examples(tokenizer,
-                  max_seq_len,
-                  num_image_embeds,
-                  wandb_config,
-                  evaluate=False,
-                  test=False,
-                  data_dir=JSONL_DATA_DIR,
-                  img_dir=IMG_DATA_DIR
-                  ):
+def load_examples(tokenizer, wandb_config, evaluate=False, test=False, data_dir=JSONL_DATA_DIR, img_dir=IMG_DATA_DIR):
     """
 
     :param tokenizer: BERT tokenizer of choice
-    :param max_seq_len: BERT max_seq_leng, max is 512
-    :param num_image_embeds: number of image embeddings to generate with ImageEncoder submodule [1-9]
     :param wandb_config: wandb.config, which needs to contain file names of validation, test, and train files
     :param evaluate: True if loading Dataset for evaluating on validation or test set, False for Training
     :param test: True ONLY if loading Test Dataset, False if evaluating on validation set; if evaluate = False, test has to be False
@@ -166,7 +156,8 @@ def load_examples(tokenizer,
 
     img_transforms = get_image_transforms()
     labels = get_labels()
-    dataset = JsonlDataset(path, img_dir, tokenizer, img_transforms, labels, max_seq_len - num_image_embeds - 2)
+    dataset = JsonlDataset(path, img_dir, tokenizer, img_transforms, labels, wandb_config.max_seq_length -
+                           wandb_config.num_image_embeds - 2)
 
     logger.info(f"JsonlDataset from {path}\n")
 
