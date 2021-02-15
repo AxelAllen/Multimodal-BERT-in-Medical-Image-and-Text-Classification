@@ -39,6 +39,8 @@ more detailed explanations. When GPU is needed, we did our experiments on Google
 * **baseline_experiments_results.ipynb** shows the Tensorboard from the experiments with the textonly BERT
 model and the MMBT model
   
+* **run_bert_text_only.ipynb** shows the end-to-end pipeline for running the text-only experiments
+  
 * **image_submodel.ipynb** 
 
 ## Dataset
