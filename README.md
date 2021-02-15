@@ -10,7 +10,7 @@ Part of the Software Project "Language, Action and Perception".
 * The project scripts were tested on Python 3.6 and 3.7. on Mac OS and Linux.
 * We tested in Anaconda python virtual environment.
 * Notebooks were tested on Google Colab and experiments were run on Google Colab when GPU is required.
-* GPU is necessary to run the experiment. A single GPU is sufficient.
+* GPU is recommended to run the experiment. A single GPU is sufficient.
 * Approximate runtime/experiment: 5-15 minutes.
 
 ### Instructions
@@ -33,15 +33,18 @@ containing the Argument parser.
    
 ## Notebooks
 
-The notebooks in this directory con tain the codes to run the experiments. Please see each individual notebook for
-more detailed explanations. When GPU is needed, we did our experiments on Google Colab.
+The notebooks in this directory contain the code to run the experiments. Please see each individual notebook for
+more detailed explanations. Using Google Colab is recommended since they were created and tested on Colab and running the models without GPU can take a long time. If you have access to a GPU outside of Colab, it is possible of course to run the experiments on an environment of your choice but the notebooks cannot be guaranteed to work on every possible setting.
 
 * **baseline_experiments_results.ipynb** shows the Tensorboard from the experiments with the textonly BERT
 model and the MMBT model
   
+
 * **run_bert_text_only.ipynb** shows the end-to-end pipeline for running the text-only experiments
   
-* **image_submodel.ipynb** 
+  
+* **image_submodel.ipynb** This notebook details the Image-only model and how we obtained our results from that experiment.
+
 
 ## Dataset
 
@@ -64,6 +67,8 @@ the **./data/** directory.
 Please note that these 2 subdirectories are **NOT** included in this repo and will need
 to be created as part of the preparation steps to reproduce the experiments.
 
+For reference, here's also a link to the original dataset of the Indiana University Chest X-ray (https://openi.nlm.nih.gov/detailedresult?img=CXR111_IM-0076-1001&req=4).
+
 ## Preprocess
 
 You can basically ignore the **preprocess/ folder**, since it's not relevant for running the any parts of the model. 
@@ -77,8 +82,28 @@ information regarding the dataset.
 
 ## Integrated Gradients
 
+The integrated gradients is a way to visualize and extract explanations from the images. The basic idea behind it is that we can make use of the learned weights, which allow us to take the partial derivatives w/ respect to the inputs (the pixels) and visualize gradients that have highest activations with respect to some threshold value. The integrated gradients module is a fork from this repository <https://github.com/TianhongDai/integrated-gradient-pytorch> and it comes with an open source MIT license. We have slightly modified the original implementation to work with our data. For more information consult the original paper ["Axiomatic Attribution for Deep Networks"](https://arxiv.org/pdf/1703.01365.pdf). Also consult the **image_submodel.ipynb** notebook for more details on how it was used in our experiment.
 
+Otherwise, the **integrated_gradients/ folder** itself can be safely ignored in terms of running the experiments. 
 
 ## References
 
+Aydin, F., Zhang, M., Ananda-Rajah, M., & Haffari, G. (2019). Medical Multimodal Classifiers Under Scarce Data Condition. ArXiv:1902.08888 [Cs,
+Stat]. http://arxiv.org/abs/1902.08888
 
+Demner-Fushman, D., Kohli, M. D., Rosenman, M. B., Shooshan, S. E., Rodriguez, L., Antani, S., Thoma, G. R., & McDonald, C. J. (2016). Preparing
+a collection of radiology examinations for distribution and retrieval. Journal of the American Medical Informatics Association : JAMIA, 23(2),
+304–310. https://doi.org/10.1093/jamia/ocv080
+
+Hessel, J., & Lee, L. (2020). Does my multimodal model learn cross-modal interactions? It’s harder to tell than you might think! Proceedings of
+the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP), 861–877.
+https://www.aclweb.org/anthology/2020.emnlp-main.62
+
+Kiela, D., Bhooshan, S., Firooz, H., Perez, E., & Testuggine, D. (2020). Supervised Multimodal Bitransformers for Classifying Images and Text.
+ArXiv:1909.02950 [Cs, Stat]. http://arxiv.org/abs/1909.02950
+
+Rajpurkar, P., Irvin, J., Zhu, K., Yang, B., Mehta, H., Duan, T., Ding, D., Bagul, A., Langlotz, C., Shpanskaya, K., Lungren, M. P., & Ng, A. Y. (2017).
+CheXNet: Radiologist-Level Pneumonia Detection on Chest X-Rays with Deep Learning. ArXiv:1711.05225 [Cs, Stat]. http://arxiv.org/abs/1711.05225
+
+Sundararajan, Mukund., Taly, Ankur., Yan, Qiqi. (2017). Axiomatic Attribution for Deep Networks. ArXiv:1703.01365 [Cs, Stat].
+https://arxiv.org/pdf/1703.01365.pdf
