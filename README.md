@@ -39,7 +39,7 @@ more detailed explanations. Using Google Colab is recommended since they were cr
 * **baseline_experiments_results.ipynb** shows the Tensorboard from the experiments with the textonly BERT
 model and the MMBT model
   
-* **image_submodel.ipynb** 
+* **image_submodel.ipynb** This notebook details the Image-only model and how we obtained our results from that experiment.
 
 ## Dataset
 
