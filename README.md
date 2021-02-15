@@ -1,8 +1,9 @@
 # Pre-Trained Multi-Modal Text and Image Classification in Sparse Medical Data Application
 
-## This Directory File Organization
 
-FYI: this should be the en organization of the directories and files for the entire project, right?
+This project is part of the Software Project "Language, Action and Perception" at University of Saarland, WS 2021.
+
+## This Directory File Organization
 
 This project repository is organized as follows:
 
@@ -17,17 +18,24 @@ This project repository is organized as follows:
     * **MMBT/**: contains MMBT model src codes and related utility functions
     * **runs/**: saved Tensorboards for displaying models' performance
     * **integrated_gradients/**: 
-        * main.py what does this code do?
+        * main.py 
         * there's notebook image_submodule notebook here?
-    * run_mmbt.py or notebook
-    * run_text_only.py or notebook
-    * image_only notebook
-    * experiment_results notebook: tensorboard graphs
+    * *run_mmbt.ipynb* notebook
+    * *run_bert_text_only.ipynb* notebook
+    * *image_submodel.ipynb* notebook
+    * *baseline_experiments_results.ipynb* notebook
     
 *Note:* The NLCXR_front_png directory is NOT provided; please make this directory after cloning the repo and obtain the
-image files according to the instruction in the **/data** directory
+image files according to the instruction in the **/data** directory.  
 
-## Supervised Multimodal BiTransformers for Classifying Images and Text (MMBT)
+*Note2:* Previous run's outputs and checkpoints are omitted due to large file size. When new experiments are run, the notebooks
+will make a new directory in this parent directory. the **runs/** directory will also be updated during each experiment (text-only
+and MMBT).
+
+## Overview
+
+
+### Supervised Multimodal BiTransformers for Classifying Images and Text (MMBT)
 
 In our project, we are experimenting with the Supervised Multimodal BiTransformers for Classifying Images and Text
 (MMBT) presented by Kiela et al. (2020). This is a BERT-based model that can accommodate multi-modal inputs.
@@ -35,8 +43,116 @@ The model aims to fuse the multiple modalities as the input data are introduced 
 architecture so that the model's attention mechanism can be applied to the multimodal inputs. For more information
 regarding the model, please refer to the documentation in the **MMBT** directory.
 
-## Bibliography
 
->Kiela, D., Bhooshan, S., Firooz, H., Perez, E., & Testuggine, D. (2020).     
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Supervised Multimodal Bitransformers for Classifying Images and Text. ArXiv:1909.02950.  
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://arxiv.org/abs/1909.02950  
+### Requirements
+
+* The project scripts were tested on Python 3.6 and 3.7. on Mac OS and Linux.
+* We tested in Anaconda python virtual environment.
+* Notebooks were tested on Google Colab and experiments were run on Google Colab when GPU is required.
+* GPU is recommended to run the experiment. A single GPU is sufficient.
+    * the MMBT experiments will run out of standard CPU memory in Google Colab unless GPU is available.
+    * to run multiple experiments, it may be necessary to reset the runtime from time to time.
+* Approximate runtime/experiment: 5-15 minutes.
+
+### Instructions
+
+1. Please create a virtual environment with the provided .yml file `LAP_environment.yml` 
+2. Clone this repository
+3. Download image files according to the instructions in the *Dataset* section.
+4. The notebooks can be run in any order, with the exception that the `baseline_experiments_results.ipynb` notebook will
+only reflect new runs if you run it afterward. You can view previously executed runs in that notebook, however.
+5. To change hyperparameters for the text-only and MMBT notebooks, simply change the default values in the cell
+containing the Argument parser.  
+   
+    5.1 These notebooks can simply be run as is according to the default arguments.  
+    5.2 To specify the experiment to be run, simply change the filenames of the desired datafile and specify the output
+   directory, otherwise results will simply be written over the existing output directory.
+   
+6. The loaded Tensoboard in the **baseline_experiments_results.ipynb** can be re-launched to reflect new
+experiment results.
+   
+## Notebooks
+
+The notebooks in this directory contain the code to run the experiments. Please see each individual notebook for
+more detailed explanations. Using Google Colab is recommended since they were created and tested on Colab and running the models without GPU can take a long time. 
+If you have access to a GPU outside of Colab, it is possible of course to run the experiments on an environment of your choice but the notebooks cannot be guaranteed 
+to work on every possible setting.
+
+* **baseline_experiments_results.ipynb** shows the Tensorboard from the experiments with the textonly BERT
+model and the MMBT model
+  
+
+* **run_bert_text_only.ipynb** shows the end-to-end pipeline for running the text-only experiments
+
+
+* **run_mmbt.ipynb* notebook** shows the end-to-end MMBT experiment pipeline
+  
+  
+* **image_submodel.ipynb** This notebook details the Image-only model and how we obtained our results from that experiment.
+
+
+## Dataset
+
+For more information regarding the dataset utilized in the project and the
+preparation steps, please consult the information in the **data** directory.  
+
+Before proceeding to train and test the model, the frontal X-ray image files used in the 
+experiments can be obtained via the link to this [Shared Google Drive](https://drive.google.com/drive/folders/1VmpB1kNLESDMGL5eoglMtlsgj32zkR9P?usp=sharing).
+
+For access to all X-ray images, include non-frontal images, please refer to
+this [Other Shared Google Drive](https://drive.google.com/drive/folders/1OP6aPLMF4ib2kTCTp9YeG0b6zVVorfKW?usp=sharing).
+
+
+The frontal images should be saved to the **data/NLMCXR_png_frontal** subdirectory inside
+the **./data/** directory.  
+
+The X-ray images from the other shared Google Drive should be saved to the **data/NLMCXR_png** subdirectory inside
+the **./data/** directory.  
+
+Please note that these 2 subdirectories are **NOT** included in this repo and will need
+to be created as part of the preparation steps to reproduce the experiments.
+
+For reference, here's also a link to the original dataset of the Indiana University Chest X-ray (https://openi.nlm.nih.gov/detailedresult?img=CXR111_IM-0076-1001&req=4).
+
+## Preprocess
+
+You can basically ignore the **preprocess/ folder**, since it's not relevant for running the any parts of the model. 
+It includes various scripts that were used in extracting the labels from the dataset, checking that the created files 
+match with the content of the reports and images they were created from and also filtering the frontal images from the 
+rest.  
+
+This directory will be updated with more explanations for the final submission. There are some details that
+we need to work out after meeting with Aydin, F., one of the authors of the Aydin et al. (2019) paper to verify some
+information regarding the dataset. 
+
+## Integrated Gradients
+
+The integrated gradients is a way to visualize and extract explanations from the images. The basic idea behind it is that we can make use of the learned weights, 
+which allow us to take the partial derivatives w/ respect to the inputs (the pixels) and visualize gradients that have highest activations with respect to some threshold value. 
+The integrated gradients module is a fork from this repository <https://github.com/TianhongDai/integrated-gradient-pytorch> and it comes with an open source MIT license. 
+We have slightly modified the original implementation to work with our data. For more information consult the original paper ["Axiomatic Attribution for Deep Networks"](https://arxiv.org/pdf/1703.01365.pdf). 
+Also consult the **image_submodel.ipynb** notebook for more details on how it was used in our experiment.
+
+Otherwise, the **integrated_gradients/** directory itself can be safely ignored in terms of running the experiments. 
+
+## References
+
+Aydin, F., Zhang, M., Ananda-Rajah, M., & Haffari, G. (2019). Medical Multimodal Classifiers Under Scarce Data Condition. ArXiv:1902.08888 [Cs,
+Stat]. http://arxiv.org/abs/1902.08888
+
+Demner-Fushman, D., Kohli, M. D., Rosenman, M. B., Shooshan, S. E., Rodriguez, L., Antani, S., Thoma, G. R., & McDonald, C. J. (2016). Preparing
+a collection of radiology examinations for distribution and retrieval. Journal of the American Medical Informatics Association : JAMIA, 23(2),
+304–310. https://doi.org/10.1093/jamia/ocv080
+
+Hessel, J., & Lee, L. (2020). Does my multimodal model learn cross-modal interactions? It’s harder to tell than you might think! Proceedings of
+the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP), 861–877.
+https://www.aclweb.org/anthology/2020.emnlp-main.62
+
+Kiela, D., Bhooshan, S., Firooz, H., Perez, E., & Testuggine, D. (2020). Supervised Multimodal Bitransformers for Classifying Images and Text.
+ArXiv:1909.02950 [Cs, Stat]. http://arxiv.org/abs/1909.02950
+
+Rajpurkar, P., Irvin, J., Zhu, K., Yang, B., Mehta, H., Duan, T., Ding, D., Bagul, A., Langlotz, C., Shpanskaya, K., Lungren, M. P., & Ng, A. Y. (2017).
+CheXNet: Radiologist-Level Pneumonia Detection on Chest X-Rays with Deep Learning. ArXiv:1711.05225 [Cs, Stat]. http://arxiv.org/abs/1711.05225
+
+Sundararajan, Mukund., Taly, Ankur., Yan, Qiqi. (2017). Axiomatic Attribution for Deep Networks. ArXiv:1703.01365 [Cs, Stat].
+https://arxiv.org/pdf/1703.01365.pdf

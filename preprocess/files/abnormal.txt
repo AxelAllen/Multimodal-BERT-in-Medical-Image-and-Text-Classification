@@ -1,0 +1,708 @@
+5.xml	borderline heart size and abnormal interstitial pulmonary pattern which may be compatible with chronic interstitial change, differential diagnosis is xxxx and includes asymmetric pulmonary edema, inflammation, atypical infection, infiltrative process. comparison with previous exams would be of xxxx. bilateral hilar fullness may indicate pulmonary hypertension and clinical correlation is recommended, differential diagnosis reactive lymphadenopathy, metastatic disease.
+6.xml	borderline heart size, improved mediastinal widening. no focal alveolar consolidation, no definite pleural effusion seen. mild hypoventilation, bronchovascular crowding without typical findings of pulmonary edema.
+9.xml	 cardiomegaly without overt heart failure.
+11.xml	 mild stable cardiomegaly. 2. small bilateral pleural effusions.
+14.xml	 interval improvement in consolidative left base opacity. multifocal scattered bibasilar patchy and xxxx pulmonary opacities again noted, most consistent with atelectasis/infiltrate. 2. stable enlarged cardiomediastinal silhouette. stable pulmonary vascular congestion. .
+27.xml	 cardiomegaly with central vascular congestion and increased interstitial opacities suggesting mild interstitial pulmonary edema. 2. small bilateral pleural effusions. 3. no visible pneumothorax.
+30.xml	the heart size and cardiomediastinal silhouette are within normal limits. pulmonary vasculature appears normal. there is no focal air space consolidation. no pleural effusion or pneumothorax.
+34.xml	the heart size and cardiomediastinal silhouette are within normal limits. pulmonary vasculature appears normal. there is no focal air space consolidation. no pleural effusion or pneumothorax.
+39.xml	cardiomegaly and pulmonary venous hypertension.
+66.xml	severe cardiomegaly. limited mediastinal evaluation given body habitus and lordotic projection. recommend xxxx for further evaluation of mediastinum given t/spine injury noted on c/spine imaging. critical result notification documented through primordial.
+70.xml	stable cardiomegaly with prominent perihilar opacities which may represent scarring or edema.
+74.xml	stable cardiomegaly. improved aeration of lung bases with persistent left basilar effusion. prominent interstitium, possibly due to mild volume overload. .
+152.xml	persistent cardiomegaly and patchy bibasilar interstitial disease.
+194.xml	cardiomegaly without heart failure. minimal xxxx left basilar scarring/atelectasis.
+220.xml	xxxx change. no active cardiopulmonary disease. thoracolumbar scoliosis.
+226.xml	moderate-to-severe cardiomegaly with probable pulmonary artery hypertension. persistent left basilar opacity without significant effusion.
+246.xml	cardiomegaly, but no focal consolidation.
+248.xml	slight cardiomegaly with no failure or pneumonia.
+251.xml	stable cardiomegaly and xxxx of interstitial edema with small but increasing right pleural effusion.
+286.xml	moderate sized right pneumothorax. there is minimal right-to-left cardiomediastinal shift, suggesting xxxx.
+298.xml	cardiomegaly with central pulmonary vascular congestion. no xxxx edema.
+299.xml	 cardiomegaly without pulmonary edema. 2. xxxx right medial basilar airspace disease. 3. left lower lobe subsegmental atelectasis.
+319.xml	postoperative left upper lobe. no visible active cardiopulmonary disease.
+348.xml	 lobulated anterior mediastinal opacity on the lateral view, possibly consistent with a tortuous/ectatic thoracic aorta versus an anterior mediastinal mass. contrast-enhanced xxxx examination would xxxx to further evaluate if clinically indicated. 2. mild cardiomegaly with findings of chronic obstructive pulmonary disease.
+361.xml	 cardiomegaly, question small bilateral pleural effusions 2. abnormal pulmonary opacities most suggestive of pulmonary edema, differential diagnosis includes infectious and inflammatory processes.
+376.xml	borderline cardiac enlargement. tortuous aorta. prominent hilar contours. worsening patchy peripheral opacification in the right midlung, somewhat pleural based. a pneumonia superimposed on changes of emphysema and parenchymal scarring would be a consideration. a followup study and 4 to 6 weeks could be considered to evaluate for resolution. if this area does not resolve, further characterization with xxxx may be warranted.
+413.xml	 cardiomegaly
+420.xml	xxxx change. hypoinflation with no visible active cardiopulmonary disease.
+444.xml	 cardiomegaly without overt heart failure. 2. continued elevation of the left hemidiaphragm. 3. scattered xxxx of left base scarring/atelectasis.
+445.xml	mild cardiomegaly. tortuous aorta. no xxxx consolidation, pleural effusion or pneumothorax. stable right paratracheal opacity. xxxx correlated xxxx of the chest xxxx, xxxx this represents vascular shadows. mild right apex curvature of the lower thoracic spine. degenerative endplate spurring mid and lower thoracic spine with minimal grade 1 anterolisthesis of a lower thoracic vertebral level, xxxx t10 on t1
+464.xml	cardiomegaly. no infiltrates or effusions. right catheter tip upper svc. the xxxx appears to be a normal orientation on the lateral film. there's been no change in position of the catheter since the prior exam.
+480.xml	[&lt;the heart size and cardiomediastinal silhouette are stable and within normal limits. pulmonary vasculature appears normal. there is no focal air space consolidation. no pleural effusion or pneumothorax.&gt;] extensive left upper quadrant splenic calcification may reflect old granulomatous disease
+486.xml	 interstitial pulmonary edema. 2. cardiomegaly.
+525.xml	xxxx sternotomy xxxx and mediastinal postsurgical changes. stable cardiomegaly. crowded bronchovascular and interstitial markings xxxx related to low lung volumes and technique. grossly stable appearance of the lungs compared to prior exam without overt edema or gross airspace consolidation.
+542.xml	low lung volumes bilaterally with central bronchovascular crowding without focal cardiopulmonary disease. .
+555.xml	mild cardiomegaly. no overt edema. lateral image is degraded by motion but there suggestion of minimal bibasilar airspace disease/atelectasis. no appreciable pleural effusion or pneumothorax.
+558.xml	hypoinflation with no visible active cardiopulmonary disease.
+577.xml	 cardiomegaly and small left pleural effusion versus pleural thickening 2. streaky and patchy bibasilar opacities may be compatible with atelectasis versus consolidation, aspiration, clinical correlation recommended
+590.xml	 minimal xxxx atelectasis in the right midlung zone versus pleural scarring in the right xxxx fissure. 2. minimal blunting of the posterior right costophrenic xxxx, consistent with a small pleural effusion and/or pleural scarring. 3. cardiomegaly. 4. no xxxx abnormalities as compared to prior study of earlier the same xxxx
+614.xml	increased size of density in the left cardiophrenic xxxx. primary differential considerations include increased size of prominent epicardial fat, pericardial mass, pleural mass or cardiac aneurysm. ct chest with contrast is recommended. these findings and recommendations were discussed xxxx. xxxx by dr. xxxx xxxx telephone at xxxx p.m. xxxx/xxxx. dr. xxxx<xxxx>technologist receipt of the results.
+653.xml	stable cardiomediastinal silhouette. stable lingular nodule, presumably granuloma . no pleural effusion, pneumothorax or interval airspace consolidation to suggest pneumonia.
+686.xml	stable cardiomegaly. improved aeration in the left lung base. right basilar airspace disease is unchanged. no pneumothorax or pleural effusion. right internal jugular central line has been removed. left subclavian line is stable.
+688.xml	 cardiomegaly and small bilateral pleural effusions 2. abnormal pulmonary opacities most suggestive of pulmonary edema, primary differential diagnosis includes infection and aspiration, clinical correlation recommended
+702.xml	borderline heart size. calcified aorta. no active pulmonary edema or lobar pneumonia. probable large retrocardiac hiatal hernia.
+765.xml	stable cardiomegaly and persistent minimal bibasilar atelectasis.
+824.xml	mild stable cardiomegaly.
+829.xml	moderate cardiomegaly with pulmonary vascular congestion early interstitial edema.
+830.xml	moderate enlargement of the heart xxxx. this shows significant interval increase in size from the remote xxxx comparison. xxxx cardiomegaly or pericardial fluid could have this appearance. minimal patchy infiltrate/atelectasis in medial right base and lingular scarring or subsegmental atelectasis. no pleural effusion or pneumothorax.
+850.xml	 left-sided biventricular cardiac pacemaker. leads appear intact. no pneumothorax. 2. cardiomegaly and mild interstitial pulmonary edema. 3. xxxx opacities overlying the left lung base on the frontal view, possibly lingular atelectasis or infiltrate. no large pleural effusion.
+900.xml	 borderline heart size, stable. 2. interval left subclavian pacemaker placed in satisfactory position. no pneumothorax.
+936.xml	 cardiomegaly without heart failure. 2. low lung findings. left retrocardiac opacities, xxxx subsegmental atelectasis.
+1014.xml	 cardiomegaly with mild vascular prominence. no change.
+1044.xml	similar exam with changes of cystic fibrosis. no xxxx focal abnormality. .
+1057.xml	 cardiomegaly with mild interstitial edema and xxxx posterior pleural effusion. 2. 17 mm nodular opacity in the left lung and 10 mm nodular opacity in the right lung. these lesions are xxxx and could be followed up radiographically after treatment of edema, or could be further characterized with ct.
+1073.xml	cardiomegaly with xxxx right pleural effusion.
+1103.xml	 stable moderate cardiomegaly.
+1115.xml	right middle lobe and lower lobe pneumonia. followup radiographs in 8-12 weeks after appropriate therapy are indicated to exclude an underlying abnormality.
+1123.xml	 left pleural effusion with adjacent atelectasis. xxxx right effusion is also present. 2. cardiomegaly without overt edema.
+1173.xml	considering differences in technical factors xxxx stable cardiomediastinal silhouette with mild cardiomegaly. no focal alveolar consolidation, no definite pleural effusion seen. calcified right lung nodules suggest a previous granulomatous process. no typical findings of pulmonary edema.
+1181.xml	 cardiomegaly/pericardial fluid and small bilateral pleural effusions 2. abnormal pulmonary opacities most suggestive of pulmonary edema, differential diagnosis includes infection and aspiration, clinical correlation recommended
+1184.xml	the heart size and cardiomediastinal silhouette are stable and within normal limits. pulmonary vasculature appears normal. there is no focal air space consolidation. no pleural effusion or pneumothorax.
+1241.xml	 widened upper mediastinal silhouette. may represent vascular shadows exaggerated by supine and very lordotic imaging technique. however, the setting of xxxx, upper mediastinal hematoma not excluded. depending on clinical suspicion and mechanism further investigation may be warranted. 2. mild cardiomegaly appears stable. no edema. no layering pleural effusions, focal consolidation or pneumothorax.
+1254.xml	 central pulmonary vascular congestion and mild interstitial edema, improved since the prior study. 2. moderate volume bilateral pleural effusions. 3. mild cardiomegaly. .
+1290.xml	cardiomegaly with bibasilar airspace disease and bilateral pleural effusions, right greater than left. .
+1294.xml	stable cardiomegaly without gross evidence for failure or pneumonia.
+1322.xml	3 cm right upper lobe anterior segment mass. no effusion. no adenopathy. ct scan is the xxxx xxxx to determine if there is any mediastinal adenopathy. no bony abnormalities.
+1369.xml	 scarring in the left midlung. 2. cardiomegaly with especially enlarged left atrium with postoperative changes of mitral valve surgery.
+1397.xml	cardiomegaly. thoracic aortic atherosclerosis.
+1411.xml	stable enlarged cardiomediastinal silhouette. tortuous aorta. low lung volumes and left basilar bandlike opacities suggestive of scarring or atelectasis. no overt edema. question small right pleural effusion versus pleural thickening. no visible pneumothorax.
+1428.xml	 xxxx densities in left base may be compatible with scarring or subsegmental atelectasis 2. abnormal opacity in the right base xxxx due at xxxx in part to atelectasis with right hemidiaphragm eventration, question small right pleural effusion
+1429.xml	borderline cardiomegaly and cardiac pacemaker. no change from prior studies.
+1432.xml	 cardiomegaly and central vascular congestion with perihilar opacities, possibly edema. 2. large right pleural effusion.
+1446.xml	hypoinflation with no visible active cardiopulmonary disease.
+1472.xml	 stable cardiomegaly and mild central vascular prominence. 2. xxxx right upper extremity picc line with tip in proximal svc. no pneumothorax.
+1481.xml	 stable position a left-sided pacemaker leads. 2. stable cardiomegaly. 3. small bilateral pleural effusions, right greater than left.
+1489.xml	there are low lung volumes with central vascular congestion and lower lobe subsegmental atelectasis. compared to xxxx, there is a stable appearing defibrillator and cardiomegaly. no pneumothorax or large pleural effusion. there are degenerative changes of the xxxx and spine.
+1538.xml	winged right scapula consistent with supporting structure soft tissue injury. no visible fractures. no visible cardiopulmonary injury.
+1568.xml	mild cardiomegaly without heart failure.
+1578.xml	slight cardiomegaly. calcified hilar lymph xxxx. no edema or effusions.
+1579.xml	 stable cardiomegaly with left basilar infiltrate versus atelectasis.
+1587.xml	the heart size and cardiomediastinal silhouette are within normal limits. pulmonary vasculature appears normal. there is no focal air space consolidation. no pleural effusion or pneumothorax.
+1593.xml	 pulmonary vascular congestion versus chronic fibrotic changes. 2. cardiomegaly. 3. senescent changes.
+1601.xml	 vascular congestion and diffuse interstitial edema 2. stable cardiomegaly 3. low lung volumes
+1602.xml	borderline cardiomegaly. otherwise unremarkable exam.
+1645.xml	 unchanged cardiomegaly. 2. interstitial prominence. maybe due to technical factors.
+1664.xml	 cardiomegaly.
+1683.xml	possible right lower lobe pneumonia. cardiomegaly
+1724.xml	borderline cardiomegaly, otherwise unremarkable exam.
+1739.xml	cardiomegaly and mild interstitial pulmonary edema.
+1776.xml	tracheostomy tube terminates at the level of the clavicles. moderate cardiomegaly stable. increased interstitial markings and patchy opacities through the bases. nonspecific, findings may indicate edema or atypical infection. no pleural effusions. no pneumothorax.
+1777.xml	the heart size and cardiomediastinal silhouette are within normal limits. pulmonary vasculature appears normal. there is no focal air space consolidation. no pleural effusion or pneumothorax.
+1818.xml	 mild cardiomegaly and moderate hiatal hernia.
+1867.xml	there is no pneumothorax or pleural effusion. stable cardiomegaly and left-sided pacemaker. increased pulmonary markings xxxx chronic without significant change. no active air space process.
+1878.xml	borderline cardiac enlargement. vascular congestion without overt pulmonary edema. basilar atelectasis with xxxx posterior recess pleural effusions. overall, findings of mild volume overload.
+1895.xml	 mild stable cardiomegaly and central vascular congestion. 2. low lung volumes with elevated left hemidiaphragm and basilar subsegmental atelectasis. 3. extensive bilateral shoulder degenerative changes with subluxation/dislocation left shoulder, possibly chronic. suggest clinical correlation.
+1906.xml	stable cardiomegaly and mild bilateral interstitial opacities which represent mild pulmonary edema.
+1948.xml	stable cardiomegaly without evidence of overt heart failure/pulmonary edema.
+1979.xml	 scattered xxxx of subsegmental atelectasis, most notably in the right middle lobe. 2. mildly enlarged cardiac silhouette; cardiomegaly versus pericardial effusion.
+1980.xml	cardiomegaly, aortic ectasia/tortuosity, cardiomediastinal silhouette appears similar to prior. no focal alveolar consolidation, no definite pleural effusion seen. no typical findings of pulmonary edema.
+1984.xml	xxxx change. no active cardiopulmonary disease.
+2006.xml	low lung volumes. cardiomegaly. minimal left base and perihilar minimal infiltrate.
+2019.xml	 scattered bilateral subsegmental atelectasis. decreased from prior radiograph. 2. stable mild cardiomegaly.
+2027.xml	xxxx change. hypoinflation with no visible active cardiopulmonary disease.
+2071.xml	increasing cardiomegaly. no effusions. minimal interstitial edema.
+2093.xml	resolution of cardiomegaly. no active disease.
+2100.xml	hypoinflation with no visible active cardiopulmonary disease.
+2128.xml	low lung volumes with bronchovascular crowding. otherwise, no focal alveolar consolidation, no definite pleural effusion seen. no typical findings of pulmonary edema. heart size borderline enlarged for technique, tracheostomy tube tip approximately 4.7 cm above the carina.
+2139.xml	stable cardiomegaly without overt pulmonary edema.
+2142.xml	hypoinflation with no visible active cardiopulmonary disease.
+2148.xml	 bilateral pleural effusions, right larger than left 2. abnormal pulmonary opacities which may be due to atelectasis, differential diagnosis includes infection, aspiration, atypical distribution pulmonary edema
+2191.xml	cardiomegaly with pulmonary edema superimposed on chronic interstitial lung changes.
+2209.xml	 stable cardiomegaly without infiltrates.
+2225.xml	interstitial and alveolar opacities most confluent in the left perihilar lung may be compatible with infection, differential diagnosis includes atypical pulmonary edema, inflammation. no definite pleural effusion seen. stable cardiomediastinal silhouette with near top normal heart size. aeration of the left perihilar lung may be slightly improved compared with the xxxx image from xxxx.
+2246.xml	the heart size and cardiomediastinal silhouette are within normal limits. pulmonary vasculature appears normal. there is no focal air space consolidation. no pleural effusion or pneumothorax.
+2255.xml	cardiomegaly with pulmonary interstitial edema and xxxx bilateral pleural effusions. .
+2286.xml	 cardiomegaly and small bilateral pleural effusions 2. abnormal pulmonary opacities most suggestive of pulmonary edema, primary differential diagnosis atypical infection and inflammation
+2302.xml	xxxx change. hypoinflation with no visible active cardiopulmonary disease.
+2326.xml	 stable moderate cardiomegaly with prominent central pulmonary vasculature. 2. improved left basilar atelectasis or infiltrate.
+2346.xml	heart size within normal limits. no abnormal mediastinal widening. no edema. no focal consolidation. xxxx blunting of the posterior right sulcus may reflect a xxxx right pleural effusion. no pneumothoraces. flowing osteophytes are seen through the mid and lower thoracic spine.
+2349.xml	cardiomegaly with central pulmonary vascular prominence and coarsened interstitial markings, concerning for interstitial pulmonary edema.
+2356.xml	stable left chest, xxxx-xxxx, cardiac pacemaker seen, sternotomy xxxx. stable cardiomediastinal silhouette. no pneumothorax. no large pleural effusion. low lung volumes. streaky opacities at the lung bases, xxxx subsegmental atelectasis, unchanged. the visualized thoracic xxxx are unremarkable. degenerative changes demonstrated within the left glenohumeral joint.
+2389.xml	borderline heart size. aortic atherosclerosis. small volume effusions and basilar airspace disease. right-sided central catheter tip low svc. ng tube has been removed. there is mild xxxx-distention of this stomach.
+2424.xml	borderline cardiomegaly without heart failure.
+2444.xml	probable left midlung and left basilar atelectasis. cardiomegaly.
+2457.xml	 stable postop changes with mild cardiomegaly. 2. small bilateral pleural effusions.
+2505.xml	 stable cardiomegaly with right mediastinal shift. 2. stable interstitial markings and prominent bibasilar airspace opacities which xxxx represent atelectasis.
+2511.xml	postoperative chest. hypoinflation with no visible active cardiopulmonary disease.
+2545.xml	cardiomegaly with small bilateral pleural effusions and left basilar atelectasis.
+2546.xml	exam quality limited by very low lung volumes on the frontal view and rotation. cardiomediastinal silhouette accentuated by technical factors, heart size xxxx mildly enlarged. marked bronchovascular crowding, indistinct vascular margination may be secondary to crowding, mild pulmonary edema, interstitial infiltrates difficult to exclude. no definite pleural effusion seen. osseous demineralization and exaggerated kyphosis, vp shunt tubing noted.
+2550.xml	 marked cardiomegaly. 2. increased interstitial markings in the lower lungs, edema versus chronic interstitial changes.
+2592.xml	cardiomegaly with vascular congestion and suspected pulmonary edema. .
+2608.xml	postoperative changes of the chest. stable cardiomegaly.
+2648.xml	xxxx change. hypoinflation with no visible active cardiopulmonary disease.
+2663.xml	 cardiomegaly. 2. pleural thickening along the inferior left lateral chest wall stable since the prior examination.
+2684.xml	cardiomegaly and increased interstitial opacities which may be compatible with mild pulmonary edema, differential diagnosis includes infection, inflammation, aspiration
+2689.xml	the heart size and cardiomediastinal silhouette are within normal limits. pulmonary vasculature appears normal. there is no focal air space consolidation. no pleural effusion or pneumothorax.
+2717.xml	the heart size and cardiomediastinal silhouette are within normal limits. pulmonary vasculature appears normal. left hilar and medial left base granuloma. there is no focal air space consolidation. no pleural effusion or pneumothorax.
+2718.xml	heart size within normal limits, minimal aortic ectasia/tortuosity. abnormal interstitial pattern, nonspecific in appearance with xxxx differential diagnosis including chronic interstitial lung disease, infectious, inflammatory process, atypical pulmonary edema. not highly characteristic appearance of contusion or aspiration. chronic appearing contour deformity of the distal right clavicle suggests old injury. no definite pleural effusion seen, no pneumothorax.
+2720.xml	stable postop changes with stable mild cardiomegaly and normal lung vascularity.
+2755.xml	mild cardiomegaly with xxxx of early failure.
+2776.xml	 cardiomegaly with diffuse interstitial opacities. findings may be secondary to pulmonary edema. atypical infection is another consideration.
+2779.xml	 borderline enlarged heart. 2. tortuous/ectatic thoracic aorta. 3. fracture of the distal right clavicle, better seen on today's radiograph of the shoulder.
+2783.xml	 low lung volumes with mild cardiomegaly and scattered right basilar subsegmental atelectasis and scattered retrocardiac airspace opacities.
+2792.xml	 cardiomegaly 2. xxxx xxxx opacity in the left base xxxx atelectasis
+2866.xml	 cardiomegaly with bilateral interstitial opacities. 2. bilateral effusions and/or atelectasis, right worse than left.
+2875.xml	 stable cardiomegaly with no focal airspace disease. 2. stable moderate thoracic levoscoliosis and mild thoracolumbar dextroscoliosis. .
+2883.xml	the cardiac silhouette appears be at upper limits of normal to borderline enlarged. the mediastinum and parahilar structures are also slightly prominent but unchanged. portacatheter is noted with its tip in superior xxxx xxxx. this appears unchanged. slightly xxxx inspiratory effort is noted on the frontal film. this is unchanged. osseous structures appear be grossly unremarkable. no pneumothorax or obvious pulmonary lesions seen.
+2895.xml	the heart size is top normal, cardiomediastinal silhouette within normal limits. pulmonary vasculature appears normal. there is no focal air space consolidation. no pleural effusion or pneumothorax.
+2906.xml	mild cardiomegaly.
+2917.xml	mild cardiomegaly. there are a few thin peripheral reticular opacities in the bases compatible with mild edema given mild central venous congestion. there is no pleural effusion or pneumothorax.
+2953.xml	mild cardiomegaly.
+2959.xml	circumscribed structure in the ap xxxx could represent lymphadenopathy, mass, pulmonary arterial abnormality xxxx as aneurysm, or enlargement of the left atrial appendage. as prior chest x-xxxx are not available online at this xxxx should be considered.
+2962.xml	cardiomegaly and increased interstitial opacities xxxx represent interstitial edema.
+2974.xml	borderline cardiomegaly without heart failure. no focal pneumonia.
+3019.xml	there is mild to moderate cardiomegaly. tortuous and ectatic appearing aorta. no overt edema. no focal infiltrate. no pleural effusion or pneumothorax is seen.
+3024.xml	 cardiomegaly 2. indistinct vascular margination which may be secondary to bronchovascular crowding however differential diagnosis includes mild pulmonary edema, atypical infection, inflammation
+3039.xml	cardiomegaly with globular appearance of the cardiac silhouette. considerations would include pericardial effusion or dilated cardiomyopathy.
+3057.xml	mild cardiomegaly with interstitial prominence, could represent mild interstitial edema, atypical infection, or chronic interstitial changes.
+3061.xml	mild cardiomegaly. basilar atelectasis.
+3071.xml	 mild cardiomegaly without pulmonary edema. 2. minimal bibasal subsegmental atelectasis/scar. 3. very small left pleural effusion.
+3073.xml	hypoinflation with cardiomegaly and pulmonary venous hypertension. left mid lung focal atelectasis.
+3087.xml	cardiomegaly with interstitial edema. no effusions, pneumonia, nodules or masses.
+3111.xml	the heart size and cardiomediastinal silhouette are within normal limits. pulmonary vasculature appears normal. there is no focal air space consolidation. no pleural effusion or pneumothorax.
+3118.xml	cardiomegaly with mild bibasilar infiltrates versus atelectasis.
+3127.xml	patchy bilateral airspace disease with pulmonary xxxx, xxxx a combination of atelectasis and consolidation. borderline cardiac enlargement. tracheostomy tube tip 6.4 cm above the carina.
+3142.xml	 cardiomegaly and pulmonary vascular congestion. 2. eventration of right hemidiaphragm with basilar atelectasis.
+3151.xml	stable, nonenlarged cardiomediastinal silhouette. left upper lobe calcified granuloma noted. epigastric and right upper quadrant postsurgical changes. interval increased bilateral interstitial opacities, with probable left lower lobe infiltrate.
+3163.xml	xxxx change. hypoinflation with no visible active cardiopulmonary disease.
+3178.xml	the heart size and cardiomediastinal silhouette are within normal limits. pulmonary vasculature appears normal. there is no focal air space consolidation. no pleural effusion or pneumothorax.
+3192.xml	stable cardiomegaly with no focal airspace disease.
+3212.xml	 unchanged cardiomegaly. 2. question xxxx pleural effusions.
+3245.xml	the heart size and cardiomediastinal silhouette are within normal limits. pulmonary vasculature appears normal. right lower lobe calcified granuloma. there is no focal air space consolidation. no pleural effusion or pneumothorax.
+3260.xml	 streaky left basilar opacities, xxxx atelectasis versus infiltrate. 2. cardiomegaly, stable.
+3271.xml	 borderline cardiomegaly. 2. age-indeterminate, xxxx chronic, xxxx deformity in the midthoracic spine.
+3275.xml	 mild to moderate cardiomegaly. 2. vascular redistribution without definite findings of pulmonary edema
+3277.xml	 cardiomegaly without failure 2. ectatic aorta
+3296.xml	mild cardiomegaly, with subsegmental atelectasis in the right lower lobe.
+3309.xml	cardiomegaly with surgical changes of cabg, with numerous broken xxxx sternotomy xxxx and a sternotomy xxxx fragment noted xxxx in the posterior left pleural space.
+3318.xml	 left-sided small pleural effusion versus extrapleural fat or scarring. 2. cardiomegaly.
+3325.xml	 question of left lower lobe pneumonia and/or pleural effusion. 2. borderline heart size with mild central vascular congestive changes.
+3349.xml	 left basilar opacity xxxx represents atelectasis/scarring with associated elevated hemidiaphragm. 2. stable cardiomegaly. 3. no xxxx airspace disease.
+3351.xml	stable subsegmental bibasilar atelectasis. cardiomegaly without heart failure.
+3353.xml	 chest. no visible active cardiopulmonary disease. 2. left hip. advanced posttraumatic osteoarthritis.
+3372.xml	 marked cardiomegaly. 2. low lung volumes.
+3437.xml	 cardiomegaly, vascular congestion and probable mild interstitial edema. 2. bibasilar airspace disease, bilateral pleural effusions, right greater than left.
+3482.xml	there is cardiomegaly. lateral view somewhat limited however small bilateral pleural effusions suspected. there is central vascular congestion.
+3498.xml	 cardiomegaly without lung infiltrates.
+3515.xml	 xxxx left pleural effusion and associated left basilar airspace disease. 2. moderate cardiomegaly without pulmonary edema.
+3535.xml	exam quality limited by hypoventilation and kyphosis. low lung volumes, bibasilar opacities xxxx due at xxxx in part to atelectasis. abnormal interstitial pulmonary pattern, nonspecific in appearance with xxxx differential diagnosis including chronic lung disease, interstitial infiltrates, pulmonary edema. right hilar calcifications and dense right lung nodule suggest a previous granulomatous process. no definite pleural effusion seen. heart size near top normal limits for technique, sternotomy xxxx, cabg clips, artifact of aortic valve surgery.
+3557.xml	 small left pleural effusion. 2. stable mild cardiomegaly.
+3577.xml	cardiomegaly and pulmonary venous hypertension
+3578.xml	scarring at the lateral costophrenic xxxx. otherwise no significant radiographic abnormality.
+3593.xml	the heart size and cardiomediastinal silhouette are within normal limits. pulmonary vasculature appears normal. minimal blunting of the lateral sulci bilaterally xxxx reflects pleural thickening or scarring, no dependent pleural fluid posteriorly. minimal right base subsegmental atelectasis. no lobar consolidation. no pneumothorax.
+3665.xml	stable cardiomediastinal silhouette with normal heart size. xxxx mild streaky opacities in the left base, atelectasis versus infiltrate. no definite pleural effusion seen. no typical findings of pulmonary edema.
+3672.xml	mild stable cardiomegaly with mild central pulmonary vascular congestion and interstitial accentuation, xxxx edema.
+3677.xml	stable moderate to marked cardiomegaly.
+3712.xml	 moderate right-sided pleural effusion. 2. no cavitary lung changes to suggest active tuberculosis. the airspace opacities in right upper lobe seen on xxxx chest are not visualized on this study which could be due to difference in technique and patient rotation. 3. cardiomegaly with prominent aorta which may be accentuated due to ap view. 4. left humerus fracture. .
+3723.xml	the heart size and cardiomediastinal silhouette are within normal limits. pulmonary vasculature appears normal. there is no focal air space consolidation. no pleural effusion or pneumothorax.
+3754.xml	left upper lobe pneumonia. followup radiographs after appropriate therapy in 8-12 weeks are indicated to exclude an underlying abnormality.
+3774.xml	borderline cardiomegaly, mild aortic ectasia/tortuosity. no focal alveolar consolidation, no definite pleural effusion seen. mild bronchovascular crowding without typical findings of pulmonary edema.
+3787.xml	stable cardiomegaly without heart failure.
+3803.xml	cardiomegaly with midlung and lower lobe edema. shunt catheter overlies the right anterior chest.
+3808.xml	mild cardiomegaly. densely calcified aorta. prominence of the pulmonary outflow and xxxx most xxxx indicates enlarged pulmonary arteries and raise concern for pulmonary artery hypertension. there is no overt edema. the right diaphragm is elevated, there are small right and xxxx left pleural effusions. no pneumothorax.
+3810.xml	stable cardiomegaly with mild pulmonary interstitial edema.
+3820.xml	 cardiomegaly. 2. minimal left midlung atelectasis. 3. blunting of left costophrenic xxxx. this could indicate a small amount of pleural fluid versus pleural-parenchymal scarring.
+3835.xml	abnormal opacity in the right lung base which may be compatible with pneumonia in the appropriate clinical setting. recommend clinical correlation for infection and followup to resolution. or, if clinical findings are not compatible with xxxx may be of xxxx.
+3838.xml	 enlarged cardiac silhouette, possibly consistent with mild cardiomegaly versus a small pericardial effusion. 2. mild bibasilar atelectasis and/or infiltrates with probable small bilateral pleural effusions, on the right greater than left, and pleural thickening versus loculated pleural fluid along the peripheral aspect of the right upper lobe. .
+3843.xml	cardiomegaly and pulmonary vascular congestion.
+3844.xml	 cardiomegaly without pulmonary edema. 2. minimal bibasilar opacities which may reflect atelectasis or infiltrate.
+3869.xml	minimal cardiomegaly. prominent pulmonary xxxx. probable very small pleural effusions and minimal questionable interstitial edema. no pneumonia
+3898.xml	cardiomegaly which appears xxxx from xxxx with probable mild pulmonary edema. .
+3905.xml	cardiomegaly with bibasilar opacities, which may represent atelectasis or infiltrate.
+84.xml	right basilar airspace disease.
+315.xml	hypoinflation with elevated left hemidiaphragm and possible left basilar infiltrate versus atelectasis. followup evaluation is suggested in 2 to 4 weeks. impression: exam: chest 2v frontal/lateral date: xxxx, xxxx xxxx pm comparison: ct chest xxxx history: shortness of breath findings: the heart is mildly enlarged. the lungs are hypoinflated with mildly elevated left hemidiaphragm. there is patchy opacity in the left lung base which may be secondary to atelectasis and/or possible infiltrate. increased markings are noted throughout and were present on prior ct. the study is limited secondary to moderate xxxx motion. underlying emphysematous changes are identified. impression: hypoinflation with elevated left hemidiaphragm and possible left basilar infiltrate versus atelectasis. followup evaluation is suggested in 2 to 4 weeks.
+604.xml	left basilar airspace disease. recommend follow up chest x-xxxx to document resolution xxxx for better characterization.
+720.xml	patchy right lower lobe infiltrate as well as probable left basilar infiltrate versus atelectasis.
+799.xml	left basilar airspace disease.
+1023.xml	 a few basilar xxxx of opacity. this may represent scarring or atelectasis.
+1144.xml	right midlung and left basilar airspace densities. the most recent study is not available for comparison. recommend further evaluation with xxxx.
+1171.xml	prominent hiatal hernia. left basilar opacity compatible pleural effusion and atelectasis. xxxx right pleural effusion. no pulmonary edema / overt chf identified. stable senescent mediastinal contour.
+1195.xml	 left basilar mixed interstitial and alveolar infiltrate. interval followup to resolution is recommended.
+1239.xml	 redemonstration of elevated right hemidiaphragm with associated basilar airspace disease and effusion. 2. ill-defined xxxx right upper lung opacities, possibly related to superimposed rib lesions versus developing pulmonary nodules. further imaging xxxx of the chest may be indicated.
+1463.xml	chronic asymmetric elevation of the right hemidiaphragm with mildly increased right basilar airspace disease, atelectasis versus infiltrate. .
+1635.xml	stable elevated right hemidiaphragm with questionable subtle increased right basilar airspace disease/atelectasis. correlate clinically.
+1654.xml	minimal left basilar opacity most xxxx representing atelectasis or chronic scarring.
+1794.xml	left basilar atelectasis and/or infiltrate, with no radiographic evidence of tuberculosis.
+1823.xml	 improved right mid lung and right basilar consolidation. 2. decreasing right pleural effusion.
+1831.xml	streaky left basilar airspace opacities, which could reflect atelectasis and/or infection.
+1851.xml	minimal patchy left basilar atelectasis or infiltrate.
+1871.xml	 cardiac xxxx in stable position. 2. increase in right and decrease in left basilar atelectasis.
+1903.xml	 left basilar atelectasis. 2. no focal airspace consolidation.
+1929.xml	 low lung volumes with streaky left basilar opacity, xxxx subsegmental atelectasis and scarring. infiltrate is xxxx less xxxx but not entirely excluded. 2. mild central vascular congestion and bronchovascular crowding.
+1935.xml	copd and small left basilar scar.
+2053.xml	nonspecific interstitial prominence and basilar patchy airspace disease. maybe due to pulmonary fibrosis, scarring and/or atelectasis. comparison with outside previous films may be useful.
+2198.xml	changes of chronic interstitial lung disease with ill-defined patchy left apical and right basilar airspace disease. pa and lateral chest radiograph may be of benefit xxxx clinically feasible.
+2262.xml	low lung volumes with mild, xxxx left basilar opacity, atelectasis versus infiltrate. .
+2355.xml	kub  there are numerous air-filled dilated loops of small bowel over the mid abdomen. these findings are consistent with small bowel obstruction. chest  left basilar airspace disease, xxxx atelectasis. .
+2419.xml	low lung volumes with minimal left basilar atelectasis versus scarring.
+2520.xml	xxxx pulmonary edema and left basilar atelectasis/airspace disease.
+2552.xml	 right basilar opacities favored to represent atelectasis. 2. stigmata of xxxx cell disease. 3. cholelithiasis.
+2595.xml	lung volumes with streaky left basilar opacity consistent with subsegmental atelectasis.
+2682.xml	mild streaky left basilar airspace disease, xxxx atelectasis. .
+2725.xml	minimal left basilar atelectasis versus infiltrate. low lung volumes.
+2738.xml	generalized low lung lungs with eventration of the left hemidiaphragm. question concomitant left basilar opacity, may represent atelectasis or infiltrate.
+2846.xml	small left pleural effusion with left basilar atelectasis.
+2900.xml	 patchy left basilar subsegmental atelectasis, infiltrates and/or small left pleural effusion. .
+3040.xml	xxxx right basilar airspace opacity.
+3058.xml	basilar atelectasis. no confluent lobar consolidation or pleural effusion.
+3216.xml	mild left costophrenic xxxx blunting xxxx xxxx basilar pleural effusion, increased left suprahilar opacity, differential diagnosis includes increased volume loss, apical pleural fluid, tumor progression. left hemithorax volume loss with leftward shift of the heart and mediastinum. xxxx right costophrenic xxxx, right lung free of focal consolidation.
+3466.xml	left basilar patchy opacities, which may represent atelectasis or infection. .
+3499.xml	 stable right basilar scarring and right pleural thickening
+3511.xml	 suspected fractures of the left anterior 6th and 7th ribs, of uncertain acuity. correlate with xxxx tenderness. 2. low lung volumes with mild basilar atelectasis, left greater than right. .
+3636.xml	minimal right basilar airspace disease, xxxx right middle lobe.
+3721.xml	 small left basilar parenchymal scarring and/or effusion. 2. postsurgical changes of the mediastinum. 3. otherwise unremarkable chest radiograph.
+3877.xml	persistent stable right basilar atelectasis.
+3895.xml	manifestations of decompensated congestive heart failure with basilar atelectasis.
+83.xml	 bilateral pulmonary nodules suggesting pulmonary metastases 2. right internal jugular central catheter, the distal tip in the right atrium.
+98.xml	low lung volumes with slightly increased perihilar opacities bilaterally, xxxx infectious etiology.
+104.xml	 pulmonary vascular congestion. 2. emphysema. 3. bibasilar streaky airspace opacities.
+108.xml	 right basilar opacity with associated blunting of costophrenic xxxx on lateral view may represent small pleural effusion, atelectasis, and/or consolidation. 2. interface at the left hemidiaphragm may represent artifact however further evaluation with right lateral decubitus films would better evaluate.
+113.xml	mild patchy bibasilar airspace disease most xxxx representing atelectasis given the low lung volumes.
+203.xml	small bilateral pleural effusions.
+239.xml	bilateral opacities most prominent in the lower lobes xxxx representing airspace disease or edema.
+273.xml	 interval placement of a dual-lumen dialysis catheter with the distal tip projected over the right atrium. 2. bibasilar airspace opacities and bilateral pleural effusions.
+280.xml	obscuration of the bilateral lung bases, xxxx combination of atelectasis, infiltrate, effusions.
+283.xml	bibasilar airspace disease, left worse right. bilateral pleural fluid.
+311.xml	moderate hypoinflation with associated bibasilar atelectasis.
+343.xml	 stable emphysematous changes. 2. stable biapical pleural-parenchymal scarring.
+373.xml	subtle interstitial markings bilateral, may represent mild pulmonary edema or chronic interstitial changes.
+430.xml	improving lung volumes with bibasilar atelectasis.
+518.xml	 pulmonary hypoinflation with bronchovascular crowding and minimal bibasilar subsegmental atelectasis.
+526.xml	small bilateral pleural effusions and right infrahilar infiltrate versus bronchovascular crowding.
+537.xml	bibasilar atelectasis.
+564.xml	low lung volumes with bibasilar streaky opacities most xxxx representing subsegmental atelectasis.
+635.xml	bibasilar patchy airspace disease with bilateral small pleural fluid collections.
+672.xml	 bilateral airspace disease. 2. stable enlarged heart and prominent mediastinal contours.
+714.xml	bibasilar airspace disease left greater than right with small effusions.
+715.xml	 evidence of previous granulomatous infection. 2. bibasilar bandlike opacities. the appearance xxxx atelectasis/scar.
+723.xml	stable bilateral interstitial opacities, could represent scarring or infiltrate. ct may be helpful to further characterize.
+726.xml	minimal bibasilar focal atelectasis.
+740.xml	congestive heart failure with bibasilar pulmonary interstitial edema and bilateral pleural fluid.
+750.xml	 continued hilar fullness consistent with adenopathy and bilateral interstitial opacities. stable as compared to earlier study. the changes are compatible with known diagnosis of sarcoidosis.
+762.xml	few small nodular opacities in the left upper lung. these small nodules are relatively dense, suggestive of chronic granulomatous disease. comparison with an xxxx chest radiograph would be helpful to establish stability.
+864.xml	bibasilar opacities, right greater than left, features suggest a combination of consolidation and atelectasis
+878.xml	multiple bilateral calcified granulomas most xxxx sequela of granulomatous process. no focal infiltrate or consolidation. . if one would like to discuss this case further, please xxxx. xxxx at xxxx. thanks.
+885.xml	minimally increased air space opacities bilaterally, most prominent in the lung bases. findings are nonspecific, but may represent subsegmental atelectasis versus mild interstitial edema or an atypical infectious process.
+925.xml	 bibasilar airspace disease left greater than right. 2. stable postsurgical changes with colonic interposition overlying the mediastinum.
+932.xml	bihilar prominence may be secondary mild lymphoid enlargement. followup chest x-xxxx versus further imaging xxxx may be indicated. correlation with prior films would be helpful if available.
+976.xml	hypoinflation with bibasilar focal atelectasis.
+1047.xml	 streaky bibasilar opacities; the appearance xxxx subsegmental atelectasis. 2. enlarged cardiac silhouette. 3. mildly elevated right hemidiaphragm.
+1088.xml	bilateral enlargement of the xxxx, xxxx lymphadenopathy. consider correlation with a xxxx of the chest. sarcoidosis would be a consideration, less xxxx lymphoproliferative xxxx/lymphoma.
+1095.xml	 severe emphysema. 2. irregular, pleural-parenchymal opacity in left upper lobe. this may irregular pleural-parenchymal scarring, however, recommend comparison with more remote outside imaging, if available to determine long-term stability. if none are available, recommend short-term xxxx in 3 to 4 months. evaluation of coronal and sagittal reformatted images from the outside study would also be helpful. these were not xxxx available at the outside institution. malignancy cannot be confidently excluded on the available images.
+1141.xml	right basilar infiltrate or atelectasis, and xxxx bilateral pleural effusions.
+1192.xml	bilateral large pleural effusion, possibly from pleuritis or sympathetic from the known pancreatitis.
+1236.xml	 low lung volumes 2. patchy and streaky bibasilar atelectasis or scarring, unchanged from prior study 3. blunting of the costophrenic xxxx suggestive of small pleural effusions. this is seen xxxx in the posterior costophrenic recesses 4. esophagogastric to the in xxxx, the distal tip coursing inferiorly into the stomach and not included on the study. previously noted esophagogastric flexion catheter has been removed 5. previously noted left-sided picc line has been removed.
+1340.xml	 low lung volumes with subsequent bronchovascular crowding and bibasilar atelectasis. .
+1374.xml	low lung volumes with streaky bibasilar opacities, xxxx subsegmental atelectasis over infiltrate.
+1400.xml	bilateral lower lobe focal atelectasis.
+1407.xml	numerous bilateral pulmonary nodules with dominant nodule/mass in the left lower lung. diagnostic considerations would include primary lung carcinoma with metastatic nodules versus secondary metastatic disease from known brain tumor. suggest clinical correlation and further imaging xxxx examination.
+1435.xml	small bilateral pleural effusions.
+1452.xml	small bilateral pleural effusions. .
+1468.xml	developing heart failure with pulmonary venous engorgement and bibasilar pulmonary interstitial edema.
+1541.xml	 technically limited exam. 2. low lung volumes with xxxx bilateral pleural effusions. .
+1559.xml	stable postsurgical changes of esophagectomy with improved bibasilar airspace opacities/atelectasis.
+1562.xml	patchy alveolar and interstitial opacities within the lung bases bilaterally representing an infectious etiology versus chronic lung disease.
+1586.xml	 bibasilar atelectasis/infiltrate. improved from prior.
+1672.xml	 concern for left subphrenic free air. verification with abdominal decubitus views is recommended for further evaluation. 2. interval increase in size of the moderate to large bilateral pleural effusions with bibasilar atelectasis/airspace disease. 3. left central venous catheter in unchanged position. 4. interval placement of feeding tube the courses beneath the diaphragm and out of the xxxx-of-view.
+1699.xml	interstitial markings bilaterally, pulmonary fibrosis, unchanged. .
+1783.xml	significant improvement in bilateral airspace disease and improved aeration bilaterally as described above.
+1836.xml	 marked bullous emphysematous changes and traction bronchiectasis, again most notable involving the bilateral upper lobes. stable suspected superimposed left upper lobe aspergilloma - as more readily demonstrated on the previous ct chest study from xxxx.
+2007.xml	low lung volumes with minimal bibasilar atelectasis. overall no significant interval change.
+2008.xml	5 cm nodule in the left midlung zone. may contain calcium although this cannot be stated with certainty. comparison to old films, if available would be useful to determine chronicity and stability. if old films are not available, xxxx scan could be xxxx to evaluate for the presence of calcium.
+2011.xml	 moderate left basilar lung consolidation with mild right basilar opacities, which may represent infection and/or atelectasis. 2. bilateral rib fractures, most of which appear old. 3. interval vertebral body xxxx deformity in the lumbar spine since xxxx. .
+2072.xml	 improving bilateral interstitial edema pattern. 2. small right-sided pleural effusion.
+2134.xml	 low lung volume study with minimal bibasilar atelectasis. stable chest.
+2184.xml	mild pulmonary vascular congestion, with xxxx xxxx bilateral effusions. constellation findings is most compatible with congestive heart failure.
+2189.xml	appearance suggests emphysema. apical capping, slightly greater at the left. recommend comparison with prior films or followup chest x-xxxx films to confirm stability and approximately 4 months in xxxx. critical result notification documented through primordial.
+2200.xml	small bilateral pleural effusions with bibasilar atelectasis and/or airspace disease, left greater than right.
+2230.xml	persistent bibasilar airspace disease and bilateral pleural fluid.
+2236.xml	low lung volumes with bronchovascular crowding, bibasilar opacities xxxx due at xxxx in part to atelectasis, infiltrates, pulmonary edema difficult to entirely exclude.
+2287.xml	bilateral interstitial opacities and central vascular congestion xxxx interstitial edema.
+2312.xml	bilateral small pleural effusions and associated atelectasis. stable right upper mediastinal opacity consistent with xxxx goiter.
+2498.xml	 chest. no active disease. 2. left and right xxxx. bilateral degenerative joint disease, left worse than right.
+2527.xml	low lung volumes. bibasilar atelectasis versus scarring.
+2615.xml	interval increase in size and number of innumerable bilateral pulmonary nodules consistent with worsening metastatic disease.
+2736.xml	small bilateral pleural effusions with a few scattered areas of patchy bilateral airspace disease.
+2748.xml	 continued innumerable bilateral small lung nodules. no change.
+2789.xml	bibasilar airspace disease and bilateral pleural fluid.
+2807.xml	compared to xxxx, there are xxxx extensive bilateral reticulonodular interstitial opacities, concerning for atypical infection. result notification xxxx primordial. .
+2851.xml	 mild bibasilar airspace disease, probably atelectasis.
+2878.xml	 increased bilateral interstitial opacity, xxxx consistent with mild interstitial edema.
+2901.xml	small to moderate sized bilateral pleural effusions with adjacent infiltrate or atelectasis.
+2913.xml	decreasing lung volumes. probable bilateral pleural effusions and elevation of both hemidiaphragms.
+2916.xml	right lower lobe airspace disease with bilateral pleural effusions.
+2968.xml	 bibasilar airspace disease, greater on the right, either atelectasis or infiltrate. 2. platelike right midlung atelectasis. .
+3160.xml	xxxx bilateral effusions.
+3253.xml	 left base opacity may represent early infection or atelectasis. recommend followup pa and lateral chest x-xxxx in 6 weeks to ensure resolution. 2. bilateral small pleural effusions.
+3266.xml	emphysema. large right upper lobe xxxx. biapical scarring.
+3278.xml	 redemonstration of diffuse bilateral pulmonary fibrosis with relative sparing of the bilateral lung apices. no focal pulmonary consolidation. .
+3366.xml	bibasilar airspace disease.
+3379.xml	vague opacity in the right midlung, this could reflect a small focus of atelectasis or infiltrate. bibasilar airspace opacities, xxxx atelectasis.
+3387.xml	 small bilateral pleural effusions.
+3393.xml	 bilateral lower lobe bronchitis.
+3394.xml	chronic emphysematous lung disease with mild bibasilar, right greater than left airspace disease/atelectasis.
+3471.xml	central pulmonary vascular congestion without xxxx edema, consolidation. xxxx bilateral pleural effusions.
+3494.xml	minimal bibasilar airspace disease.
+3520.xml	 stable bilateral pleural effusions and pleural thickening, right worse than left, with mild right-sided loculation. 2. stable appearance of right apical thickening/atelectasis with volume loss, possibly related to prior radiation or surgery. suggest clinical correlation.
+3573.xml	low lung volumes with probable mild bibasilar airspace disease/atelectasis. markedly limited exam, without significant interval change from xxxx. .
+3600.xml	low lung volumes with blunted costophrenic xxxx, xxxx xxxx bilateral pleural effusions.
+3602.xml	xxxx xxxx bilateral pleural effusions, right larger than left. early interstitial show pulmonary edema.
+3622.xml	 left lower lobe airspace disease and bilateral pleural effusions, left greater than right. this may be secondary to inhalational injury. recommend followup to ensure complete resolution.
+3626.xml	 bullous emphysema and interstitial fibrosis. 2. probably scarring in the left apex, although difficult to exclude a cavitary lesion. 3. opacities in the bilateral upper lobes could represent scarring, however the absence of comparison exam, recommend short interval followup radiograph or ct thorax to document resolution.
+3633.xml	 slight interval worsening of the diffusely increased bilateral pulmonary interstitial markings, greatest in the peripheral aspect of the left lung and the left lung base. these findings are most consistent with slight interval worsening of the patient's known interstitial lung disease. 2. stable, mild left-sided volume loss. .
+3669.xml	 partially loculated right pleural effusion, grossly stable. 2. stable moderate layering left pleural effusion. 3. bibasilar airspace disease, possibly atelectasis.
+3738.xml	congestive heart failure with basilar pulmonary interstitial edema and bilateral pleural fluid.
+3751.xml	hypoinflation with bibasilar focal atelectasis.
+3757.xml	stable bilateral hilar adenopathy.
+3807.xml	 multiple bilateral pulmonary nodules, concerning for metastatic disease. 2. prominent left hilum. after correlation with the xxxx scan performed today, findings xxxx reflect enlargement of the left pulmonary artery.
+3832.xml	 probable small bilateral pleural effusions. 2. possible lower thoracic xxxx deformity not well characterized on today's study.
+3860.xml	streaky bibasilar opacities most suggestive of atelectasis with hypoventilation. heart size mildly enlarged for technique, stable mediastinal contours. no definite pleural effusion seen, no typical findings of pulmonary edema.
+2766.xml	unchanged loculated right pleural fusion. no change chronic interstitial lung disease.
+3047.xml	 8 mm left midlung nodule. xxxx since xxxx. comparison to interval outside film would be helpful to assess the chronicity of this nodule. if old films are not available, or if this is xxxx, chest ct scan could be xxxx to better define this.
+249.xml	radiographic findings suggestive of emphysema.
+290.xml	 changes of emphysema and left lower lobe scarring, both stable. 2. unchanged degenerative and atherosclerotic changes of the thoracic aorta.
+761.xml	emphysema with increased lung markings markings, possibly superimposed chronic lung disease/fibrosis.
+1932.xml	emphysema.
+1981.xml	 emphysematous changes. 2. resolution of prior right midlung infiltrate.
+2103.xml	 emphysema without infiltrates.
+2700.xml	emphysema. recommend rib series to to establish that circular densities overlying ribs are in the ribs.
+3283.xml	emphysema.
+208.xml	mild blunted right costophrenic xxxx which could be due to xxxx effusion or scarring.
+253.xml	mild left-sided scarring/subsegmental atelectasis. no definite infiltrate.
+272.xml	 pathologic fractures seen at t5 and l2. 2. left venous catheter in svc.
+527.xml	 chest. continued right hemidiaphragm elevation with right lower lobe airspace disease. 2. right shoulder. scapular fracture. 3. clavicle. acromioclavicular separation.
+698.xml	minimal small area scarring of the left base.
+1375.xml	mild blunting left costophrenic recess, possibly mild atelectasis or scarring.
+1421.xml	left retrocardiac airspace disease could reflect atelectasis and possible scarring. small left pleural effusion.
+1457.xml	small area scarring in the right lower lung zone.
+1819.xml	apparent scarring within the lingula, otherwise unremarkable.
+1832.xml	buckling deformity of the anterior cortex of the xxxx body. fracture is possible, if high energy xxxx was localized to this region. correlate with focal tenderness. xxxx chest, if warranted.
+1928.xml	 chest. no active disease. 2. right shoulder. healing scapular fracture.
+1970.xml	blunting of the right costophrenic sulcus could be secondary to a xxxx effusion versus scarring. no focal airspace consolidation.
+1974.xml	stable blunting of the left costophrenic xxxx which may represent persistent left pleural effusion versus pleural scarring.
+2064.xml	multiple age-indeterminate left-sided rib fractures.
+2434.xml	mildly low lung volumes with xxxx atelectasis or scarring in the lung bases.
+2485.xml	bullous disease and upper lobe scars. decreasing right upper lobe cavity.
+3103.xml	atelectasis versus scar left lung base. otherwise unremarkable. xxxx xxxx for the opportunity to assist in the care of your patient. if there are any questions about this examination please xxxx. xxxx, xxxx certified radiologist, at xxxx.
+3319.xml	 left central venous catheter fracture at the level of the overlap of the clavicle and first rib. distal catheter tip may be within the azygos vein. 2. similar-appearing left midlung scarring.
+3344.xml	question of posterior 10 rib fracture, correlate with xxxx tenderness.
+15.xml	hyperexpanded lungs. xxxx right upper lobe scarring/atelectasis. no focal pneumonia.
+65.xml	 moderate hyperinflation of the lungs. 2. dilated pulmonary arteries. this may reflect pulmonary hypertension.
+144.xml	 severe hyperinflation. 2. stable left calcified hilar lymph xxxx.
+242.xml	hyperinflated lungs, air trapping versus inspiratory xxxx.
+673.xml	hyperinflation with chronic upper lobe reticular-nodular pleural-parenchymal opacities and hilar retraction. no gross interval change from xxxx. .
+677.xml	 left lower lobe opacities xxxx representing pneumonia. 2. enlargement of the central pulmonary arteries raising the question of pulmonary hypertension.
+695.xml	 hyperexpanded lungs.
+898.xml	xxxx change copd. chronic right middle lobe scar and atelectasis. pulmonary arterial hypertension.
+1249.xml	mildly hyperinflated lungs, air trapping versus inspiratory xxxx.
+2036.xml	 interval resolution of bibasilar airspace disease. 2. hyperinflation with chronic changes of emphysema. .
+2260.xml	chest. resolving pulmonary interstitial edema and pulmonary venous hypertension.
+2332.xml	hyperinflated lungs, air trapping versus inspiratory xxxx.
+2669.xml	lung hyperexpansion. no focal air space disease.
+2674.xml	hyperinflated lungs, air trapping versus inspiratory xxxx.
+2804.xml	hyperinflated lungs, air trapping versus inspiratory xxxx.
+2844.xml	hyperexpanded lungs with no focal airspace disease.
+2986.xml	hyperinflated lungs, air trapping versus inspiratory xxxx.
+3411.xml	hyperexpanded lungs without focal air space disease.
+3491.xml	there is xxxx peribronchial cuffing noted on the lateral view with fullness in the perihilar regions, more conspicuous than on the prior study. these can be manifestations of reactive airways disease. there is no lobar pneumonia. lungs are mildly hyperinflated.
+3629.xml	 pulmonary emphysema. 2. large bilateral pulmonary arteries suggestive of pulmonary arterial hypertension. 3. no suspicious nodules or are identified.
+3695.xml	 hyperinflated lungs, air trapping versus inspiratory xxxx. 2. question mild right atrial enlargement, no findings to suggest pulmonary edema.
+3857.xml	lungs are hyperinflated suggesting underlying emphysema. no xxxx consolidation or pleural effusion. no pneumothorax. heart size and mediastinal silhouette appear stable. no edema. couple scattered small calcified nodules compatible with old granulomatous disease.
+171.xml	low lung volumes with right base airspace disease.
+573.xml	xxxx airspace disease within the superior segment of the right lower lobe with moderate layering right pleural effusion with air fluid level. follow up to resolution or cross sectional imaging of the chest recommended to rule out malignancy.
+855.xml	streaky right lower lobe infiltrate versus atelectasis.
+877.xml	sternotomy xxxx are noted in xxxx. vascular clips are noted consistent with previous coronary artery bypass graft. the previously seen central venous line catheter has been removed. a left pleural effusion remains. underlying atelectasis is suspected. given differences in technique, the effusion is not xxxx to be significantly different but is xxxx favored to be lower end of moderate for size. osseous structures are remarkable for osteopenia, degenerative changes and there is some kyphosis noted to the thoracic spine.
+912.xml	 mildly prominent interstitial markings, which could represent interstitial edema. 2. mild blunting of the posterior sulcus, which could represent a small effusion.
+975.xml	7 mm right upper lobe lung nodule. recommend followup characterization with xxxx.
+1066.xml	right lower lobe airspace disease. .
+1112.xml	 low lung volumes with mild crowding.
+1213.xml	subsegmental atelectasis in the left lower lobe.
+1297.xml	large right pleural effusion and patchy left lower lobe airspace disease.
+1364.xml	 findings consistent with mild congestive heart failure.
+1464.xml	approximately 4.8 cm mass in the left lower hemithorax. this is favored to be arising from the chest wall and be pleural based. a ct of the chest is recommended for further evaluation. critical result notification documented through primordial.
+1595.xml	mild streakiness, subsegmental atelectasis versus early infiltrate right lower lobe.
+1639.xml	right upper and left lower lobe airspace disease. .
+1681.xml	xxxx left lower lobe airspace disease.
+1946.xml	right mid lung mass with mild right paratracheal soft tissue may be secondary to associated lymphadenopathy. further imaging with ct of the chest is recommended.
+2042.xml	mild interstitial edema.
+2404.xml	left lower lobe infiltrate.
+2494.xml	increasing density in the superior segment xxxx the left lower lobe, xxxx seen on lateral view, consistent worsening of known tumor.
+2665.xml	 right subclavian catheter, distal tip in the region of the subclavian vein at the level of clavicular head. 2. low lung volumes, with left lower lung atelectasis. .
+2672.xml	low lung volumes with airspace disease within the right lung base. followup radiographs following treatment is recommended to document resolution.
+2759.xml	 interval development of left lower lobe airspace disease. this may be due to atelectasis or infiltrate.
+2815.xml	2 cm noncalcified nodule in the right lower lobe would benefit from a xxxx.
+3098.xml	 patchy right lower lobe airspace disease may be due to atelectasis or infiltrate.
+3468.xml	mild heart failure versus volume overload.
+3596.xml	low lung volumes with crowding. mild left base atelectasis.
+16.xml	small nodular opacity in left upper lung may be secondary to superimposed structures or early infiltrate. followup evaluation in 2 weeks may be helpful.
+77.xml	small left retrocardiac opacity, may represent minimal atelectasis or small focus of airspace disease.
+109.xml	right upper lobe cavity, consistent with prior tuberculous infection. there is increased right upper lobe opacities xxxx compared to the prior study. this could represent reactivation of tuberculosis or other infection.
+163.xml	 increased opacity in the right upper lobe with xxxx associated atelectasis may represent focal consolidation or mass lesion with atelectasis. recommend chest ct for further evaluation. 2. xxxx opacity overlying the left 5th rib may represent focal airspace disease.
+228.xml	 patchy opacity left base, may represent evolving infiltrate. 2. small right pleural effusion. .
+257.xml	1 cm of apical opacity, scarring versus nodule. a noncontrast xxxx is indicated for further characterization. critical result notification documented through primordial.
+292.xml	patchy alveolar infiltrates in the right midlung probably within the anterior segment of the right upper lobe. 7 mm nodular opacity overlying the left lung most xxxx represents patient's nipple recommend nipple xxxx films as it may represent a lung nodule as well. patient being recalled from the xxxx room for the nipple xxxx film
+439.xml	 left midlung opacity, not well seen on prior exam, may represent focus of airspace disease. 2. stable left base opacities, xxxx scarring or atelectasis. 2. postsurgical changes as above. .
+489.xml	 6 mm left lung nodular opacity. recommend comparison with prior images. if prior images are not available than further evaluation with ct chest is recommended. old chest film from xxxx / xxxx from xxxx was reviewed and the questionable nodule was not xxxx seen.
+533.xml	there is a large masslike opacity in the right lung base which may represent a lung cancer. additional evaluation xxxx advised. right hilum appears prominent and may contain some enlarged lymph xxxx. some calcified granulomas are seen with within the right lung. unremarkable mediastinal contour. no effusions.
+543.xml	left base airspace disease and nodular opacity in the right midlung.
+606.xml	xxxx opacity in left lung base xxxx represents atelectasis or scarring.
+716.xml	copd and chronic opacities more pronounced in the lower lung xxxx.
+747.xml	enlarged cardiac silhouette with coarse perihilar and lower lobe interstitial opacities may be due to diffuse infection or heart failure. small pleural effusions.
+766.xml	apical lordotic frontal projection. moderate enlargement of the cardiac silhouette with fullness of the left atrial appendage and xxxx pulmonary outflow. mild aortic calcifications. hilar calcifications suggest a previous granulomatous process. xxxx opacities in the lingula may be compatible scarring or subsegmental atelectasis. no focal alveolar consolidation, no definite pleural effusion seen. chronic appearing irregular interstitial markings without typical findings of pulmonary edema.
+779.xml	small streaky opacity lateral right lung, subsegmental atelectasis versus scarring.
+861.xml	 asymmetric left suprahilar opacity, consider focal airspace disease or adenopathy. correlate clinically as to xxxx or symptoms of infection. recommend followup radiograph to document resolution.
+875.xml	interval improvement/resolution right patchy lateral base opacity. there is continued xxxx density in the right lateral and left base of the chest with minimal tenting of the lateral right hemidiaphragm . costophrenic xxxx blunting may persist but the left costophrenic xxxx is clipped from view. there is a right middle base calcific nodular density xxxx from old granulomatous disease. mild left apical pleural thickening. xxxx xxxx and valve xxxx. probable prominent epicardial fat pads on either side. thoracic spine dish.
+923.xml	low lung volumes with xxxx opacities consistent with focal atelectasis.
+1116.xml	mildly improved xxxx xxxx opacities, which may represent atelectasis, infiltrate and/or pleural effusions.
+1136.xml	vague nodular opacity in the right lobe, which could represent focal infiltrate or nodule. recommend followup to resolution.
+1235.xml	 round opacity measuring 2 cm in diameter within the posterior mediastinum. recommend further evaluation of this nodule with chest ct with iv contrast.
+1387.xml	 ill-defined opacity in the lingula. increased since the previous study. may represent increased atelectasis or scarring.
+1391.xml	left mid lung opacity noted, most compatible with atelectasis versus infiltrate. recommend clinical correlation. .
+1574.xml	 xxxx right midlung opacification xxxx representing atelectasis or infiltrate. 2. mild thoracolumbar spine levocurvature. .
+1634.xml	 left lower lobe air space opacities without significant change.
+1656.xml	 right lower lobe opacity may represent focal infiltrate versus atelectasis. 2. low lung volumes. .
+1740.xml	small right juxtahilar opacity may represent infiltrate in the setting of xxxx. followup chest x-xxxx is recommended at an appropriate interval following treatment to document xxxx.
+1790.xml	asymmetric right medial apical opacity which may be attributable to the sternoclavicular joint. upper lobe airspace disease or pulmonary nodule is not entirely excluded. recommend xxxx xxxx chest and apical lordotic view of the chest to further evaluate. findings and recommendations were discussed xxxx. xxxx in the xxxx department at xxxx a.m. xxxx/xxxx.
+1813.xml	xxxx opacities in the right upper lobe anterior segment which may represent atelectasis or infiltrate.
+1866.xml	left upper lobe opacities, cannot exclude mass lesions. recommend ct chest for further evaluation.
+1882.xml	possible subtle increased opacity in right apex otherwise unremarkable appearance of lung xxxx
+1961.xml	mild xxxx xxxx opacities compatible with residual atelectasis/scarring.
+2109.xml	opacification of the right middle and lower lobes.
+2156.xml	 xxxx opacities at the lateral left base. the appearance xxxx atelectasis.
+2185.xml	 vague nodular opacity near the anterior right first rib costicartilage junction. this may be calcification. 2. minimal streaky atelectasis in the right lung base.
+2207.xml	 low lung volumes. 2. opacity in the lingula is favored to represent prominent pericardial fat, but lingular atelectasis or infiltrate cannot be ruled out. .
+2396.xml	right middle lobe opacity which may represent a focal area of consolidation or atelectasis.
+2510.xml	 right upper lobe opacity which appears improved as compared to previous xxxx scan.
+2893.xml	 retrocardiac soft tissue density. the appearance suggests hiatal hernia. 2. xxxx left base bandlike opacity. the appearance suggests atelectasis.
+3184.xml	comparison xxxx, xxxx. xxxx right pleural opacity along the lower chest wall compatible with thickening and/or some loculated effusion, accompanied with some adjacent atelectasis / airspace disease within the right lung base. round opacity seen projecting adjacent to right hilum on pa view is xxxx on lateral view to represent some discoid atelectasis or fluid associated with the upper aspect of the xxxx fissure. some xxxx opacities compatible with scarring/chronic inflammatory change are seen within the left lower lung which are more conspicuous versus previous examination. stable mediastinal contour.
+3297.xml	posterior airspace opacity consistent with developing infection.
+3301.xml	stable retrocardiac airspace opacity.
+3444.xml	bandlike opacities in the right lung. appearance xxxx atelectasis.
+3472.xml	emphysematous changes with streaky opacities in the left perihilar and lingular regions, xxxx focal atelectasis and scarring.
+3526.xml	bandlike opacities in the right base. appearance suggests atelectasis.
+3605.xml	xxxx opacity projecting over the left midlung. comparison examinations would be useful. if no comparison examinations exist, xxxx would be helpful for further evaluation. .
+3647.xml	patchy right lower lobe opacities, xxxx infectious infiltrate.
+3806.xml	 xxxx opacities in the lingula. the appearance xxxx scarring or atelectasis. xxxx since the earlier study.
+3819.xml	xxxx opacity left lung base..
+7.xml	 minimal patchy bibasilar opacities, xxxx evolving pneumonia or atelectasis 2. xxxx bilateral pleural effusions
+46.xml	 malpositioned right picc line tip. now located in left innominate vein. 2. xxxx ill-defined focal opacities. these may represent small areas of pneumonia.
+63.xml	patchy opacities in right upper lobe, concerning for pneumonia, given history. right paratracheal density possibly reactive lymphadenopathy. followup evaluation to resolution is recommended.
+140.xml	stable left upper lobe collapse associated with parenchymal scarring and pleural thickening. findings consistent with previous active pulmonary tuberculosis pneumonia.
+158.xml	 moderate right-sided hemopneumothorax as detailed above. 2. probable lateral right 8th rib fracture. 3. endotracheal tube at the level of the carina, recommend retraction.
+176.xml	right middle lobe infiltrate consistent with pneumonia.
+324.xml	left lower lobe and right perihilar airspace disease. in the appropriate clinical setting, this is compatible with infection/pneumonia and followup radiography is recommended following treatment to document resolution. if clinical findings are discordant, a xxxx is recommended.
+357.xml	 right lower lobe airspace disease and small effusion probably representing pneumonia.
+377.xml	right ij catheter tip in proximal right atrium. no pneumothorax.
+474.xml	 patchy bilateral opacities, primarily in the lung bases, whose features are most consistent with pneumonia. aspiration or edema are also possible but less xxxx. 2. xxxx lung volumes 3. no pneumothorax
+501.xml	 right pleural effusion with adjacent atelectasis. 2. no definite findings of pneumonia.
+534.xml	right lower lobe pneumonia.
+540.xml	 previously identified small right pneumothorax is not visualized on today's exam. 2. minimal bibasilar atelectasis/airspace disease.
+575.xml	minimal perihilar opacity which could indicate an atypical pneumonia.
+579.xml	 right upper lobe opacity. without comparisons, this may represent a focal area of infection/pneumonia. however, correlation should be xxxx for possible tuberculosis exposure as tuberculosis infection could have this appearance. if discordant from clinical suspicion, or does not resolve on follow up imaging, consider further evaluation with xxxx scan. 2. enlargement of the cardiac silhouette.
+721.xml	the xxxx right pneumothorax and xxxx pneumomediastinum are less apparent. mid right clavicle fracture.
+725.xml	 xxxx bilateral lower lobe opacities. the appearance xxxx subsegmental atelectasis. 2. pneumoperitoneum, xxxx postoperative secondary to recent laparoscopic surgery.
+758.xml	exam limited by body habitus. grossly similar appearance of the heart and mediastinum. left upper lung nodule appears calcified and xxxx reflects granuloma. there is a small left pleural effusion, no definite right-sided pleural effusion and no visible pneumothorax. no focal consolidations.
+768.xml	patchy right middle lobe and lingular airspace disease compatible with multilobar pneumonia. .
+794.xml	 right lower lobe infiltrate, suggestive of pneumonia
+810.xml	 low lung volumes. 2. xxxx xxxx opacities. right base appears to represent atelectasis. left base could be atelectasis or pneumonia.
+828.xml	right upper lobe infiltrate consistent with pneumonia.
+846.xml	possible small right pleural effusion, without focal consolidation or pneumothorax.
+922.xml	stable right-sided subclavian central venous catheter with tip approximating the svc. stable right suprahilar opacity, compatible with history of right upper lobe mass. elevation of the right hemidiaphragm. right-sided pneumothorax noted measuring approximately 8 cm from the the right apex. stable postsurgical changes left axilla. degenerative changes thoracic spine. stable streaky opacities right base. xxxx opacity right midlung, question fluid level, incompletely evaluated, no recent xxxx for comparison.
+1020.xml	moderate hiatal hernia. no definite pneumonia.
+1026.xml	large right xxxx pneumothorax with associated complete collapse of the right lower lobe.
+1065.xml	right upper lobe pneumonia.
+1093.xml	recurrent right pneumothorax, complete collapse of the right lung, near 100%. right-to-left mediastinal shift is present, suggesting xxxx physiology.
+1097.xml	heart size is mildly enlarged. mediastinal silhouette appears stable with coarsely calcified and tortuous aorta. there is no edema. scattered lung calcifications from old granulomatous disease. no xxxx consolidation or pleural effusion. no pneumothorax. stable left lateral pleural thickening or scarring.
+1155.xml	suggestion of slightly more prominent interstitial markings, which may represent some bronchitic/bronchiolitis changes. no suspicious nodules, pneumonia, effusions, or chf. stable mediastinal contour.
+1279.xml	the right lower lobe pneumonia
+1280.xml	diffuse reticulonodular pattern bilaterally. the this may represent heart failure, opportunistic infection, or idiopathic interstitial pneumonitis. xxxx of chest for further characterization.
+1309.xml	 decreased lung volumes. bibasilar airspace opacities seen on lateral xxxx xxxx be atelectasis or possibly pneumonia.
+1320.xml	xxxx of copd and interstitial lung disease. no definite pneumonia. there does appear to be progression of changes since xxxx.
+1326.xml	right upper lobe pneumonia.
+1357.xml	findings most suggestive of infectious or reactive small airways disease. no focal pneumonia.
+1414.xml	 lingular airspace disease which in the setting of xxxx is concerning for pneumonia.
+1460.xml	right middle lobe airspace disease, which could represent pneumonia in the appropriate clinical setting.
+1465.xml	right middle lobe airspace disease may reflect atelectasis or pneumonia. .
+1514.xml	 small right apical pneumothorax. 2. right middle and lower lobe patchy opacities, xxxx residual atelectasis. 3. near-complete resolution of right-sided pleural effusion with xxxx residual. .
+1714.xml	bilateral increasing consolidations, consistent with multifocal pneumonia.
+1726.xml	subtle medial left basilar opacity could represent early pneumonia.
+1735.xml	patchy left lower lobe infiltrate and focal atelectasis, consistent with pneumonitis.
+1763.xml	 left lower lobe, superior segment, airspace consolidation, radiographic appearance most typical for pneumonia. based on patient's age, a followup chest x-xxxx to document resolution is recommended. 2. xxxx left parapneumonic pleural effusion.
+1764.xml	right lower lobe pneumonia.
+1809.xml	there is a left basilar airspace opacity, which is concerning for pneumonia. 2. right basilar atelectasis.
+1834.xml	 small 3.3 mm right-sided pneumothorax.
+1875.xml	mild, nonconsolidating right lower lobe airspace disease. this may represent an early pneumonia.
+1880.xml	streaky left retrocardiac airspace opacities, in the correct clinical setting this could represent a pneumonia.
+1901.xml	xxxx. xxxx patchy right lower lobe infiltrate consistent with pneumonia.
+1905.xml	 xxxx xxxx right-sided chest tube tip projects outside the thoracic cavity. no residual pneumothorax. 2. small residual pneumoperitoneum consistent with known colonic perforation. .
+1915.xml	 moderate right-sided pneumothorax measuring approximately 3.3 cm in the right apex. 2. minimally displaced right lateral 8th rib fracture probable nondisplaced right lateral 7th rib fracture.
+1959.xml	vague patchy opacity in the right midlung which may represent an early pneumonia given patient's history.
+1997.xml	developing left upper lobe consolidation and focal atelectasis, consistent with pneumonitis.
+2004.xml	xxxx left lower lobe nodule. the differential diagnosis includes round pneumonia and parenchymal mass. ct may be of further xxxx.
+2012.xml	probable xxxx posterior recess effusions with mild basilar atelectasis. no lobar pneumonia.
+2043.xml	a cardiac pacemaker/defibrillator device is redemonstration of the left chest wall with a single xxxx projecting over the right atrium and 2 leads projecting over the right ventricle. the cardiac silhouette is mildly enlarged, unchanged. no focal pulmonary consolidation. no pneumothorax. no pleural effusion. minimal degenerative changes of the thoracic spine. .
+2061.xml	stable postsurgical changes of left hemithorax with resolution of small apical pneumothorax and basilar air space opacities.
+2081.xml	interval development of bilateral upper lobe consolidation, right greater than left, xxxx representing pneumonia.. followup imaging to document resolution is recommended.
+2110.xml	 findings consistent with emphysema with interstitial thickening. this could be due to edema superimposed on emphysema or pneumonitis or fibrosis. xxxx chest if warranted clinically given recent onset of dyspnea. .
+2227.xml	 left upper lobe pneumonia.
+2248.xml	patchy airspace disease in the lingula without evidence of effusion. pneumonia is in the differential. a followup exam in 4 to 6 weeks should be considered to ensure resolution of this process.
+2272.xml	 patchy left lower lobe airspace disease, possibly atelectasis or pneumonia. 2. right mid lung subsegmental atelectasis.
+2283.xml	 stable left lung consolidation, possibly infectious pneumonia and/or aspiration. recommend followup radiographs after treatment to ensure complete resolution. 2. stable mild residual medial right basilar airspace disease.
+2298.xml	emphysema without superimposed pneumonia.
+2301.xml	vague area of focal airspace disease within the right midlung. there is raises concern for pneumonia. recommend followup after appropriate treatment to document complete resolution.
+2330.xml	stable heart size, mediastinal silhouette. no overt edema. no focal consolidation, pleural effusion or pneumothorax.
+2337.xml	 large left hydropneumothorax, with complete collapse of the left lung. 2. airspace and interstitial opacity within the right upper and lower lobes. possible apical cavitation. tuberculosis should be excluded clinically.
+2365.xml	bibasilar atelectasis. no pneumonia. .
+2369.xml	right upper lobe pneumonia.
+2371.xml	right lower lobe infiltrate. in the appropriate clinical setting this appearance is compatible with pneumonia. consider followup pa and lateral chest x-xxxx in 4-6 weeks to ensure resolution and exclude an underlying mass.
+2377.xml	 increased size of left pneumothorax, with xxxx partial collapse of the left upper and lower lobes. 2. small left pleural effusion/hemothorax.
+2381.xml	stable pacemaker generator within the left chest with 2 distal leads terminating in the right atrium and right ventricle, also in stable position. no pneumothorax.
+2394.xml	 small right pleural effusion. increased. 2. no pneumothorax is seen. 3. scattered xxxx of right base atelectasis.
+2399.xml	left lower lobe airspace disease consistent with pneumonia. associated right pleural effusion.
+2422.xml	 xxxx right apical pneumothorax measuring approximately 5 mm in thickness. 2. multiple right-sided rib fractures involving at xxxx the right anterior 5th through 9th ribs with mild displacement. 3. mild right basilar airspace disease, atelectasis versus contusion. .
+2533.xml	 probable xxxx residual left pneumothorax. 2. stable streaky left basilar airspace disease, possibly atelectasis.
+2636.xml	 question small amount of free intraperitoneal air on the right. this is xxxx to be postprocedural due to the recent abdominal surgery. 2. left basilar airspace opacity atelectasis versus pneumonitis.
+2644.xml	 focal opacity in the right midlung zone worrisome for pneumonitis. 2. mild pulmonary vascular congestion.
+2691.xml	patchy airspace disease on the lateral view, probably within the right lower lobe, xxxx a pneumonia superimposed on xxxx severe underlying emphysema. recommend following this process to resolution.
+2706.xml	possible area of pneumonitis right lower lobe.
+2712.xml	 left lower lobe airspace disease suspicious for pneumonia.
+2743.xml	worsening masslike opacification of right apex, suggesting worsening malignancy or malignancy with postobstructive pneumonia.
+2753.xml	probable right lower lobe pneumonia.
+2762.xml	heart size moderately enlarged for technique, aortic ectasia/tortuosity. right hemidiaphragm eventration. no focal alveolar consolidation, no definite pleural effusion seen. vascular redistribution without typical findings of pulmonary edema. no pneumothorax.
+2806.xml	right upper lobe pneumonia. consideration may be given for followup chest x-xxxx, following appropriate therapy.
+3022.xml	focal airspace disease in the right middle lobe. this is most concerning for pneumonia. recommend follow up to ensure resolution.
+3045.xml	right lower lobe pneumonia. consider followup radiograph to document resolution. .
+3067.xml	multifocal right-sided pneumonia.
+3106.xml	patchy, right lower lobe airspace disease. this xxxx represents pneumonia. recommend followup radiographs to ensure resolution.
+3122.xml	 right-sided small pleural effusion. 2. right base xxxx/fluid level. atypical location for a hiatal hernia. cannot exclude a right lower lobe cavity. correlation xxxx scan recommended. does not appear to be a hydropneumothorax or empyema.
+3130.xml	 right upper lobe pneumonia. 2. increasing large left pleural effusion. increasing left basilar opacity; atelectasis/airspace disease. 3. increased size of masslike left lung base opacity seen only on pa view. this could represent loculated fluid, atelectasis or a lung mass. ct scan is recommended to further evaluate. critical result notification documented through primordial. .
+3215.xml	concerning findings for fibrosis in the bases of the lungs. this can be further characterized with a xxxx of the chest. no confluent lobar pneumonia or pleural effusion.
+3246.xml	 stable appearance of xxxx scarring in the right upper lung associated with numerous xxxx xxxx granulomas. there are calcified right hilar lymph xxxx as xxxx. 2. xxxx opacities in the left lung base, xxxx atelectasis or scarring 3. low lung volumes 4. no focal air space opacities to suggest pneumonia.
+3252.xml	bibasilar airspace opacities, right greater than left. these findings are concerning for pneumonia.
+3264.xml	right upper lobe airspace consolidation please correlate clinically for pneumonia.
+3307.xml	stable xxxx silhouette. no pneumothorax. no focal consolidation. no large pleural effusion. unchanged pleural thickening at the visualized lung apices. mild osteopenia, degenerative changes. no fractures.
+3311.xml	emphysema without superimposed pneumonia.
+3326.xml	 left lower lobe atelectasis or pneumonia with small pleural effusion.
+3334.xml	stable chest with stable position right chest pacemaker and leads overlie the right atrium and right ventricle. no pneumothorax identified. .
+3350.xml	 suspected mild patchy right upper lobe pneumonia, for which clinical correlation is recommended.
+3368.xml	 cardiac defibrillator. leads appear intact. 2. no pneumothorax identified. 3. xxxx xxxx opacities. findings may reflect atelectasis and/or mild fibrotic change.
+3415.xml	 stable right middle lobe consolidation, most consistent with pneumonia.
+3418.xml	after further review with staff radiologist there is a right upper lobe focal opacity xxxx reflecting pneumonia.
+3425.xml	improved right lower lobe consolidation with mild residual or recurrent pneumonia. recommend radiographic follow up after appropriate therapy to confirm resolution. if there is no improvement consider xxxx for further evaluation. .
+3464.xml	underinflated lungs with elevation of the left diaphragm and patchy airspace disease in the left base, probably mostly atelectasis. it would be difficult to completely exclude a superimposed pneumonia. no pleural effusion.
+3493.xml	 stable position of cardiac pacemaker and leads. 2. no pleural effusion, pneumothorax or focal airspace disease.
+3514.xml	bibasilar pneumonia.
+3516.xml	small to moderate right apical pneumothorax.
+3575.xml	perihilar opacities which may represent changes due to bronchiectasis. vague nodular opacities in the right lung zone may represent dilated bronchi filled with mucous or possibly focal areas of peribronchial pneumonia.
+3597.xml	xxxx airspace opacity in the left upper lung which may represent streaky atelectasis or resolving pneumonia.
+3635.xml	 xxxx interstitial airspace opacities in the lower lobes most consistent with atypical infectious process in the setting of xxxx. 2. no pleural effusion or visible pneumothorax.
+3678.xml	 patchy left lower lobe airspace disease, concerning for pneumonia. 2. right upper lobe opacity, favoring scarring and/or granulomas. .
+3694.xml	 distal tip of the dual-lumen right internal jugular central venous catheter projects over the right atrium. 2. no apparent pneumothorax. 3. stable right upper lung lucency. ct chest may be helpful to further characterize.
+3730.xml	 increased elevation right hemidiaphragm with right basilar atelectasis. left basilar airspace disease and pleural effusion unchanged. 2. interval removal of right chest tube, no pneumothorax. .
+3731.xml	vague opacity at the left lung base which appears to be within the left lower lobe. this may represent resolving or developing pneumonia given the patient's history.
+3772.xml	 right upper lobe pneumonia. 2. rounded nodular opacity in the peripheral left upper lung which may represent further sequela infectious process versus other pathology including metastatic disease in a patient with thyroid cancer. follow up to resolution recommended.
+3879.xml	 left lower lobe pneumonia and minimal scarring or subsegmental atelectasis in the right lung base.
+23.xml	round density within the anterior segment of the right upper lobe. this may represent xxxx pulmonary nodule. the primordial xxxx was employed to notify the referring physicians of this critical finding. .
+87.xml	2.1 cm nodular density in the anterior costophrenic xxxx on the lateral view, which could represent overlapping shadows or actual pulmonary nodule. recommend followup with chest ct.
+118.xml	 stable and adequately placed xxxx. 2. prominent pulmonary vasculature, subpleural edema, and peribronchial cuffing suggestive of volume overload versus viral bronchiolitis.
+502.xml	 continued elevation of the left hemidiaphragm. 2. extensive post-op changes. 3. right pleural densities which may represent thickening or localized fluid. 4. air-fluid level below the right hemidiaphragm medially. although this could represent air-fluid within a xxxx of bowel, a subpulmonic process is a consideration. if clinically indicated, xxxx scan would better define this.
+550.xml	at xxxx 2 right lung pulmonary nodules concerning for<br>metastatic disease
+585.xml	interval decrease in size of numerous pulmonary nodules and masses. no nodules or masses are definitely seen on xxxx radiograph. .
+662.xml	 xxxx 1 xxxx nodular density seen on the pa view only projecting in the right midlung. recommend noncontrasted enhanced xxxx for evaluation of this nodule. does this patient have known xxxx factors for malignancy? 2. somewhat indistinct pulmonary interstitium possibly reflecting underlying pulmonary sarcoidosis
+787.xml	 haziness in the right lung apex and questionable right middle lobe pulmonary nodule. these may be explained by overlapping structures, xxxx chest would be useful for further evaluation. 2. emphysematous changes.
+1362.xml	 fracture deformity proximal right humerus. 2. no pulmonary consolidation.
+1542.xml	interval decrease of pulmonary vascular congestion and edema.
+1887.xml	 overall stable appearance of the chest suggesting pulmonary fibrosis.
+1904.xml	emphysematous changes without evidence of focal airspace disease or pulmonary edema.
+1949.xml	 right upper lobe pulmonary nodule, xxxx granuloma.
+1966.xml	multiple pulmonary nodules consistent with metastases. chest, abdomen, and pelvis ct with contrast would be helpful for further evaluation.
+2014.xml	large left pleural effusion with minimal residual left lung aeration. small right pleural effusion. right lung bronchovascular crowding and indistinct vascular margination which may be secondary to crowding, infiltrates or pulmonary edema. limited assessment of heart size due to obscured heart xxxx.
+2393.xml	exam quality limited by hypoinflation and rotation. considering technical factors heart size xxxx mildly enlarged, aortic calcifications and ectasia/tortuosity, mediastinal calcifications suggest a previous granulomatous process. no focal alveolar consolidation, no definite pleural effusion seen. bronchovascular crowding without typical findings of pulmonary edema.
+2439.xml	heart size mildly enlarged for technique. no focal alveolar consolidation, no definite pleural effusion seen. bronchovascular crowding without typical findings of pulmonary edema.
+2543.xml	 focal density overlying the right first rib and medial right clavicle. this could be bony in origin but an underlying pulmonary lesion cannot be excluded. no prior images are currently available for comparison. if outside images are available comparison is recommended. otherwise xxxx scan of the chest.
+2576.xml	hypoinflation with no visible active xxxx pulmonary disease.
+2619.xml	 extensive pulmonary bronchiectasis and scarring from cystic fibrosis, not significantly xxxx from prior. 2. left-sided medication injection xxxx has its tip projecting over the cavoatrial junction. .
+2658.xml	question mild pulmonary vascular congestion in a patient with prosthetic aortic valve.
+2823.xml	 vague increased sclerotic focus overlying the posterior spine on lateral xxxx, xxxx from prior study. although this may be artifact or a pulmonary density, a xxxx sclerotic focus within the thoracic xxxx cannot be excluded. bone scan would be helpful to evaluate for metastatic disease to the bone.
+2873.xml	prominence of the left hilum may be secondary to adenopathy or enlarged pulmonary vasculature. chest ct with contrast may be helpful for further clarification.
+3011.xml	 heart failure with pulmonary edema.
+3036.xml	mild interstitial prominence, xxxx chronic though could reflect early pulmonary edema.
+3125.xml	 round area of density measuring 9 x 8 cm in left superior lower lobe with interval increased size compared to prior imaging. recommend xxxx chest, abdomen and pelvis with contrast for further evaluation. dr. xxxx xxxx notified by the veriphy critical result notification xxxx of the left pulmonary mass and recommended followup xxxx chest, abdomen and pelvis with contrast at xxxx xxxx/xxxx.
+3294.xml	heart size mildly enlarged for technique, mediastinal contours appear similar to prior, right chest xxxx tip in the high svc. no focal alveolar consolidation, no definite pleural effusion seen. bronchovascular crowding without typical findings of pulmonary edema.
+3487.xml	interstitial pulmonary edema.
+3538.xml	prominent interstitial markings in the central lungs and bases which may be secondary to low lung volumes with bronchovascular crowding, differential considerations include interstitial infiltrates of inflammatory or infectious etiology and mild pulmonary edema. clinical correlation is recommended.
+3563.xml	findings of chronic obstructive pulmonary disease.
+3617.xml	exam quality limited by hypoventilation and apical lordotic frontal projection. considering technical factors heart size xxxx at xxxx mildly enlarged. no focal alveolar consolidation, no definite pleural effusion seen. bronchovascular crowding without typical findings of pulmonary edema.
+3789.xml	nodular densities projecting over right 5th and 6th ribs may healing rib fracture; xxxx recommended to rule-out underlying pulmonary nodule. xxxx level veriphy message was sent xxxx. xxxx regarding possible lung nodules at xxxx hours xxxx/xxxx.
+265.xml	copd.
+1334.xml	findings of copd and left base focal atelectasis.
+1556.xml	findings of copd with right costophrenic xxxx focal atelectasis.
+2104.xml	probable copd and old granulomatous disease.
+2120.xml	copd and old granulomatous disease.
+3162.xml	stable changes of copd.
+3330.xml	copd with almost completely resolved right apical pleural air collection.
+92.xml	right paratracheal mass, possibly lymphadenopathy. if there are no previous chest x-xxxx from elsewhere are xxxx scan with contrast xxxx be of further xxxx. dr. xxxx xxxx i discussed these findings in the xxxx department approximately xxxx hours xxxx, xxxx.
+107.xml	limited exam secondary to artifact within the upper abdomen (this does not represent free intra-abdominal xxxx). recommend repeat chest x-xxxx.
+134.xml	 left paraspinal/retrocrural adenopathy.
+195.xml	increasing prominence of the superior mediastinum may be secondary to enlarging thyroid mass. with increasing tortuosity of the thoracic aorta and concern for dissection, chest ct is recommended for further evaluation.
+352.xml	continued hypoinflation with right middle lobe focal atelectasis.
+398.xml	suspected left hemidiaphragm paralysis. consider a fluoroscopic evaluation for confirmation. consider xxxx of the neck and nasopharynx with intravenous contrast if there is no known potential xxxx. critical result notification documented through primordial.
+431.xml	large medial right upper lobe mass highly concerning for primary lung cancer. xxxx chest with intravenous contrast for further evaluation. xxxx xxxx xxxx. xxxx's xxxx was notified of this result at xxxxpm xxxx/xxxx and accepted receipt. results were faxed. .
+551.xml	 chest. no active disease. 2. the knee. advanced degenerative joint disease.
+663.xml	 left base airspace disease. 2. left venous catheter with tip in the right atrium.
+718.xml	hypoventilated lungs, but no focal consolidation.
+808.xml	minimal left costophrenic xxxx airspace disease and/or pleural effusion.
+809.xml	 focal atelectasis to the left lung, posterior to the heart.
+833.xml	right upper lobe lung nodules. recommend xxxx.
+934.xml	redemonstration of right chest wall mass compatible with patient's known breast carcinoma.
+966.xml	xxxx prominence of the mediastinal contour near the right hilum possibly representing the ascending aorta or mediastinal lymphadenopathy. ct chest with contrast may be helpful for further evaluation.
+1029.xml	 small left pleural effusion.
+1089.xml	vagal nerve stimulator overlying the left chest. minimal atelectasis in the right lung base. .
+1158.xml	xxxx xxxx atelectasis/airspace disease.
+1268.xml	1 cm nodule within the lung base, seen only on the lateral view. consider imaging correlation with xxxx abdomen study, if available. .
+1367.xml	moderate congestive cardiac failure.
+1386.xml	xxxx 7 xxxx nodular density at the left costophrenic xxxx. recommend ct scan for further evaluation.
+1547.xml	 elevated left diaphragm. 2. no focal airspace disease.
+1549.xml	xxxx xxxx right pleural effusion.
+1563.xml	streaky air space disease may represent infiltrate. .
+1566.xml	 right sided pleural effusion.
+1624.xml	interval placement of right humeral orthopedic xxxx, incompletely evaluated. if attention is desired to this area, consider dedicated shoulder x-xxxx.
+1665.xml	 small left pleural effusion. 2. mediastinal adenopathy noted but better evaluated on the xxxx xxxx ct.
+1784.xml	left base focal atelectasis, no infiltrates that would suggest active tuberculosis.
+1800.xml	 prominence of left hilum which could be due to nodule/lymph node or superimposing blood xxxx. in the absence of prior studies for comparison, xxxx chest for further evaluation. result notification xxxx primordial.
+1815.xml	xxxx right upper lobe mass, suspicious for neoplasm. ct of chest abdomen and head would be helpful for further evaluation.
+1857.xml	 possible infiltrates in the right lung and left base. consider ct for further evaluation, if clinically indicated.
+1908.xml	 right middle lobe lung nodule. corresponds to one of those seen on the previous xxxx scan. the other nodules seen on the chest ct scan are not xxxx identified. this may be due to xxxx having resolved or simply not being visible on the chest x-xxxx. a chest ct scan would be needed to be xxxx to determine whether these have xxxx resolved or xxxx not visible on the chest x-xxxx.
+1954.xml	there are 2 xxxx masses within the right chest, largest over the right heart xxxx measuring up to 3.8 x 3.4 cm. the appearance is concerning for metastatic disease, given the history of right-sided breast cancer.
+2092.xml	diffuse interstitial lung disease with pleural effusion.
+2097.xml	recurrent moderate sized left pleural effusion.
+2116.xml	 moderate right pleural effusion.
+2126.xml	interval improvement in aeration of lung bases and pleural effusions. residual small left effusion and questionable small right pleural effusion.
+2130.xml	large pericardial effusion.
+2267.xml	 chest. no active disease. 2. left knee. advanced degenerative joint disease.
+2281.xml	hypoinflation with lingular focal atelectasis.
+2456.xml	suspected left hilar mass with obstructive atelectasis. xxxx thorax for further characterization.
+2687.xml	 xxxx large hiatal hernia. 2. left base atelectasis.
+2711.xml	 right perihilar lung nodule. recommend ct thorax with contrast to further assess. dr. xxxx xxxx the findings xxxx.
+2821.xml	nodular density noted on recent pa chest radiograph xxxx represents an artifact. no nodules noted within the lungs on a recent outside xxxx from xxxx.
+2828.xml	findings consistent with left base airspace disease.
+2871.xml	xxxx onset right basal chest infection
+2908.xml	lingular nodule measuring 2.2 x 6 cm. recommend xxxx to further evaluate. the above findings and recommendations were discussed with xxxx xxxx at xxxx p.m. xxxx, xxxx xxxx telephone.
+2922.xml	left-sided dual-xxxx pacemaker as expected. possible xxxx effusions.
+2964.xml	xxxx left upper lobe infiltrate.
+3081.xml	 moderate sized right pleural effusion appears smaller than the prior study. 2. small left pleural effusion appears unchanged.
+3089.xml	 retained contrast in the distal esophagus. 2. unchanged right hilar mass.
+3145.xml	 left midlung mass. 2. left base effusion. 3. probable hiatal hernia.
+3156.xml	unchanged appearance of the chest with interstitial prominence the differential of which is xxxx but could include interstitial edema, infectious process or interstitial disease.
+3312.xml	 increased left hilar fullness. this may represent superimposed xxxx, adenopathy cannot be excluded on this exam. if there is clinical concern, suggest reference to prior exam or ct chest. 2. large hiatal hernia, increased in size from prior exam.
+3363.xml	minimal xxxx patchy airspace disease within the lingula, may reflect atelectasis or infiltrate.
+3463.xml	lines and tubes as above. moderate-to-large left pleural effusion, with adjacent airspace disease or atelectasis.
+3489.xml	prominent interstitial markings, xxxx represent xxxx bronchiolitis. no focal areas of consolidation. .
+3544.xml	multiple nodules in both the left and right lungs consistent with neoplasm. further workup could be initiated with contrasted ct of the chest, abdomen, and pelvis. dr. xxxx xxxx i discussed the findings and further workup suggestions by telephone approximately xxxx hours xxxx, xxxx.
+3545.xml	bony structures appear intact. minimal retrocardiac airspace disease.
+3667.xml	right lung base airspace disease and left base atelectasis.
+3759.xml	interval development of large right-sided pleural effusion. xxxx deformity noted at the upper thoracic vertebral body xxxx relates to xxxx deformity described on previous ct scan.
+3775.xml	findings concerning for interstitial edema or infection.
+3783.xml	multilobar airspace consolidation.
+3921.xml	
