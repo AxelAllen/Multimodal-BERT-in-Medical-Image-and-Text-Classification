@@ -33,6 +33,7 @@ This project repository is organized as follows:
     * *run_bert_text_only.ipynb* notebook
     * *image_submodel.ipynb* notebook
     * *baseline_experiments_results.ipynb* notebook
+    * textBert_utils.py src codes and utility functions for the *run_bert_text_only.ipynb* notebook
     
 *Note:* The NLCXR_front_png directory is NOT provided; please make this directory after cloning the repo and obtain the
 image files according to the instruction in the **/data** directory.  
