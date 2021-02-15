@@ -37,7 +37,7 @@ POOLING_BREAKDOWN = {1: (1, 1), 2: (2, 1), 3: (3, 1), 4: (2, 2), 5: (5, 1), 6: (
 MMBT_DIR_PARENT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(MMBT_DIR_PARENT, "data")
 MODELS_DIR = os.path.join(DATA_DIR, "models")
-SAVED_CHEXNET = os.path.join(MODELS_DIR, "SAVED_CHEXNET.pt")
+SAVED_CHEXNET = os.path.join(MODELS_DIR, "saved_chexnet.pt")
 
 
 class ImageEncoderDenseNet(nn.Module):

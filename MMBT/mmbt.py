@@ -2,6 +2,24 @@
 This is an adaptation of the modeling_mmbt.py implementation from Huggingface implementation of Kiela (2020) MMBT model.
 The original implementation was not executable and this implementation addresses the bugs.
 
+the original MMBTConfig class doesn't inherit all the config
+attributes of the BertConfig class.
+
+This is problematic in line 366 of modeling_mmbt.py: https://github.com/huggingface/transformers/blob/8ea412a86faa8e9edeeb6b5c46b08def06aa03ea/src/transformers/models/mmbt/modeling_mmbt.py#L183.
+
+I took some inspiration from MAG Bert and how they inherit the MAGBERTclassification from BERTPreTrainedModel, which is
+also how BertForSequenceClassification is done.
+
+When done this way, the BertPreTrainModel only accepts 2 positional arguments, so the transformer and image encoder
+components have to be moved into multimodal config as the MMBTModel needs these attributes.
+
+Hence, the MMBTConfig and MMBTModel modifications.
+
+The ModalEmbeddings class needs hidden_modal_size, which is part of the MMBTConfig. However, originally this attribute
+gets passed as part of the 'config' argument, which now has only the BertConfig and not MMBTConfig attributes.
+
+So the modifications in ModalEmbeddings has both BertConfig (self.config) and MMBTConfig attributes.
+
 The changes were made in the MMBTModel, ModalEmbedding, and MMBTforClassification class as well as the MMBTConfig class
 in the mmbt_config.py
 
@@ -18,7 +36,7 @@ from transformers.file_utils import add_start_docstrings, add_start_docstrings_t
     replace_return_docstrings
 from transformers import MMBTConfig
 
-logger = logging.get_logger(__name__)
+logger = logging.getLogger(__name__)
 
 _CONFIG_FOR_DOC = "MMBTConfig"
 
@@ -170,10 +188,13 @@ MMBT_INPUTS_DOCSTRING = r"""
             Whether or not to return a :class:`~transformers.file_utils.ModelOutput` instead of a plain tuple.
 """
 
+"""
 @add_start_docstrings(
     "The bare MMBT Model outputting raw hidden-states without any specific head on top.",
     MMBT_START_DOCSTRING,
-)
+)"""
+
+
 class MMBTModel(nn.Module, ModuleUtilsMixin):
     def __init__(self, config, mmbt_config):
         super().__init__()
@@ -183,9 +204,10 @@ class MMBTModel(nn.Module, ModuleUtilsMixin):
                                              mmbt_config.modal_hidden_size,
                                              mmbt_config.encoder,
                                              mmbt_config.transformer.embeddings)
-
+    """
     @add_start_docstrings_to_model_forward(MMBT_INPUTS_DOCSTRING)
     @replace_return_docstrings(output_type=BaseModelOutputWithPooling, config_class=_CONFIG_FOR_DOC)
+    """
     def forward(
             self,
             input_modal,
@@ -292,13 +314,16 @@ class MMBTModel(nn.Module, ModuleUtilsMixin):
         self.embeddings.word_embeddings = value
 
 
+"""
 @add_start_docstrings(
-    """
+    
     MMBT Model with a sequence classification/regression head on top (a linear layer on top of the pooled output)
-    """,
+    ,
     MMBT_START_DOCSTRING,
     MMBT_INPUTS_DOCSTRING,
-)
+)"""
+
+
 class MMBTForClassification(BertPreTrainedModel):
     r"""
         **labels**: (`optional`) ``torch.LongTensor`` of shape ``(batch_size,)``:
@@ -318,11 +343,12 @@ class MMBTForClassification(BertPreTrainedModel):
     Examples::
         # For example purposes. Not runnable.
         transformer = BertModel.from_pretrained('bert-base-uncased')
-        encoder = ImageEncoder(args)
-        model = MMBTForClassification(config, transformer, encoder)
+        encoder = ImageEncoderDenseNet(args)
+        model = MMBTForClassification(config, mmbt_config)
         outputs = model(input_modal, input_ids, labels=labels)
         loss, logits = outputs[:2]
     """
+
     def __init__(self, config, mmbt_config):
         super().__init__(config)
         self.num_labels = config.num_labels
