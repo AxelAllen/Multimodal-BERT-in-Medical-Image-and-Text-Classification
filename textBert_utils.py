@@ -21,6 +21,7 @@ import json
 import os
 import random
 import torch
+import torch.nn as nn
 import torch.nn.functional as F
 from torch.utils.data import TensorDataset
 from torch.utils.data import DataLoader, RandomSampler, SequentialSampler
@@ -378,3 +379,10 @@ def set_seed(wandb_config):
     torch.manual_seed(wandb_config.seed)
     if wandb_config.n_gpu > 0:
         torch.cuda.manual_seed_all(wandb_config.seed)
+
+
+def get_multiclass_criterion(jsonl_dataset_obj):
+    label_freqs = jsonl_dataset_obj.get_label_frequencies()
+    freqs = [label_freqs[label] for label in jsonl_dataset_obj.labels]
+    label_weights = (torch.tensor(freqs, dtype=torch.float) / len(jsonl_dataset_obj)) ** -1
+    return nn.BCEWithLogitsLoss(pos_weight=label_weights.cuda())

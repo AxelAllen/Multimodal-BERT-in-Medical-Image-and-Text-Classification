@@ -24,10 +24,10 @@ from collections import Counter
 import logging
 
 import torch
+import torch.nn as nn
 from PIL import Image
 from torch.utils.data import Dataset
 from torchvision.transforms import transforms
-
 
 logger = logging.getLogger(__name__)
 
@@ -59,7 +59,12 @@ class JsonlDataset(Dataset):
         start_token, sentence, end_token = sentence[0], sentence[1:-1], sentence[-1]
         sentence = sentence[:self.max_seq_length]
 
-        label = torch.LongTensor([self.labels.index(self.data[index]["label"])])
+        if self.n_classes > 2:
+            # multiclass
+            label = torch.zeros(self.n_classes)
+            label[[self.labels.index(tgt) for tgt in self.data[index]["label"]]] = 1
+        else:
+            label = torch.LongTensor([self.labels.index(self.data[index]["label"])])
 
         image = Image.open(os.path.join(self.img_data_dir, self.data[index]["img"])).convert("RGB")
         image = self.transforms(image)
@@ -102,6 +107,17 @@ def collate_fn(batch):
     img_end_token = torch.stack([row["image_end_token"] for row in batch])
 
     return text_tensor, mask_tensor, img_tensor, img_start_token, img_end_token, tgt_tensor
+
+
+def get_multiclass_labels():
+    """
+    0: normal
+    1: abnormal
+    2: notable findings/abnormalities that are not relevant or within normal limits (WNL)
+
+    :return:
+    """
+    return [0, 1, 2]
 
 
 def get_labels():
@@ -155,10 +171,18 @@ def load_examples(tokenizer, wandb_config, evaluate=False, test=False, data_dir=
         raise ValueError("invalid data file option!!")
 
     img_transforms = get_image_transforms()
-    labels = get_labels()
+
+    if wandb_config.multiclass:
+        labels = get_multiclass_labels()
+    else:
+        labels = get_labels()
+
     dataset = JsonlDataset(path, img_dir, tokenizer, img_transforms, labels, wandb_config.max_seq_length -
                            wandb_config.num_image_embeds - 2)
 
     logger.info(f"JsonlDataset from {path}\n")
 
     return dataset
+
+
+
