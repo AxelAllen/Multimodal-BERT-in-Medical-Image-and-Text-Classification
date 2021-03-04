@@ -5,9 +5,18 @@ from xml.dom import minidom
 dir_path = "./NLMCXR_reports/"
 impressions = {}
 findings = {}
+majors = {}
 both = {}
 
 
+for filename in listdir(dir_path):
+    if filename.endswith('.xml'):
+      mydoc = minidom.parse(dir_path+filename)
+      major = mydoc.getElementsByTagName('major')
+      if major[0].firstChild is not None:
+        majors.update({filename: major[0].firstChild.data})
+
+'''
 for filename in listdir(dir_path):
     text = ''
     if filename.endswith('.xml'):
@@ -36,4 +45,9 @@ with open('./files/findings_files.txt', 'w', encoding='utf-8') as w:
 with open('./files/all_text_files.txt', 'w', encoding='utf-8') as w:
   for f, txt in both.items():
     w.write(f'{f}, {txt}\n')
+'''
+
+with open('./files/majors_files.txt', 'w', encoding='utf-8') as w:
+  for f, m in majors.items():
+    w.write(f'{f}, {m}\n')
 
