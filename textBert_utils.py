@@ -82,7 +82,7 @@ def tokenize_and_encode_data(sentences_iterable, tokenizer_encoder, max_sent_len
     if multiclass:
         labeling_classes = get_multiclass_labels()
         num_labels = len(labeling_classes)
-        print(num_labels)
+        # print(num_labels)
         multilabels = []
 
     # For every sentence...
@@ -120,11 +120,14 @@ def tokenize_and_encode_data(sentences_iterable, tokenizer_encoder, max_sent_len
     attention_masks = torch.cat(attention_masks, dim=0)
 
     if multiclass:
-        input_labels = torch.cat(multilabels, dim=0)
+        input_labels = torch.vstack(multilabels)
     else:
         input_labels = torch.tensor(labels_iterable)
 
     # Print sentence 0, now as a list of IDs.
+    # print('input id shape', input_ids.shape)
+    # print('attention masks shape', attention_masks.shape)
+    # print('input labels shape', input_labels.shape)
     print('Original: ', sentences_iterable[0])
     print('Token IDs:', input_ids[0])
     print('Label:', input_labels[0])
@@ -160,8 +163,8 @@ def get_label_frequencies(labels_iterable):
 
 
 def get_multiclass_criterion(labels_iterable):
-    label_freqs = get_label_frequencies()
-    freqs = [label_freqs[label] for label in labels_iterable]
+    label_freqs = get_label_frequencies(labels_iterable)
+    freqs = [label_freqs[label] for label in get_multiclass_labels()]
     label_weights = (torch.tensor(freqs, dtype=torch.float) / len(labels_iterable)) ** -1
     return nn.BCEWithLogitsLoss(pos_weight=label_weights.cuda())
 
@@ -198,7 +201,7 @@ def make_dataloader(dataset, wandb_config, eval=False):
 
 def train(data_loaders_dict, wandb_config, model, criterion=None):
     """ Train the model """
-    comment = f"train_{os.path.splitext(wandb_config.train_file)[0]}_{wandb_config.train_batch_size}"
+    comment = f"textonly_train_{os.path.splitext(wandb_config.train_file)[0]}_{wandb_config.train_batch_size}"
     tb_writer = SummaryWriter(comment=comment)
 
     t_total = len(
@@ -349,7 +352,7 @@ def train(data_loaders_dict, wandb_config, model, criterion=None):
 
 def evaluate(data_loaders_dict, wandb_config, model, prefix="", test=False, criterion=None):
     if test:
-        comment = f"test_{os.path.splitext(wandb_config.test_file)[0]}_{wandb_config.eval_batch_size}"
+        comment = f"textonly_test_{os.path.splitext(wandb_config.test_file)[0]}_{wandb_config.eval_batch_size}"
         tb_writer = SummaryWriter(comment=comment)
 
     eval_output_dir = wandb_config.output_dir
