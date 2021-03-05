@@ -64,7 +64,7 @@ def get_train_val_test_data(wandb_config):
     return train, val, test
 
 
-def tokenize_and_encode_data(sentences_iterable, tokenizer_encoder, max_sent_len, labels_iterable, multiclass=False):
+def tokenize_and_encode_data(sentences_iterable, tokenizer_encoder, max_sent_len, labels_iterable, multiclass):
     """
     Tokenize and encode input data with BERT tokenizer into BERT compatible tokens (input ids), attention
     masks, and label tensors
@@ -82,6 +82,7 @@ def tokenize_and_encode_data(sentences_iterable, tokenizer_encoder, max_sent_len
     if multiclass:
         labeling_classes = get_multiclass_labels()
         num_labels = len(labeling_classes)
+        print(num_labels)
         multilabels = []
 
     # For every sentence...
@@ -109,7 +110,7 @@ def tokenize_and_encode_data(sentences_iterable, tokenizer_encoder, max_sent_len
         attention_masks.append(encoded_dict['attention_mask'])
 
         # for multilabeling
-        if multilabels:
+        if multiclass:
             multi_label = torch.zeros(num_labels)
             multi_label[labeling_classes.index(label)] = 1
             multilabels.append(multi_label)
@@ -131,7 +132,7 @@ def tokenize_and_encode_data(sentences_iterable, tokenizer_encoder, max_sent_len
     return input_ids, attention_masks, input_labels
 
 
-def make_tensor_dataset(sentences_iterable, labels_iterable, wandb_config, saved_model=False, multiclass=False):
+def make_tensor_dataset(sentences_iterable, labels_iterable, wandb_config, saved_model=False):
     """
     Make Torch TensorDataset
 
@@ -148,7 +149,7 @@ def make_tensor_dataset(sentences_iterable, labels_iterable, wandb_config, saved
         tokenizer = BertTokenizer.from_pretrained(wandb_config.tokenizer_name, do_lower_case=True)
     input_ids, attention_masks, labels_tensors = tokenize_and_encode_data(sentences_iterable, tokenizer,
                                                                           wandb_config.max_seq_length, labels_iterable,
-                                                                          multiclass)
+                                                                          wandb_config.multiclass)
     return TensorDataset(input_ids, attention_masks, labels_tensors)
 
 
