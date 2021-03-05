@@ -28,7 +28,7 @@ import torch.nn.functional as F
 from torch.utils.data import TensorDataset
 from torch.utils.data import DataLoader, RandomSampler, SequentialSampler
 from tqdm import tqdm, trange
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, f1_score
 
 from transformers import BertTokenizer
 from transformers import (
@@ -64,21 +64,26 @@ def get_train_val_test_data(wandb_config):
     return train, val, test
 
 
-def tokenize_and_encode_data(sentences_iterable, tokenizer_encoder, max_sent_len, labels_iterable):
+def tokenize_and_encode_data(sentences_iterable, tokenizer_encoder, max_sent_len, labels_iterable, multiclass=False):
     """
     Tokenize and encode input data with BERT tokenizer into BERT compatible tokens (input ids), attention
     masks, and label tensors
 
+    :param multiclass: bool True if multilabel
     :param sentences_iterable: raw sentences
     :param tokenizer_encoder: name of BERT tokenizer
     :param max_sent_len: default = 256, but cannot exceed 512
-    :param labels_iterable: class labels
+    :param labels_iterable: class labels; array-like or iterable, but cannot be a generator
     :return: input_ids, attention masks, and label torch.Tensors
     """
     # Tokenize all of the sentences and map the tokens to thier word IDs.
     input_ids = []
     attention_masks = []
-    multilabels = []
+    if multiclass:
+        labeling_classes = get_multiclass_labels()
+        num_labels = len(labeling_classes)
+        multilabels = []
+
     # For every sentence...
     for sent, label in zip(sentences_iterable, labels_iterable):
         # `encode_plus` will:
@@ -104,17 +109,16 @@ def tokenize_and_encode_data(sentences_iterable, tokenizer_encoder, max_sent_len
         attention_masks.append(encoded_dict['attention_mask'])
 
         # for multilabeling
-        labeling_classes = get_multiclass_labels()
-        num_labels = len(labeling_classes)
-        multi_label = torch.zeros(num_labels)
-        multi_label[labeling_classes.index(label)] = 1
-        multilabels.append(multi_label)
+        if multilabels:
+            multi_label = torch.zeros(num_labels)
+            multi_label[labeling_classes.index(label)] = 1
+            multilabels.append(multi_label)
 
     # Convert the lists into tensors.
     input_ids = torch.cat(input_ids, dim=0)
     attention_masks = torch.cat(attention_masks, dim=0)
 
-    if num_labels > 2:
+    if multiclass:
         input_labels = torch.cat(multilabels, dim=0)
     else:
         input_labels = torch.tensor(labels_iterable)
@@ -122,15 +126,16 @@ def tokenize_and_encode_data(sentences_iterable, tokenizer_encoder, max_sent_len
     # Print sentence 0, now as a list of IDs.
     print('Original: ', sentences_iterable[0])
     print('Token IDs:', input_ids[0])
-    print('Labels:', input_labels[0])
+    print('Label:', input_labels[0])
 
     return input_ids, attention_masks, input_labels
 
 
-def make_tensor_dataset(sentences_iterable, labels_iterable, wandb_config, saved_model=False):
+def make_tensor_dataset(sentences_iterable, labels_iterable, wandb_config, saved_model=False, multiclass=False):
     """
     Make Torch TensorDataset
 
+    :param multiclass: True if multilabel classification
     :param sentences_iterable:
     :param labels_iterable:
     :param wandb_config:
@@ -142,7 +147,8 @@ def make_tensor_dataset(sentences_iterable, labels_iterable, wandb_config, saved
     else:
         tokenizer = BertTokenizer.from_pretrained(wandb_config.tokenizer_name, do_lower_case=True)
     input_ids, attention_masks, labels_tensors = tokenize_and_encode_data(sentences_iterable, tokenizer,
-                                                                          wandb_config.max_seq_length, labels_iterable)
+                                                                          wandb_config.max_seq_length, labels_iterable,
+                                                                          multiclass)
     return TensorDataset(input_ids, attention_masks, labels_tensors)
 
 
@@ -152,10 +158,10 @@ def get_label_frequencies(labels_iterable):
     return label_freqs
 
 
-def get_multiclass_criterion(jsonl_dataset_obj):
+def get_multiclass_criterion(labels_iterable):
     label_freqs = get_label_frequencies()
-    freqs = [label_freqs[label] for label in jsonl_dataset_obj.labels]
-    label_weights = (torch.tensor(freqs, dtype=torch.float) / len(jsonl_dataset_obj)) ** -1
+    freqs = [label_freqs[label] for label in labels_iterable]
+    label_weights = (torch.tensor(freqs, dtype=torch.float) / len(labels_iterable)) ** -1
     return nn.BCEWithLogitsLoss(pos_weight=label_weights.cuda())
 
 
@@ -189,7 +195,7 @@ def make_dataloader(dataset, wandb_config, eval=False):
 """# Fine Tune BERT for Classification"""
 
 
-def train(data_loaders_dict, wandb_config, model):
+def train(data_loaders_dict, wandb_config, model, criterion=None):
     """ Train the model """
     comment = f"train_{os.path.splitext(wandb_config.train_file)[0]}_{wandb_config.train_batch_size}"
     tb_writer = SummaryWriter(comment=comment)
@@ -226,7 +232,7 @@ def train(data_loaders_dict, wandb_config, model):
 
     global_step = 0
     tr_loss, logging_loss = 0.0, 0.0
-    best_accuracy, n_no_improve = 0, 0
+    best_eval_metric, n_no_improve = 0, 0
     model.train()
     model.zero_grad()
     optimizer.zero_grad()
@@ -245,16 +251,25 @@ def train(data_loaders_dict, wandb_config, model):
             b_input_mask = batch[1]
             b_labels = batch[2]
 
-            result = model(b_input_ids,
-                           token_type_ids=None,
-                           attention_mask=b_input_mask,
-                           labels=b_labels,
-                           return_dict=True)
+            if wandb_config.multiclass:
+                result = model(b_input_ids,
+                               token_type_ids=None,
+                               attention_mask=b_input_mask,
+                               labels=None,
+                               return_dict=True)
+            else:
+                result = model(b_input_ids,
+                               token_type_ids=None,
+                               attention_mask=b_input_mask,
+                               labels=b_labels,
+                               return_dict=True)
 
-            loss = result.loss
             logits = result.logits
 
-            # loss = criterion(logits, labels)
+            if wandb_config.multiclass:
+                loss = criterion(logits, b_labels)
+            else:
+                loss = result.loss
 
             if wandb_config.gradient_accumulation_steps > 1:
                 loss = loss / wandb_config.gradient_accumulation_steps
@@ -274,7 +289,11 @@ def train(data_loaders_dict, wandb_config, model):
                     logs = {}
                     if wandb_config.evaluate_during_training:
                         # Only evaluate when single GPU otherwise metrics may not average well
-                        results = evaluate(data_loaders_dict, wandb_config, model, f"checkpoint_{global_step}")
+                        if wandb_config.multiclass:
+                            results = evaluate(data_loaders_dict, wandb_config, model, f"checkpoint_{global_step}",
+                                               False, criterion)
+                        else:
+                            results = evaluate(data_loaders_dict, wandb_config, model, f"checkpoint_{global_step}")
                         for key, value in results.items():
                             eval_key = "eval_{}".format(key)
                             logs[eval_key] = value
@@ -302,9 +321,18 @@ def train(data_loaders_dict, wandb_config, model):
                     # torch.save(wandb_config, os.path.join(output_dir, "training_args.bin"))
                     logger.info("Saving model checkpoint to %s", output_dir)
 
-        results = evaluate(data_loaders_dict, wandb_config, model, f"epoch_{epoch}")
-        if results["accuracy"] > best_accuracy:
-            best_accuracy = results["accuracy"]
+        if wandb_config.multiclass:
+            results = evaluate(data_loaders_dict, wandb_config, model, f"epoch_{epoch}", False, criterion)
+        else:
+            results = evaluate(data_loaders_dict, wandb_config, model, f"epoch_{epoch}")
+
+        if wandb_config.multiclass:
+            eval_result = results["micro_f1"]
+        else:
+            eval_result = results["accuracy"]
+
+        if eval_result > best_eval_metric:
+            best_eval_metric = eval_result
             n_no_improve = 0
         else:
             n_no_improve += 1
@@ -318,7 +346,7 @@ def train(data_loaders_dict, wandb_config, model):
     return global_step, tr_loss / global_step
 
 
-def evaluate(data_loaders_dict, wandb_config, model, prefix="", test=False):
+def evaluate(data_loaders_dict, wandb_config, model, prefix="", test=False, criterion=None):
     if test:
         comment = f"test_{os.path.splitext(wandb_config.test_file)[0]}_{wandb_config.eval_batch_size}"
         tb_writer = SummaryWriter(comment=comment)
@@ -351,32 +379,48 @@ def evaluate(data_loaders_dict, wandb_config, model, prefix="", test=False):
             b_input_mask = batch[1]
             b_labels = batch[2]
 
-            result = model(b_input_ids,
-                           token_type_ids=None,
-                           attention_mask=b_input_mask,
-                           labels=b_labels,
-                           return_dict=True)
-
-            tmp_eval_loss = result.loss
+            if wandb_config.multiclass:
+                result = model(b_input_ids,
+                               token_type_ids=None,
+                               attention_mask=b_input_mask,
+                               labels=None,
+                               return_dict=True)
+            else:
+                result = model(b_input_ids,
+                               token_type_ids=None,
+                               attention_mask=b_input_mask,
+                               labels=b_labels,
+                               return_dict=True)
             logits = result.logits  # model outputs are always tuple in transformers (see doc)
-            # tmp_eval_loss = criterion(logits, labels)
+
+            if wandb_config.multiclass:
+                tmp_eval_loss = criterion(logits, b_labels)
+            else:
+                tmp_eval_loss = result.loss
+
             eval_loss += tmp_eval_loss.mean().item()
         nb_eval_steps += 1
-        # Move logits and labels to CPU            
-        pred = F.softmax(logits, dim=1).argmax(dim=1).cpu().detach().numpy()
+        # Move logits and labels to CPU
+        if wandb_config.multiclass:
+            pred = torch.sigmoid(logits).cpu().detach().numpy() > 0.5
+        else:
+            pred = F.softmax(logits, dim=1).argmax(dim=1).cpu().detach().numpy()
         out_label_id = b_labels.detach().cpu().numpy()
         preds.append(pred)
         out_label_ids.append(out_label_id)
 
     eval_loss = eval_loss / nb_eval_steps
 
-    preds = [l for sl in preds for l in sl]
-    out_label_ids = [l for sl in out_label_ids for l in sl]
-
-    result = {
-        "loss": eval_loss,
-        "accuracy": accuracy_score(out_label_ids, preds)
-    }
+    result = {"loss": eval_loss}
+    if wandb_config.multiclass:
+        tgts = np.vstack(out_label_ids)
+        preds = np.vstack(preds)
+        result["macro_f1"] = f1_score(tgts, preds, average="macro")
+        result["micro_f1"] = f1_score(tgts, preds, average="micro")
+    else:
+        preds = [l for sl in preds for l in sl]
+        out_label_ids = [l for sl in out_label_ids for l in sl]
+        result["accuracy"] = accuracy_score(out_label_ids, preds)
 
     output_eval_file = os.path.join(eval_output_dir, prefix, "eval_results.txt")
     if not os.path.exists(output_eval_file):
@@ -406,6 +450,3 @@ def set_seed(wandb_config):
     torch.manual_seed(wandb_config.seed)
     if wandb_config.n_gpu > 0:
         torch.cuda.manual_seed_all(wandb_config.seed)
-
-
-
