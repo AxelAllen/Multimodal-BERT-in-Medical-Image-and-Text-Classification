@@ -62,7 +62,7 @@ class JsonlDataset(Dataset):
         if self.n_classes > 2:
             # multiclass
             label = torch.zeros(self.n_classes)
-            label[[self.labels.index(tgt) for tgt in self.data[index]["label"]]] = 1
+            label[self.labels.index(self.data[index]["label"])] = 1
         else:
             label = torch.LongTensor([self.labels.index(self.data[index]["label"])])
 
@@ -80,7 +80,7 @@ class JsonlDataset(Dataset):
     def get_label_frequencies(self):
         label_freqs = Counter()
         for row in self.data:
-            label_freqs.update(row["label"])
+            label_freqs.update([row["label"]])
         return label_freqs
 
 
@@ -185,4 +185,8 @@ def load_examples(tokenizer, wandb_config, evaluate=False, test=False, data_dir=
     return dataset
 
 
-
+def get_multiclass_criterion(jsonl_dataset_obj):
+    label_freqs = jsonl_dataset_obj.get_label_frequencies()
+    freqs = [label_freqs[label] for label in jsonl_dataset_obj.labels]
+    label_weights = (torch.tensor(freqs, dtype=torch.float) / len(jsonl_dataset_obj)) ** -1
+    return nn.BCEWithLogitsLoss(pos_weight=label_weights.cuda())

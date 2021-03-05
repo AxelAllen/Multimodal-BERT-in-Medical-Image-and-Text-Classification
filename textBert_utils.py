@@ -15,6 +15,8 @@ be accessed [here.](https://github.com/huggingface/transformers/blob/8ea412a86fa
 
 """
 import logging
+from collections import Counter
+from MMBT.mmbt_utils import get_multiclass_labels, get_labels
 import pandas as pd
 import numpy as np
 import json
@@ -76,9 +78,9 @@ def tokenize_and_encode_data(sentences_iterable, tokenizer_encoder, max_sent_len
     # Tokenize all of the sentences and map the tokens to thier word IDs.
     input_ids = []
     attention_masks = []
-
+    multilabels = []
     # For every sentence...
-    for sent in sentences_iterable:
+    for sent, label in zip(sentences_iterable, labels_iterable):
         # `encode_plus` will:
         #   (1) Tokenize the sentence.
         #   (2) Prepend the `[CLS]` token to the start.
@@ -101,14 +103,26 @@ def tokenize_and_encode_data(sentences_iterable, tokenizer_encoder, max_sent_len
         # And its attention mask (simply differentiates padding from non-padding).
         attention_masks.append(encoded_dict['attention_mask'])
 
+        # for multilabeling
+        labeling_classes = get_multiclass_labels()
+        num_labels = len(labeling_classes)
+        multi_label = torch.zeros(num_labels)
+        multi_label[labeling_classes.index(label)] = 1
+        multilabels.append(multi_label)
+
     # Convert the lists into tensors.
     input_ids = torch.cat(input_ids, dim=0)
     attention_masks = torch.cat(attention_masks, dim=0)
-    input_labels = torch.tensor(labels_iterable)
+
+    if num_labels > 2:
+        input_labels = torch.cat(multilabels, dim=0)
+    else:
+        input_labels = torch.tensor(labels_iterable)
 
     # Print sentence 0, now as a list of IDs.
     print('Original: ', sentences_iterable[0])
     print('Token IDs:', input_ids[0])
+    print('Labels:', input_labels[0])
 
     return input_ids, attention_masks, input_labels
 
@@ -130,6 +144,19 @@ def make_tensor_dataset(sentences_iterable, labels_iterable, wandb_config, saved
     input_ids, attention_masks, labels_tensors = tokenize_and_encode_data(sentences_iterable, tokenizer,
                                                                           wandb_config.max_seq_length, labels_iterable)
     return TensorDataset(input_ids, attention_masks, labels_tensors)
+
+
+def get_label_frequencies(labels_iterable):
+    label_freqs = Counter()
+    label_freqs.update(labels_iterable)
+    return label_freqs
+
+
+def get_multiclass_criterion(jsonl_dataset_obj):
+    label_freqs = get_label_frequencies()
+    freqs = [label_freqs[label] for label in jsonl_dataset_obj.labels]
+    label_weights = (torch.tensor(freqs, dtype=torch.float) / len(jsonl_dataset_obj)) ** -1
+    return nn.BCEWithLogitsLoss(pos_weight=label_weights.cuda())
 
 
 def make_dataloader(dataset, wandb_config, eval=False):
@@ -381,8 +408,4 @@ def set_seed(wandb_config):
         torch.cuda.manual_seed_all(wandb_config.seed)
 
 
-def get_multiclass_criterion(jsonl_dataset_obj):
-    label_freqs = jsonl_dataset_obj.get_label_frequencies()
-    freqs = [label_freqs[label] for label in jsonl_dataset_obj.labels]
-    label_weights = (torch.tensor(freqs, dtype=torch.float) / len(jsonl_dataset_obj)) ** -1
-    return nn.BCEWithLogitsLoss(pos_weight=label_weights.cuda())
+
