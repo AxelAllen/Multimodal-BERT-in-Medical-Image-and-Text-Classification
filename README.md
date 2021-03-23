@@ -3,6 +3,8 @@
 
 This project is part of the Software Project "Language, Action and Perception" at University of Saarland, WS 2021.
 
+The repository is still a work in progress as the project goes on.
+
 ## This Directory File Organization
 
 This project repository is organized as follows:
@@ -136,7 +138,7 @@ experiment results.
    
 #### Alternative Instructions
 
-We have created a [shared Google Drive - LAP_MMBT](https://drive.google.com/drive/folders/1gwgx4ZApTKz5fN6SG9YkiVjVCZ0WNGeH?usp=sharing) 
+We have created a [shared Google Drive - LAP](https://drive.google.com/drive/folders/1gwgx4ZApTKz5fN6SG9YkiVjVCZ0WNGeH?usp=sharing) 
 for this project where all the scripts, data, and Jupyter/Colab Notebooks in this repo have been uploaded. 
 Simply download this drive and re-upload to your own Google Drive for testing. (i.e. you can only _view_ files
 in this Drive and comment, but you cannot edit them.)

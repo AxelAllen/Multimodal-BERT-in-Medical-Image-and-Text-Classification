@@ -14,10 +14,11 @@ parser = argparse.ArgumentParser(description='integrated-gradients')
 parser.add_argument('--cuda', action='store_true', help='if use the cuda to do the accelartion')
 parser.add_argument('--model-type', type=str, default='inception', help='the type of network')
 parser.add_argument('--img', type=str, default='01.jpg', help='the images name')
-parser.add_argument('--drive', type=bool, default=False, help='path to google drive folder')
 
 if __name__ == '__main__':
-    current_folder = Path().resolve()
+    # resolve directory
+    FILE_DIR = Path().resolve()
+    
     args = parser.parse_args()
     # check if have the space to save the results
     if not os.path.exists('results/'):
@@ -37,15 +38,15 @@ if __name__ == '__main__':
     elif args.model_type == 'densenet':
         model = models.densenet121(pretrained=True)
     elif args.model_type == 'chexnet':
-        if args.drive == True:
-            model = torch.load('/content/drive/MyDrive/LAP/models/saved_chexnet.pt')
-        else:
-            model = torch.load(os.path.join(current_folder, 'models') + '/' + 'saved_chexnet.pt')
+        DATA_DIR = os.path.join(FILE_DIR, 'data')
+        MODELS_DIR = os.path.join(DATA_DIR, 'models')
+        SAVED_CHEXNET = os.path.join(MODELS_DIR, "saved_chexnet.pt")
+        model = torch.load(SAVED_CHEXNET)
     model.eval()
     if args.cuda:
         model.cuda()
     # read the image
-    img = cv2.imread(os.path.join(current_folder, 'integrated_gradients') + '/examples/' + args.img)
+    img = cv2.imread(os.path.join(FILE_DIR, 'integrated_gradients') + '/examples/' + args.img)
     
     if args.model_type == 'inception':
         # the input image's size is different
@@ -68,4 +69,4 @@ if __name__ == '__main__':
     img_integrated_gradient = visualize(attributions, img, clip_above_percentile=99, clip_below_percentile=0, overlay=False)
     output_img = generate_entrie_images(img, img_gradient, img_gradient_overlay, img_integrated_gradient, \
                                         img_integrated_gradient_overlay)
-    cv2.imwrite(os.path.join(current_folder, 'integrated_gradients') + '/examples/' + args.model_type + '/' + args.img, np.uint8(output_img))
+    cv2.imwrite(os.path.join(FILE_DIR, 'integrated_gradients') + '/examples/' + args.model_type + '/' + args.img, np.uint8(output_img))
