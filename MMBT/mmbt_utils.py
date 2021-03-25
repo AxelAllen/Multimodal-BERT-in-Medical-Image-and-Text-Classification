@@ -109,6 +109,31 @@ def collate_fn(batch):
     return text_tensor, mask_tensor, img_tensor, img_start_token, img_end_token, tgt_tensor
 
 
+def collate_fn_mask_all_text(batch):
+    """
+    Specify batching for the torch Dataloader function
+
+    :param batch: each batch of the JsonlDataset
+    :return: text tensor, attention mask tensor, img tensor, modal start token, modal end token, label
+    """
+    lens = [len(row["sentence"]) for row in batch]
+    bsz, max_seq_len = len(batch), max(lens)
+
+    mask_tensor = torch.zeros(bsz, max_seq_len, dtype=torch.long)
+    text_tensor = torch.zeros(bsz, max_seq_len, dtype=torch.long)
+
+    for i_batch, (input_row, length) in enumerate(zip(batch, lens)):
+        text_tensor[i_batch, :length] = input_row["sentence"]
+        #mask_tensor[i_batch, :length] = 1
+
+    img_tensor = torch.stack([row["image"] for row in batch])
+    tgt_tensor = torch.stack([row["label"] for row in batch])
+    img_start_token = torch.stack([row["image_start_token"] for row in batch])
+    img_end_token = torch.stack([row["image_end_token"] for row in batch])
+
+    return text_tensor, mask_tensor, img_tensor, img_start_token, img_end_token, tgt_tensor
+
+
 def get_multiclass_labels():
     """
     0: normal
