@@ -390,6 +390,7 @@ class MMBTForClassification(BertPreTrainedModel):
             head_mask=head_mask,
             inputs_embeds=inputs_embeds,
             return_dict=return_dict,
+            output_attentions=True
         )
 
         pooled_output = outputs[1]
