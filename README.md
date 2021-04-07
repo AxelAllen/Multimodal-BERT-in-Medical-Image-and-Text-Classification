@@ -222,8 +222,13 @@ Although our Text-only model seems to perform slightly better than our multimoda
 
 ### Attention
 
+We were curious to further investigate these cases where the text model makes a mistake and the multimodal model corrects it. Therefore, we decided to visualize the attention weights of some of these cases using the BertViz visualization tool by Jesse Vig (2019). We compared the attention weights of the text-only model to the attention weights of our multimodal model (MMBT) to see whether there are any visible differences between these cases. In the multimodal model, the image embeddings are projected into BERT's text token space and they are propagated through the self-attention layers, just like the normal text embeddings. This allows us to look at the attention weights of these image embeddings and see whether they attend more or less to other tokens and whether these connections can reveal anything about what leads the multimodal model to correct some of these cases where the text model fails. In addition, visualizing attention weights can help reveal whether there are any general patterns that explain how the attention mechanism contributes to making predctions.
+
+The results of this experiment will be updated here soon.
 
 ### Zero Shot
+
+One additional experiment we conducted was to use our multimodal model in a zero-shot setting. Since our image model is the weak link in our multimodal setting, with clearly the lowest accuracy, we were curious to see whether using our finetuned multimodal model in a scenario where we mask all the text input and rely solely on the image modality would lead to a better performance than our image only model achieves. The results of this experiment do not support this hypothesis and will be updated here soon.
 
 
 ### Integrated Gradients
