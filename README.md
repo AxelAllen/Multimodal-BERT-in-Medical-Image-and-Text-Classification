@@ -185,6 +185,27 @@ information regarding the dataset.
 
 ## Results
 
+We evaluated our model on 2 different labeling schemes. In our main labeling scheme we extracted the labels from the 'major' field in the radiologists report. We labeled everything tagged as 'normal' as 0 and everything else as  'abnormal' or 1. This led to approximately 40% normal cases and 60% abnormal cases. In addition, we experimented using the 'impression' field in the radiologists report as the basis for our labels, as this is likely what a medical professional would look at in determining the significance of the report.  This led to approximately 60% normal cases and 40% abnormal cases, the exact opposite of our main labeling scheme. We then evaluated our models on both of these labeling schemes and the results can be seen below.
+
+#### Unimodal vs. Multimodal models
+
+| Model             | MMBT (major)      | MMBT (impression) |
+|-------------------|-------------------|-------------------|
+| Multimodal        | 0.96              | 0.86              |
+| Text-only         | 0.97              | 0.88              |
+| Image-only        | 0.74              | 0.74              |
+
+
+In addition, we tried a third multilabel labeling scheme, which was based on the 'major' labels. However, we created a third category for cases that were borderline abnormal and did not involve any kinds of diseases, but other abnormalities, such as medical instruments or devices. We report our multilabel results in F1 instead of accuracy. The results can be seen in the table below.
+
+#### Findings: Binary vs. Multilabel
+
+| Model             | MMBT - Binary (accuracy)      | MMBT - Multilabel (macro/micro F1) |
+|-------------------|-------------------------------|------------------------------------|
+| Multimodal        | 0.96                          | 0.82/0.93                          |
+| Text-only         | 0.97                          | 0.86/0.94                          |
+| Image-only        | 0.74                          | N/A                                |
+
 
 ## Experiments
 
