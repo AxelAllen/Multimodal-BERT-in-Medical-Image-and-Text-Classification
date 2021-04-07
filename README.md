@@ -185,7 +185,7 @@ information regarding the dataset.
 
 ## Results
 
-We evaluated our model on 2 different labeling schemes. In our main labeling scheme we extracted the labels from the 'major' field in the radiologists report. We labeled everything tagged as 'normal' as 0 and everything else as  'abnormal' or 1. This led to approximately 40% normal cases and 60% abnormal cases. In addition, we experimented using the 'impression' field in the radiologists report as the basis for our labels, as this is likely what a medical professional would look at in determining the significance of the report.  This led to approximately 60% normal cases and 40% abnormal cases, the exact opposite of our main labeling scheme. We then evaluated our models on both of these labeling schemes and the results can be seen below.
+We evaluated our model on 2 different labeling schemes. In our main labeling scheme we extracted the labels from the 'major' field in the radiologists report. We labeled everything tagged as 'normal' as 0 and everything else as  'abnormal' or 1. This led to approximately 40% normal cases and 60% abnormal cases. In addition, we experimented using the 'impression' field in the radiologists report as the basis for our labels, as this is likely what a medical professional would look at in determining the significance of the report.  This led to approximately 60% normal cases and 40% abnormal cases, the exact opposite of our main labeling scheme.  We used the text from the 'findings' field in the radiologists report as our text modality for all of our experiments. We then evaluated our models on both of these labeling schemes. The results can be seen in the table below.
 
 #### Unimodal vs. Multimodal models
 
