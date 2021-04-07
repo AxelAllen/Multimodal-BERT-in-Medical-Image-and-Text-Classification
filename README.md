@@ -212,6 +212,13 @@ In addition, we tried a third multilabel labeling scheme, which was based on the
 
 ### False Predictions
 
+Although our Text-only model seems to perform slightly better than our multimodal model we were still curious to see if there exist some edge cases where the model actually benefits from multimodality. Indeed, we did find some of these edge cases where the text model does make a false predictions but MMBT predicts it correctly. The opposite is naturally true as well. There does exist other cases where MMBT makes a mistake and the text-model does not. This naturally follows from the fact that the text model achieves a higher accuracy. However, for this specific experiment we were more interested in the former case, where the model does benefit from multimodality in terms of making correct predictions. The results of this can be seen in the table below.
+
+
+| Labeling Scheme   | Total Errors      | Total Corrected by MMBT | Corrected False Positives | Corrected False Negatives|
+|-------------------|-------------------|-------------------------|---------------------------|--------------------------|
+| Major             | 17                | 3                       | 0                         | 3                        |
+| Impression        | 70                | 31                      | 12                        | 19                       |
 
 ### Attention
 
