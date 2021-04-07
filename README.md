@@ -181,7 +181,22 @@ rest.
 
 This directory will be updated with more explanations for the final submission. There are some details that
 we need to work out after meeting with Aydin, F., one of the authors of the Aydin et al. (2019) paper to verify some
-information regarding the dataset. 
+information regarding the dataset.
+
+## Results
+
+
+## Experiments
+
+
+### False Predictions
+
+
+### Attention
+
+
+### Zero Shot
+
 
 ### Integrated Gradients
 
@@ -191,26 +206,61 @@ The integrated gradients module is a fork from this repository <https://github.c
 We have slightly modified the original implementation to work with our data. For more information consult the original paper ["Axiomatic Attribution for Deep Networks"](https://arxiv.org/pdf/1703.01365.pdf). 
 Also consult the **image_submodel.ipynb** notebook for more details on how it was used in our experiment.
 
-Otherwise, the **integrated_gradients/** directory itself can be safely ignored in terms of running the experiments. 
+Otherwise, the **integrated_gradients/** directory itself can be safely ignored in terms of running the experiments.
 
 ## References
 
-Aydin, F., Zhang, M., Ananda-Rajah, M., & Haffari, G. (2019). Medical Multimodal Classifiers Under Scarce Data Condition. ArXiv:1902.08888 [Cs,
-Stat]. http://arxiv.org/abs/1902.08888
+Faik Aydin, Maggie Zhang, Michelle Ananda-Rajah, and Gholamreza Haffari. 2019. Medical Multimodal Classifiers Under Scarce
+Data Condition. arXiv:1902.08888 [cs, stat].
 
-Demner-Fushman, D., Kohli, M. D., Rosenman, M. B., Shooshan, S. E., Rodriguez, L., Antani, S., Thoma, G. R., & McDonald, C. J. (2016). Preparing
-a collection of radiology examinations for distribution and retrieval. Journal of the American Medical Informatics Association : JAMIA, 23(2),
-304–310. https://doi.org/10.1093/jamia/ocv080
+Guillem Collell, Ted Zhang, and Marie-Francine Moens. 2017. Imagined visual representations as multimodal embeddings. In
+Proceedings of the Thirty-First AAAI Conference on Artificial Intelligence, AAAI’17, pages 4378–4384, San Francisco, California,
+USA. AAAI Press.
 
-Hessel, J., & Lee, L. (2020). Does my multimodal model learn cross-modal interactions? It’s harder to tell than you might think! Proceedings of
-the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP), 861–877.
-https://www.aclweb.org/anthology/2020.emnlp-main.62
+Dina Demner-Fushman, Marc D. Kohli, Marc B. Rosenman, Sonya E. Shooshan, Laritza Rodriguez, Sameer Antani, George R.
+Thoma, and Clement J. McDonald. 2016. Preparing a collection of radiology examinations for distribution and retrieval. Journal of
+the American Medical Informatics Association : JAMIA, 23(2):304–310.
 
-Kiela, D., Bhooshan, S., Firooz, H., Perez, E., & Testuggine, D. (2020). Supervised Multimodal Bitransformers for Classifying Images and Text.
-ArXiv:1909.02950 [Cs, Stat]. http://arxiv.org/abs/1909.02950
+Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. 2019. BERT: Pre-training of Deep Bidirectional Transformers
+for Language Understanding. arXiv:1810.04805 [cs].
 
-Rajpurkar, P., Irvin, J., Zhu, K., Yang, B., Mehta, H., Duan, T., Ding, D., Bagul, A., Langlotz, C., Shpanskaya, K., Lungren, M. P., & Ng, A. Y. (2017).
-CheXNet: Radiologist-Level Pneumonia Detection on Chest X-Rays with Deep Learning. ArXiv:1711.05225 [Cs, Stat]. http://arxiv.org/abs/1711.05225
+Allyson Ettinger. 2020. What BERT Is Not: Lessons from a New Suite of Psycholinguistic Diagnostics for Language Models.
+Transactions of the Association for Computational Linguistics, 8:34–48.
 
-Sundararajan, Mukund., Taly, Ankur., Yan, Qiqi. (2017). Axiomatic Attribution for Deep Networks. ArXiv:1703.01365 [Cs, Stat].
+Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. 2015. Deep Residual Learning for Image Recognition. arXiv:1512.03385
+[cs].
+
+Douwe Kiela, Suvrat Bhooshan, Hamed Firooz, Ethan Perez, and Davide Testuggine. 2020. Supervised Multimodal
+Bitransformers for Classifying Images and Text. arXiv:1909.02950 [cs, stat].
+
+Yoon Kim. 2014. Convolutional Neural Networks for Sentence Classification. arXiv:1408.5882 [cs].
+
+Olga Kovaleva, Alexey Romanov, Anna Rogers, and Anna Rumshisky. 2019. Revealing the Dark Secrets of BERT. In Proceedings of
+the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on
+Natural Language Processing (EMNLP-IJCNLP), pages 4365–4374, Hong Kong, China. Association for Computational Linguistics.
+
+Jiasen Lu, Dhruv Batra, Devi Parikh, and Stefan Lee. 2019. ViLBERT: Pretraining Task-Agnostic Visiolinguistic Representations for
+Vision-and-Language Tasks. arXiv:1908.02265 [cs].
+
+Pranav Rajpurkar, Jeremy Irvin, Kaylie Zhu, Brandon Yang, Hershel Mehta, Tony Duan, Daisy Ding, Aarti Bagul, Curtis Langlotz,
+Katie Shpanskaya, Matthew P. Lungren, and Andrew Y. Ng. 2017. CheXNet: Radiologist-Level Pneumonia Detection on Chest
+X-Rays with Deep Learning. arXiv:1711.05225 [cs, stat].
+
+Claudia Schulz and Damir Juric. 2020. Can Embeddings Adequately Represent Medical Terminology? New Large-Scale Medical
+Term Similarity Datasets Have the Answer! Proceedings of the AAAI Conference on Artificial Intelligence, 34(05):8775–8782.
+
+Francesca Strik Lievers and Bodo Winter. 2018. Sensory language across lexical categories. Lingua, 204:45–61.
+
+Mukund Sundararajan,  Ankur Taly, Qiqi Yan. 2017. Axiomatic Attribution for Deep Networks. ArXiv:1703.01365 [Cs, Stat].
 https://arxiv.org/pdf/1703.01365.pdf
+
+Hao Tan and Mohit Bansal. 2019. LXMERT: Learning Cross-Modality Encoder Representations from Transformers.
+arXiv:1908.07490 [cs].
+
+Jesse Vig. 2019. A Multiscale Visualization of Attention in the Transformer Model. In Proceedings of the 57th Annual Meeting of
+the Association for Computational Linguistics: System Demonstrations, pages 37–42, Florence, Italy. Association for
+Computational Linguistics.
+
+Xiaosong Wang, Yifan Peng, Le Lu, Zhiyong Lu, Mohammadhadi Bagheri, and Ronald M. Summers. 2017. ChestX-ray8:
+Hospital-scale Chest X-ray Database and Benchmarks on Weakly-Supervised Classification and Localization of Common Thorax
+Diseases. 2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pages 3462–3471.
