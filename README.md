@@ -1,7 +1,7 @@
 # Pre-Trained Multi-Modal Text and Image Classification in Sparse Medical Data Application
 
 
-This project is part of the Software Project "Language, Action and Perception" at University of Saarland, WS 2021.
+This work is part of the Software Project: "Language, Action and Perception" at Saarland Universitz, WS 2020-2021.
 
 This repository contains our implementation and a summary of our research findings.
 
@@ -17,6 +17,7 @@ This repository contains our implementation and a summary of our research findin
 * [Preprocess](#preprocess)
 * [Experiments](#experiments)
 * [Results](#results)
+* [References](#references)
 
 ## This Directory File Organization
 
@@ -61,6 +62,8 @@ image files according to the instruction in the **/data** directory.
 will make a new directory in this parent directory. the **runs/** directory will also be updated during each experiment (text-only
 and MMBT).
 
+[Back to Contents](#contents)
+
 ## Overview
 
 This repo presents our multimodal model, its submodules, and the experiments we performed to answer our research 
@@ -87,6 +90,7 @@ The experiments we ran on the model are as follows:
    
 In addition, we also present the *Integrated Gradient* to visualize and extract explanations from the images.
 
+[Back to Contents](#contents)
 
 ### Supervised Multimodal BiTransformers for Classifying Images and Text (MMBT)
 
@@ -95,6 +99,8 @@ In our project, we are experimenting with the Supervised Multimodal BiTransforme
 The model aims to fuse the multiple modalities as the input data are introduced to the Transformers
 architecture so that the model's attention mechanism can be applied to the multimodal inputs. For more information
 regarding the model, please refer to the documentation in the **MMBT** directory.
+
+[Back to Contents](#contents)
 
 ### Dataset
 
@@ -120,6 +126,8 @@ to be created as part of the preparation steps to reproduce the experiments.
 For reference, here's also a link to the original dataset of the 
 [Indiana University Chest X-ray](https://openi.nlm.nih.gov/detailedresult?img=CXR111_IM-0076-1001&req=4).
 
+[Back to Contents](#contents)
+
 ### Requirements
 
 * The project scripts were tested on Python 3.6 and 3.7. on Mac OS and Linux.
@@ -130,11 +138,13 @@ For reference, here's also a link to the original dataset of the
     * to run multiple experiments, it may be necessary to reset the runtime from time to time.
 * Approximate runtime/experiment: 5-30 minutes.
 
+[Back to Contents](#contents)
+
 ### Instructions
 
 1. Please create a virtual environment with the provided .yml file `LAP_environment.yml`   
    1.1 This `.yml` file was created on and for a Mac OS platform. If you are running a different system, this option
-   may not work.
+   may not work.  
    1.2 see [Alternative Instructions](#alternative-instructions) for replicating this project via Google Colab
 2. Clone this repository
 3. Download image files according to the instructions in the *Dataset* section.
@@ -160,6 +170,7 @@ containing the Argument parser.
 6. The loaded Tensorboard in the **baseline_experiments_results.ipynb** can be re-launched to reflect new
 experiment results.
    
+
 #### Alternative Instructions
 
 We have created a [shared Google Drive - LAP](https://drive.google.com/drive/folders/1gwgx4ZApTKz5fN6SG9YkiVjVCZ0WNGeH?usp=sharing) 
@@ -177,7 +188,8 @@ to be at the same level as described in the [Directory Organization](#this-direc
 We may delete or write over files in this shared Drive without notice and access is only provided for your convenience.
 There may be log files from our experiments and previously run model weights; however those are not necessary for 
 project reproducibility.
- 
+
+
 ### Notebooks
 
 The notebooks in this directory contain the code to run the experiments. Please see each individual notebook for
@@ -211,7 +223,7 @@ It includes various scripts that were used in extracting the labels from the dat
 match with the content of the reports and images they were created from and also filtering the frontal images from the 
 rest.  
 
-
+[Back to Contents](#contents)
 ## Experiments
 
 ### Multimodal Contribution
@@ -220,7 +232,7 @@ These are experiments 1-3 listed in the [Overview](#overview) Section.
 
 ### Attention Mechanism Visualization
 
-#### False Predictions
+#### Multimodal Corrections
 
 Although our Text-only model seems to perform slightly better than our multimodal model we were still curious to see
 if there exist some edge cases where the model actually benefits from multimodality. Indeed, we did find some of these
@@ -271,6 +283,8 @@ Also consult the **image_submodel.ipynb** notebook for more details on how it wa
 
 Otherwise, the **integrated_gradients/** directory itself can be safely ignored in terms of running the experiments.
 
+[Back to Contents](#contents)
+
 ## Results
 
 We evaluated our model on 2 different labeling schemes. In our main labeling scheme we extracted the labels from the 
@@ -309,6 +323,35 @@ accuracy. The results can be seen in the table below.
 
 #### Findings: Attention Mechanism Visualization
 
+From the results table in [Multimodal Corrections](#multimodal-corrections), it is apparent that there are cases where the text-only
+model makes false prediction when the MMBT model does not. We selected an example to visualize the attention heads for
+comparison between the text-only and the MMBT model.
+
+**Sample ID:** CXR2363 
+
+|Image|Text|Impression|Major|Labeling
+|---|---|---|---|---|
+|![cxr2363](figures/CXR2363.png)| Heart size is upper limits of normal.The pulmonary XXXX and mediastinum are within normal limits. There is no pleural effusion or pneumothorax.There is right basilar air space opacity.| Right middle lobe and lower lobe pneumonia. Followup radiographs in 8-12 weeks after appropriate therapy are indicated to exclude an underlying abnormality.|Opacity/lung/base/right Pneumonia/middle lobe/right Pneumonia/lower lobe/right| 1 = abnormal|
+
+##### Text-Only Model Attention
+The last layer’s attention head of the text-only model, which falsely predicts the label for this sample. 
+The lines show the attention scores corresponding to the text tokens with line intensity being proportional to 
+attention weight. Tokens with higher attention scores are circled.
+![text-only attention](figures/text_only_attn.png)
+
+##### MMBT Model Attention
+The last layer’s attention head of the MMBT model, which correctly predicts the label for this sample. 
+_left figure_ = _image embedding token 1_,_center_ = _image embedding token 2_, _right_ = _imageembedding token 3_. 
+Tokens with higher attention scores are circled.
+![mmbt attention](figures/mmbt_attn_3embeddings.png)
+
+As  can  be  examined  in  the images above,  the MMBT model’s attention mechanism aligns the second image embedding 
+token to content word tokens such as _‘pleural’_, _‘pneumothorax’_, _‘basilar’_, _‘air’_, 
+_‘space’_, and _‘opacity’_ in addition to the _‘[SEP]’_ and first image embedding token. 
+In contrast, the attention mechanism in the text-only model aligns the _‘[CLS]’_ token more strongly 
+(higher attention scores) with the following tokens: _‘heart’_, _‘is’_, _‘there’_, _‘no’_, _‘.’_, and
+_‘right’_.
+
 #### Findings: Image Classification from Multimodal Fine-Tuning
 
 Results from this experiment are reported in the **Masked Text** columns of the tables in 
@@ -318,47 +361,53 @@ Results from this experiment are reported in the **Masked Text** columns of the 
 MMBT's improvement over the unimodal image-only model in this scenario is only observed when tested on the 
 _'impression'_ labeled dataset. 
 
+[Back to Contents](#contents)
+
 ## References
 
 Faik Aydin, Maggie Zhang, Michelle Ananda-Rajah, and Gholamreza Haffari. 2019. Medical Multimodal Classifiers Under Scarce
-Data Condition. [arXiv:1902.08888.]()
+Data Condition. [arXiv:1902.08888.](https://arxiv.org/abs/1902.08888)
 
 Guillem Collell, Ted Zhang, and Marie-Francine Moens. 2017. Imagined visual representations as multimodal embeddings. In
 Proceedings of the Thirty-First AAAI Conference on Artificial Intelligence, AAAI’17, pages 4378–4384, San Francisco, California,
-USA. AAAI Press.
+USA. AAAI Press.[AAAI Press](https://aaai.org/ocs/index.php/AAAI/AAAI17/paper/view/14811)
+
 
 Dina Demner-Fushman, Marc D. Kohli, Marc B. Rosenman, Sonya E. Shooshan, Laritza Rodriguez, Sameer Antani, George R.
 Thoma, and Clement J. McDonald. 2016. Preparing a collection of radiology examinations for distribution and retrieval. Journal of
 the American Medical Informatics Association : JAMIA, 23(2):304–310.
+[DOI: 10.1093/jamia/ocv080](https://academic.oup.com/jamia/article/23/2/304/2572395)
 
 Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. 2019. BERT: Pre-training of Deep Bidirectional Transformers
-for Language Understanding. [arXiv:1810.04805.]()
+for Language Understanding. [arXiv:1810.04805.](https://arxiv.org/abs/1810.04805)
 
 Allyson Ettinger. 2020. What BERT Is Not: Lessons from a New Suite of Psycholinguistic Diagnostics for Language Models.
 Transactions of the Association for Computational Linguistics, 8:34–48.
+[arXiv:1907.13528](https://arxiv.org/abs/1907.13528)
 
 Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. 2015. Deep Residual Learning for Image Recognition. 
-[arXiv:1512.03385.]()
+[arXiv:1512.03385.](https://arxiv.org/abs/1512.03385)
 
 Douwe Kiela, Suvrat Bhooshan, Hamed Firooz, Ethan Perez, and Davide Testuggine. 2020. Supervised Multimodal
-Bitransformers for Classifying Images and Text. [arXiv:1909.02950.]()
+Bitransformers for Classifying Images and Text. [arXiv:1909.02950.](https://arxiv.org/abs/1909.02950)
 
-Yoon Kim. 2014. Convolutional Neural Networks for Sentence Classification. [arXiv:1408.5882.]()
+Yoon Kim. 2014. Convolutional Neural Networks for Sentence Classification. [arXiv:1408.5882.](https://arxiv.org/abs/1408.5882)
 
 Olga Kovaleva, Alexey Romanov, Anna Rogers, and Anna Rumshisky. 2019. Revealing the Dark Secrets of BERT. In Proceedings of
 the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on
 Natural Language Processing (EMNLP-IJCNLP), pages 4365–4374, Hong Kong, China. Association for Computational Linguistics.
+[arXiv:1908.08593](https://arxiv.org/abs/1908.08593)
 
 Jiasen Lu, Dhruv Batra, Devi Parikh, and Stefan Lee. 2019. ViLBERT: Pretraining Task-Agnostic Visiolinguistic Representations for
-Vision-and-Language Tasks. [arXiv:1908.02265.]()
+Vision-and-Language Tasks. [arXiv:1908.02265.](https://arxiv.org/abs/1908.02265)
 
 Pranav Rajpurkar, Jeremy Irvin, Kaylie Zhu, Brandon Yang, Hershel Mehta, Tony Duan, Daisy Ding, Aarti Bagul, Curtis Langlotz,
 Katie Shpanskaya, Matthew P. Lungren, and Andrew Y. Ng. 2017. CheXNet: Radiologist-Level Pneumonia Detection on Chest
-X-Rays with Deep Learning. [arXiv:1711.05225.]()
+X-Rays with Deep Learning. [arXiv:1711.05225.](https://arxiv.org/abs/1711.05225)
 
 Claudia Schulz and Damir Juric. 2020. Can Embeddings Adequately Represent Medical Terminology? New Large-Scale Medical
 Term Similarity Datasets Have the Answer! Proceedings of the AAAI Conference on Artificial Intelligence, 34(05):8775–8782.
-[]()
+[arXiv:2003.11082](https://arxiv.org/abs/2003.11082)
 
 Francesca Strik Lievers and Bodo Winter. 2018. Sensory language across lexical categories. Lingua, 204:45–61.
 [https://doi.org/10.1016/j.lingua.2017.11.002](https://doi.org/10.1016/j.lingua.2017.11.002)
@@ -379,3 +428,5 @@ Xiaosong Wang, Yifan Peng, Le Lu, Zhiyong Lu, Mohammadhadi Bagheri, and Ronald M
 Hospital-scale Chest X-ray Database and Benchmarks on Weakly-Supervised Classification and Localization of Common Thorax
 Diseases. 2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pages 3462–3471.
 [arXiv:1705.02315](https://arxiv.org/abs/1705.02315)
+
+[Back to Contents](#contents)
