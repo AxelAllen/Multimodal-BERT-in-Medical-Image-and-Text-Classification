@@ -181,7 +181,55 @@ rest.
 
 This directory will be updated with more explanations for the final submission. There are some details that
 we need to work out after meeting with Aydin, F., one of the authors of the Aydin et al. (2019) paper to verify some
-information regarding the dataset. 
+information regarding the dataset.
+
+## Results
+
+We evaluated our model on 2 different labeling schemes. In our main labeling scheme we extracted the labels from the 'major' field in the radiologists report. We labeled everything tagged as 'normal' as 0 and everything else as  'abnormal' or 1. This led to approximately 40% normal cases and 60% abnormal cases. In addition, we experimented using the 'impression' field in the radiologists report as the basis for our labels, as this is likely what a medical professional would look at in determining the significance of the report.  This led to approximately 60% normal cases and 40% abnormal cases, the exact opposite of our main labeling scheme.  We used the text from the 'findings' field in the radiologists report as our text modality for all of our experiments. We then evaluated our models on both of these labeling schemes. The results can be seen in the table below.
+
+#### Unimodal vs. Multimodal models
+
+| Model             | MMBT (major)      | MMBT (impression) |
+|-------------------|-------------------|-------------------|
+| Multimodal        | 0.96              | 0.86              |
+| Text-only         | 0.97              | 0.88              |
+| Image-only        | 0.74              | 0.74              |
+
+
+In addition, we tried a third multilabel labeling scheme, which was based on the 'major' labels. However, we created a third category for cases that were borderline abnormal and did not involve any kinds of diseases, but other abnormalities, such as medical instruments or devices. We report our multilabel results in F1 instead of accuracy. The results can be seen in the table below.
+
+#### Findings: Binary vs. Multilabel
+
+| Model             | MMBT - Binary (accuracy)      | MMBT - Multilabel (macro/micro F1) |
+|-------------------|-------------------------------|------------------------------------|
+| Multimodal        | 0.96                          | 0.82/0.93                          |
+| Text-only         | 0.97                          | 0.86/0.94                          |
+| Image-only        | 0.74                          | N/A                                |
+
+
+## Experiments
+
+
+### False Predictions
+
+Although our Text-only model seems to perform slightly better than our multimodal model we were still curious to see if there exist some edge cases where the model actually benefits from multimodality. Indeed, we did find some of these edge cases where the text model does make a false predictions but MMBT predicts it correctly. The opposite is naturally true as well. There does exist other cases where MMBT makes a mistake and the text-model does not. This naturally follows from the fact that the text model achieves a higher accuracy. However, for this specific experiment we were more interested in the former case, where the model does benefit from multimodality in terms of making correct predictions. The results of this can be seen in the table below.
+
+
+| Labeling Scheme   | Total Errors (Text Model) | Total Corrected by MMBT | Corrected False Positives | Corrected False Negatives|
+|-------------------|---------------------------|-------------------------|---------------------------|--------------------------|
+| Major             | 17                        | 3                       | 0                         | 3                        |
+| Impression        | 70                        | 31                      | 12                        | 19                       |
+
+### Attention
+
+We were curious to further investigate these cases where the text model makes a mistake and the multimodal model corrects it. Therefore, we decided to visualize the attention weights of some of these cases using the BertViz visualization tool by Jesse Vig (2019). We compared the attention weights of the text-only model to the attention weights of our multimodal model (MMBT) to see whether there are any visible differences between these cases. In the multimodal model, the image embeddings are projected into BERT's text token space and they are propagated through the self-attention layers, just like the normal text embeddings. This allows us to look at the attention weights of these image embeddings and see whether they attend more or less to other tokens and whether these connections can reveal anything about what leads the multimodal model to correct some of these cases where the text model fails. In addition, visualizing attention weights can help reveal whether there are any general patterns that explain how the attention mechanism contributes to making predctions.
+
+The results of this experiment will be updated here soon.
+
+### Zero Shot
+
+One additional experiment we conducted was to use our multimodal model in a zero-shot setting. Since our image model is the weak link in our multimodal setting, with clearly the lowest accuracy, we were curious to see whether using our finetuned multimodal model in a scenario where we mask all the text input and rely solely on the image modality would lead to a better performance than our image only model achieves. The results of this experiment do not support this hypothesis and will be updated here soon.
+
 
 ### Integrated Gradients
 
@@ -191,26 +239,61 @@ The integrated gradients module is a fork from this repository <https://github.c
 We have slightly modified the original implementation to work with our data. For more information consult the original paper ["Axiomatic Attribution for Deep Networks"](https://arxiv.org/pdf/1703.01365.pdf). 
 Also consult the **image_submodel.ipynb** notebook for more details on how it was used in our experiment.
 
-Otherwise, the **integrated_gradients/** directory itself can be safely ignored in terms of running the experiments. 
+Otherwise, the **integrated_gradients/** directory itself can be safely ignored in terms of running the experiments.
 
 ## References
 
-Aydin, F., Zhang, M., Ananda-Rajah, M., & Haffari, G. (2019). Medical Multimodal Classifiers Under Scarce Data Condition. ArXiv:1902.08888 [Cs,
-Stat]. http://arxiv.org/abs/1902.08888
+Faik Aydin, Maggie Zhang, Michelle Ananda-Rajah, and Gholamreza Haffari. 2019. Medical Multimodal Classifiers Under Scarce
+Data Condition. arXiv:1902.08888 [cs, stat].
 
-Demner-Fushman, D., Kohli, M. D., Rosenman, M. B., Shooshan, S. E., Rodriguez, L., Antani, S., Thoma, G. R., & McDonald, C. J. (2016). Preparing
-a collection of radiology examinations for distribution and retrieval. Journal of the American Medical Informatics Association : JAMIA, 23(2),
-304–310. https://doi.org/10.1093/jamia/ocv080
+Guillem Collell, Ted Zhang, and Marie-Francine Moens. 2017. Imagined visual representations as multimodal embeddings. In
+Proceedings of the Thirty-First AAAI Conference on Artificial Intelligence, AAAI’17, pages 4378–4384, San Francisco, California,
+USA. AAAI Press.
 
-Hessel, J., & Lee, L. (2020). Does my multimodal model learn cross-modal interactions? It’s harder to tell than you might think! Proceedings of
-the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP), 861–877.
-https://www.aclweb.org/anthology/2020.emnlp-main.62
+Dina Demner-Fushman, Marc D. Kohli, Marc B. Rosenman, Sonya E. Shooshan, Laritza Rodriguez, Sameer Antani, George R.
+Thoma, and Clement J. McDonald. 2016. Preparing a collection of radiology examinations for distribution and retrieval. Journal of
+the American Medical Informatics Association : JAMIA, 23(2):304–310.
 
-Kiela, D., Bhooshan, S., Firooz, H., Perez, E., & Testuggine, D. (2020). Supervised Multimodal Bitransformers for Classifying Images and Text.
-ArXiv:1909.02950 [Cs, Stat]. http://arxiv.org/abs/1909.02950
+Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. 2019. BERT: Pre-training of Deep Bidirectional Transformers
+for Language Understanding. arXiv:1810.04805 [cs].
 
-Rajpurkar, P., Irvin, J., Zhu, K., Yang, B., Mehta, H., Duan, T., Ding, D., Bagul, A., Langlotz, C., Shpanskaya, K., Lungren, M. P., & Ng, A. Y. (2017).
-CheXNet: Radiologist-Level Pneumonia Detection on Chest X-Rays with Deep Learning. ArXiv:1711.05225 [Cs, Stat]. http://arxiv.org/abs/1711.05225
+Allyson Ettinger. 2020. What BERT Is Not: Lessons from a New Suite of Psycholinguistic Diagnostics for Language Models.
+Transactions of the Association for Computational Linguistics, 8:34–48.
 
-Sundararajan, Mukund., Taly, Ankur., Yan, Qiqi. (2017). Axiomatic Attribution for Deep Networks. ArXiv:1703.01365 [Cs, Stat].
+Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. 2015. Deep Residual Learning for Image Recognition. arXiv:1512.03385
+[cs].
+
+Douwe Kiela, Suvrat Bhooshan, Hamed Firooz, Ethan Perez, and Davide Testuggine. 2020. Supervised Multimodal
+Bitransformers for Classifying Images and Text. arXiv:1909.02950 [cs, stat].
+
+Yoon Kim. 2014. Convolutional Neural Networks for Sentence Classification. arXiv:1408.5882 [cs].
+
+Olga Kovaleva, Alexey Romanov, Anna Rogers, and Anna Rumshisky. 2019. Revealing the Dark Secrets of BERT. In Proceedings of
+the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on
+Natural Language Processing (EMNLP-IJCNLP), pages 4365–4374, Hong Kong, China. Association for Computational Linguistics.
+
+Jiasen Lu, Dhruv Batra, Devi Parikh, and Stefan Lee. 2019. ViLBERT: Pretraining Task-Agnostic Visiolinguistic Representations for
+Vision-and-Language Tasks. arXiv:1908.02265 [cs].
+
+Pranav Rajpurkar, Jeremy Irvin, Kaylie Zhu, Brandon Yang, Hershel Mehta, Tony Duan, Daisy Ding, Aarti Bagul, Curtis Langlotz,
+Katie Shpanskaya, Matthew P. Lungren, and Andrew Y. Ng. 2017. CheXNet: Radiologist-Level Pneumonia Detection on Chest
+X-Rays with Deep Learning. arXiv:1711.05225 [cs, stat].
+
+Claudia Schulz and Damir Juric. 2020. Can Embeddings Adequately Represent Medical Terminology? New Large-Scale Medical
+Term Similarity Datasets Have the Answer! Proceedings of the AAAI Conference on Artificial Intelligence, 34(05):8775–8782.
+
+Francesca Strik Lievers and Bodo Winter. 2018. Sensory language across lexical categories. Lingua, 204:45–61.
+
+Mukund Sundararajan,  Ankur Taly, Qiqi Yan. 2017. Axiomatic Attribution for Deep Networks. ArXiv:1703.01365 [Cs, Stat].
 https://arxiv.org/pdf/1703.01365.pdf
+
+Hao Tan and Mohit Bansal. 2019. LXMERT: Learning Cross-Modality Encoder Representations from Transformers.
+arXiv:1908.07490 [cs].
+
+Jesse Vig. 2019. A Multiscale Visualization of Attention in the Transformer Model. In Proceedings of the 57th Annual Meeting of
+the Association for Computational Linguistics: System Demonstrations, pages 37–42, Florence, Italy. Association for
+Computational Linguistics.
+
+Xiaosong Wang, Yifan Peng, Le Lu, Zhiyong Lu, Mohammadhadi Bagheri, and Ronald M. Summers. 2017. ChestX-ray8:
+Hospital-scale Chest X-ray Database and Benchmarks on Weakly-Supervised Classification and Localization of Common Thorax
+Diseases. 2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pages 3462–3471.
