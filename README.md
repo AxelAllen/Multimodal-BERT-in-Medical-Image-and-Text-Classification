@@ -3,7 +3,20 @@
 
 This project is part of the Software Project "Language, Action and Perception" at University of Saarland, WS 2021.
 
-The repository is still a work in progress as the project goes on.
+This repository contains our implementation and a summary of our research findings.
+
+# Contents
+
+* [Directory Organization](#this-directory-file-organization)
+* [Project Overview](#overview)
+* [MMBT Model](#supervised-multimodal-bitransformers-for-classifying-images-and-text-mmbt)
+* [Dataset](#dataset)
+* [Requirements](#requirements)
+* [Instructions](#instructions)
+* [Notebooks](#notebooks)
+* [Preprocess](#preprocess)
+* [Experiments](#experiments)
+* [Results](#results)
 
 ## This Directory File Organization
 
@@ -17,6 +30,7 @@ This project repository is organized as follows:
         * **image_labels_csv/**
         * **models/**
         * **NLCXR_front_png/**
+        * preparations.py
     * **MMBT/**: contains MMBT model src codes and related utility functions
         * image.py
         * mmbt.py
@@ -33,7 +47,10 @@ This project repository is organized as follows:
         * visualization.py
     * *run_mmbt.ipynb* notebook
     * *run_bert_text_only.ipynb* notebook
+    * *run_mmbt_masked_text_eval.ipynb* notebook  
     * *image_submodel.ipynb* notebook
+    * *bertviz_attention.ipynb* notebook
+    * *false_preds.ipynb* notebook  
     * *baseline_experiments_results.ipynb* notebook
     * textBert_utils.py src codes and utility functions for the *run_bert_text_only.ipynb* notebook
     
@@ -46,7 +63,7 @@ and MMBT).
 
 ## Overview
 
-This repo presents our baseline model, its submodules, and the experiments we performed to answer our research 
+This repo presents our multimodal model, its submodules, and the experiments we performed to answer our research 
 questions. Our main focus of the project is to try to answer the following questions:
 
 
@@ -60,19 +77,13 @@ questions. Our main focus of the project is to try to answer the following quest
       better in downstream tasks than simply concatenating vectors representing the two modalities?
 
 
-The experiments we ran on the baseline model are as follows:
+The experiments we ran on the model are as follows:
 
 1. Image-only classification
 2. Text-only classification
-   2.1 3 text data options:  
-        2.1.1 'impression' metadata text  
-        2.1.2 'findings' metadata text  
-        2.1.3 'both' impression and findings metadata texts
 3. Multimodal classification: text and image inputs
-   3.1 3 text data options:  
-        3.1.1 'impression' metadata text  
-        3.1.2 'findings' metadata text  
-        3.1.3 'both' impression and findings metadata texts
+4. Attention mechanism visualization
+5. Image-only classification with the multimodal model trained on text and image data
    
 In addition, we also present the *Integrated Gradient* to visualize and extract explanations from the images.
 
@@ -121,11 +132,24 @@ For reference, here's also a link to the original dataset of the
 
 ### Instructions
 
-1. Please create a virtual environment with the provided .yml file `LAP_environment.yml` 
+1. Please create a virtual environment with the provided .yml file `LAP_environment.yml`   
+   1.1 This `.yml` file was created on and for a Mac OS platform. If you are running a different system, this option
+   may not work.
+   1.2 see [Alternative Instructions](#alternative-instructions) for replicating this project via Google Colab
 2. Clone this repository
 3. Download image files according to the instructions in the *Dataset* section.
-4. The notebooks can be run in any order, with the exception that the `baseline_experiments_results.ipynb` notebook will
-only reflect new runs if you run it afterward. You can view previously executed runs in that notebook, however.
+4. The notebooks can be run in any order, with the following exceptions:  
+   
+   4.1 The `baseline_experiments_results.ipynb` notebook will only reflect new runs if you run it afterward. 
+   You can view previously executed runs in that notebook, however.  
+   
+   4.2 The `run_mmbt_masked_text_eval.ipynb` and `bertviz_attention.ipynb` notebooks runs on previously saved model(s); 
+   so you need to have trained and saved a model (MMBT and/or the BERT text-only) in the output directory specified in 
+   the `--output_dir` argument to successfully run this notebook.  
+        4.2.1 the `--output_dir` arguments in these notebooks need to be the output directory where the model is saved;
+        The easiest way to follow this is to make sure that the `--output_dir` argument for these notebooks are the 
+        same as the `--output_dir` argument in either the `run_mmbt.ipynb` or `run_bert_text_only.ipynb` notebooks.
+   
 5. To change hyperparameters for the text-only and MMBT notebooks, simply change the default values in the cell
 containing the Argument parser.  
    
@@ -143,14 +167,16 @@ for this project where all the scripts, data, and Jupyter/Colab Notebooks in thi
 Simply download this drive and re-upload to your own Google Drive for testing. (i.e. you can only _view_ files
 in this Drive and comment, but you cannot edit them.)
 
-**IMPORTANT:** If you choose to test our project this way, please be aware that you may still need to update the 
+**IMPORTANT:** If you choose to test our project this way, please be aware that you still **need** to update the 
 path to the 'LAP' directory to reflect its location in your 'MyDrive'. Your `pwd` should always be the 'LAP'
-directory for the codes to work as intended.
+project parent directory for the codes to work as intended. (The name for this directory needs not be 'LAP', but has
+to be at the same level as described in the [Directory Organization](#this-directory-file-organization).)
 
 
-Caveats:We reserve the ability to modify this Drive from time to time; particularly to manage storage. 
+**Caveats:** We reserve the ability to modify this Drive from time to time; particularly to manage storage. 
 We may delete or write over files in this shared Drive without notice and access is only provided for your convenience.
-
+There may be log files from our experiments and previously run model weights; however those are not necessary for 
+project reproducibility.
  
 ### Notebooks
 
@@ -166,8 +192,14 @@ model and the MMBT model
 * **run_bert_text_only.ipynb** shows the end-to-end pipeline for running the text-only experiments
 
 
-* **run_mmbt.ipynb* notebook** shows the end-to-end MMBT experiment pipeline
-  
+* **run_mmbt.ipynb** notebook shows the end-to-end MMBT experiment pipeline
+
+
+* **bertviz_attention.ipynb** shows the steps to visualize the attention mechanism using BertViz (Vig, 2019)
+
+
+* **run_mmbt_masked_text_eval.ipynb** shows the steps to test the MMBT model with masked text input for unimodal
+image classification
   
 * **image_submodel.ipynb** This notebook details the Image-only model and how we obtained our results from that experiment.
 
@@ -179,40 +211,24 @@ It includes various scripts that were used in extracting the labels from the dat
 match with the content of the reports and images they were created from and also filtering the frontal images from the 
 rest.  
 
-This directory will be updated with more explanations for the final submission. There are some details that
-we need to work out after meeting with Aydin, F., one of the authors of the Aydin et al. (2019) paper to verify some
-information regarding the dataset.
-
-## Results
-
-We evaluated our model on 2 different labeling schemes. In our main labeling scheme we extracted the labels from the 'major' field in the radiologists report. We labeled everything tagged as 'normal' as 0 and everything else as  'abnormal' or 1. This led to approximately 40% normal cases and 60% abnormal cases. In addition, we experimented using the 'impression' field in the radiologists report as the basis for our labels, as this is likely what a medical professional would look at in determining the significance of the report.  This led to approximately 60% normal cases and 40% abnormal cases, the exact opposite of our main labeling scheme.  We used the text from the 'findings' field in the radiologists report as our text modality for all of our experiments. We then evaluated our models on both of these labeling schemes. The results can be seen in the table below.
-
-#### Unimodal vs. Multimodal models
-
-| Model             | MMBT (major)      | MMBT (impression) |
-|-------------------|-------------------|-------------------|
-| Multimodal        | 0.96              | 0.86              |
-| Text-only         | 0.97              | 0.88              |
-| Image-only        | 0.74              | 0.74              |
-
-
-In addition, we tried a third multilabel labeling scheme, which was based on the 'major' labels. However, we created a third category for cases that were borderline abnormal and did not involve any kinds of diseases, but other abnormalities, such as medical instruments or devices. We report our multilabel results in F1 instead of accuracy. The results can be seen in the table below.
-
-#### Findings: Binary vs. Multilabel
-
-| Model             | MMBT - Binary (accuracy)      | MMBT - Multilabel (macro/micro F1) |
-|-------------------|-------------------------------|------------------------------------|
-| Multimodal        | 0.96                          | 0.82/0.93                          |
-| Text-only         | 0.97                          | 0.86/0.94                          |
-| Image-only        | 0.74                          | N/A                                |
-
 
 ## Experiments
 
+### Multimodal Contribution
 
-### False Predictions
+These are experiments 1-3 listed in the [Overview](#overview) Section.
 
-Although our Text-only model seems to perform slightly better than our multimodal model we were still curious to see if there exist some edge cases where the model actually benefits from multimodality. Indeed, we did find some of these edge cases where the text model does make a false predictions but MMBT predicts it correctly. The opposite is naturally true as well. There does exist other cases where MMBT makes a mistake and the text-model does not. This naturally follows from the fact that the text model achieves a higher accuracy. However, for this specific experiment we were more interested in the former case, where the model does benefit from multimodality in terms of making correct predictions. The results of this can be seen in the table below.
+### Attention Mechanism Visualization
+
+#### False Predictions
+
+Although our Text-only model seems to perform slightly better than our multimodal model we were still curious to see
+if there exist some edge cases where the model actually benefits from multimodality. Indeed, we did find some of these
+edge cases where the text model does make a false predictions but MMBT predicts it correctly. The opposite is naturally
+true as well. There does exist other cases where MMBT makes a mistake and the text-model does not.
+This naturally follows from the fact that the text model achieves a higher accuracy.
+However, for this specific experiment we were more interested in the former case, where the model does benefit from
+multimodality in terms of making correct predictions. The results of this can be seen in the table below.
 
 
 | Labeling Scheme   | Total Errors (Text Model) | Total Corrected by MMBT | Corrected False Positives | Corrected False Negatives|
@@ -220,31 +236,92 @@ Although our Text-only model seems to perform slightly better than our multimoda
 | Major             | 17                        | 3                       | 0                         | 3                        |
 | Impression        | 70                        | 31                      | 12                        | 19                       |
 
-### Attention
 
-We were curious to further investigate these cases where the text model makes a mistake and the multimodal model corrects it. Therefore, we decided to visualize the attention weights of some of these cases using the BertViz visualization tool by Jesse Vig (2019). We compared the attention weights of the text-only model to the attention weights of our multimodal model (MMBT) to see whether there are any visible differences between these cases. In the multimodal model, the image embeddings are projected into BERT's text token space and they are propagated through the self-attention layers, just like the normal text embeddings. This allows us to look at the attention weights of these image embeddings and see whether they attend more or less to other tokens and whether these connections can reveal anything about what leads the multimodal model to correct some of these cases where the text model fails. In addition, visualizing attention weights can help reveal whether there are any general patterns that explain how the attention mechanism contributes to making predctions.
+We were curious to further investigate these cases where the text model makes a mistake and the multimodal model
+corrects it. Therefore, we decided to visualize the attention weights of some of these cases using the BertViz
+visualization tool by Jesse Vig (2019). We compared the attention weights of the text-only model to the attention
+weights of our multimodal model (MMBT) to see whether there are any visible differences between these cases.
+In the multimodal model, the image embeddings are projected into BERT's text token space and they are propagated
+through the self-attention layers, just like the normal text embeddings. This allows us to look at the attention
+weights of these image embeddings and see whether they attend more or less to other tokens and whether these
+connections can reveal anything about what leads the multimodal model to correct some of these cases where the
+text model fails.
 
-The results of this experiment will be updated here soon.
+In addition, visualizing attention weights can help reveal whether there are any general patterns that explain how
+the attention mechanism contributes to making predictions.
 
-### Zero Shot
+This constitutes experiment 4 in the [Overview](#overview) Section.
 
-One additional experiment we conducted was to use our multimodal model in a zero-shot setting. Since our image model is the weak link in our multimodal setting, with clearly the lowest accuracy, we were curious to see whether using our finetuned multimodal model in a scenario where we mask all the text input and rely solely on the image modality would lead to a better performance than our image only model achieves. The results of this experiment do not support this hypothesis and will be updated here soon.
+### Image Classification from Multimodal Fine-Tuning
 
+One additional experiment we conducted was to use our multimodal model on unseen unimodal images. Since our image model
+is the weak link in our multimodal setting, with clearly the lowest accuracy, we were curious to see whether using
+our finetuned multimodal model in a scenario where we mask all the text input and rely solely on the image modality
+would lead to a better performance than our image only model achieves.
+
+This is experiment 5 in the [Overview](#overview) Section.
 
 ### Integrated Gradients
 
-The integrated gradients is a way to visualize and extract explanations from the images. The basic idea behind it is that we can make use of the learned weights, 
-which allow us to take the partial derivatives w/ respect to the inputs (the pixels) and visualize gradients that have highest activations with respect to some threshold value. 
-The integrated gradients module is a fork from this repository <https://github.com/TianhongDai/integrated-gradient-pytorch> and it comes with an open source MIT license. 
-We have slightly modified the original implementation to work with our data. For more information consult the original paper ["Axiomatic Attribution for Deep Networks"](https://arxiv.org/pdf/1703.01365.pdf). 
+The integrated gradients is a way to visualize and extract explanations from the images. The basic idea behind it is that we can make use of the learned weights,
+which allow us to take the partial derivatives w/ respect to the inputs (the pixels) and visualize gradients that have highest activations with respect to some threshold value.
+The integrated gradients module is a fork from this repository <https://github.com/TianhongDai/integrated-gradient-pytorch> and it comes with an open source MIT license.
+We have slightly modified the original implementation to work with our data. For more information consult the original paper ["Axiomatic Attribution for Deep Networks"](https://arxiv.org/pdf/1703.01365.pdf).
 Also consult the **image_submodel.ipynb** notebook for more details on how it was used in our experiment.
 
 Otherwise, the **integrated_gradients/** directory itself can be safely ignored in terms of running the experiments.
 
+## Results
+
+We evaluated our model on 2 different labeling schemes. In our main labeling scheme we extracted the labels from the 
+_'major'_ field in the radiologists report. We labeled everything tagged as **'normal'** as **0** and everything else 
+as  **'abnormal'** or **1**. This led to approximately **40%** normal cases and **60%** abnormal cases. 
+
+In addition, we experimented using the _'impression'_ field in the radiologists report as the basis for our labels, 
+as this is likely what a medical professional would look at in determining the significance of the report.  
+This led to approximately **60%** normal cases and **40%** abnormal cases, the exact opposite of our main labeling scheme.  
+We used the text from the 'findings' field in the radiologists report as our text modality for all of our experiments. 
+We then evaluated our models on both of these labeling schemes. 
+
+The results can be seen in the table below.
+
+#### Findings: Unimodal vs. Multimodal models
+
+| Model       | MMBT (major) | MMBT (impression) | Masked Text MMBT (major)  |Masked Text MMBT (impression)|
+|-------------|--------------|-------------------|---------------------------|-----------------------------|
+| Multimodal  | 0.96         | 0.86              |0.66                       |0.77                         |
+| Text-only   | **0.97**     | **0.88**          |N/A                        |N/A                          |
+| Image-only  | 0.74         | 0.74              |N/A                        |N/A                          |
+
+
+In addition, we tried a third multilabel labeling scheme, which was based on the _'major'_ labels. 
+However, we created a third category for cases that were borderline abnormal and did not involve any kinds of diseases, 
+but other abnormalities, such as medical instruments or devices. We report our multilabel results in F1 instead of 
+accuracy. The results can be seen in the table below.
+
+#### Findings: Binary vs. Multilabel
+
+| Model        | MMBT - Binary (accuracy) | MMBT - Multilabel (macro/micro F1) |Masked Text MMBT - Binary (accuracy)|MMBT - Multilabel (macro/micro F1) |
+|--------------|--------------------------|------------------------------------|------------------------------------|-----------------------------------|
+| Multimodal   | 0.96                     | 0.82/0.93                          |0.66                                |0.41/0.55                          |
+| Text-only    | 0.97                     | 0.86/0.94                          |N/A                                 |N/A                                |    
+| Image-only   | 0.74                     | N/A                                |N/A                                 |N/A                                |
+
+#### Findings: Attention Mechanism Visualization
+
+#### Findings: Image Classification from Multimodal Fine-Tuning
+
+Results from this experiment are reported in the **Masked Text** columns of the tables in 
+[Findings: Unimodal vs Multimodal](#findings-unimodal-vs-multimodal-models) and 
+[Findings:Findings: Binary vs. Multilabel](#findings-binary-vs-multilabel).
+
+MMBT's improvement over the unimodal image-only model in this scenario is only observed when tested on the 
+_'impression'_ labeled dataset. 
+
 ## References
 
 Faik Aydin, Maggie Zhang, Michelle Ananda-Rajah, and Gholamreza Haffari. 2019. Medical Multimodal Classifiers Under Scarce
-Data Condition. arXiv:1902.08888 [cs, stat].
+Data Condition. [arXiv:1902.08888.]()
 
 Guillem Collell, Ted Zhang, and Marie-Francine Moens. 2017. Imagined visual representations as multimodal embeddings. In
 Proceedings of the Thirty-First AAAI Conference on Artificial Intelligence, AAAI’17, pages 4378–4384, San Francisco, California,
@@ -255,45 +332,50 @@ Thoma, and Clement J. McDonald. 2016. Preparing a collection of radiology examin
 the American Medical Informatics Association : JAMIA, 23(2):304–310.
 
 Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. 2019. BERT: Pre-training of Deep Bidirectional Transformers
-for Language Understanding. arXiv:1810.04805 [cs].
+for Language Understanding. [arXiv:1810.04805.]()
 
 Allyson Ettinger. 2020. What BERT Is Not: Lessons from a New Suite of Psycholinguistic Diagnostics for Language Models.
 Transactions of the Association for Computational Linguistics, 8:34–48.
 
-Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. 2015. Deep Residual Learning for Image Recognition. arXiv:1512.03385
-[cs].
+Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. 2015. Deep Residual Learning for Image Recognition. 
+[arXiv:1512.03385.]()
 
 Douwe Kiela, Suvrat Bhooshan, Hamed Firooz, Ethan Perez, and Davide Testuggine. 2020. Supervised Multimodal
-Bitransformers for Classifying Images and Text. arXiv:1909.02950 [cs, stat].
+Bitransformers for Classifying Images and Text. [arXiv:1909.02950.]()
 
-Yoon Kim. 2014. Convolutional Neural Networks for Sentence Classification. arXiv:1408.5882 [cs].
+Yoon Kim. 2014. Convolutional Neural Networks for Sentence Classification. [arXiv:1408.5882.]()
 
 Olga Kovaleva, Alexey Romanov, Anna Rogers, and Anna Rumshisky. 2019. Revealing the Dark Secrets of BERT. In Proceedings of
 the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on
 Natural Language Processing (EMNLP-IJCNLP), pages 4365–4374, Hong Kong, China. Association for Computational Linguistics.
 
 Jiasen Lu, Dhruv Batra, Devi Parikh, and Stefan Lee. 2019. ViLBERT: Pretraining Task-Agnostic Visiolinguistic Representations for
-Vision-and-Language Tasks. arXiv:1908.02265 [cs].
+Vision-and-Language Tasks. [arXiv:1908.02265.]()
 
 Pranav Rajpurkar, Jeremy Irvin, Kaylie Zhu, Brandon Yang, Hershel Mehta, Tony Duan, Daisy Ding, Aarti Bagul, Curtis Langlotz,
 Katie Shpanskaya, Matthew P. Lungren, and Andrew Y. Ng. 2017. CheXNet: Radiologist-Level Pneumonia Detection on Chest
-X-Rays with Deep Learning. arXiv:1711.05225 [cs, stat].
+X-Rays with Deep Learning. [arXiv:1711.05225.]()
 
 Claudia Schulz and Damir Juric. 2020. Can Embeddings Adequately Represent Medical Terminology? New Large-Scale Medical
 Term Similarity Datasets Have the Answer! Proceedings of the AAAI Conference on Artificial Intelligence, 34(05):8775–8782.
+[]()
 
 Francesca Strik Lievers and Bodo Winter. 2018. Sensory language across lexical categories. Lingua, 204:45–61.
+[https://doi.org/10.1016/j.lingua.2017.11.002](https://doi.org/10.1016/j.lingua.2017.11.002)
 
-Mukund Sundararajan,  Ankur Taly, Qiqi Yan. 2017. Axiomatic Attribution for Deep Networks. ArXiv:1703.01365 [Cs, Stat].
-https://arxiv.org/pdf/1703.01365.pdf
+Mukund Sundararajan,  Ankur Taly, Qiqi Yan. 2017. Axiomatic Attribution for Deep Networks.
+[ArXiv:1703.01365.](https://arxiv.org/pdf/1703.01365.pdf)
 
 Hao Tan and Mohit Bansal. 2019. LXMERT: Learning Cross-Modality Encoder Representations from Transformers.
-arXiv:1908.07490 [cs].
+[arXiv:1908.07490.](https://arxiv.org/pdf/1908.07490.pdf)
 
 Jesse Vig. 2019. A Multiscale Visualization of Attention in the Transformer Model. In Proceedings of the 57th Annual Meeting of
 the Association for Computational Linguistics: System Demonstrations, pages 37–42, Florence, Italy. Association for
 Computational Linguistics.
+[arXiv:1906.05714](https://arxiv.org/abs/1906.05714);
+[BertViz GitHub](https://github.com/jessevig/bertviz)
 
 Xiaosong Wang, Yifan Peng, Le Lu, Zhiyong Lu, Mohammadhadi Bagheri, and Ronald M. Summers. 2017. ChestX-ray8:
 Hospital-scale Chest X-ray Database and Benchmarks on Weakly-Supervised Classification and Localization of Common Thorax
 Diseases. 2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pages 3462–3471.
+[arXiv:1705.02315](https://arxiv.org/abs/1705.02315)
