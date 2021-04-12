@@ -42,6 +42,22 @@ model instead to be comparable to the best model used in Aydin et al. (2019). Th
 modifies the pre-trained ResNet51/DenseNet121 to extract feautures prior to the final pooling layer as
 described in Kiela et al. (2020). We also modified this image encoder submodule to accept intermediary
 fine-tuned weights from the ChexNet14 Chest X-ray experiment (Rajpurkar, 2017).
+
+## Notes on Implementation
+
+
+* We implemented the MMBT model in Huggingface PyTorch with modifications as described
+
+* For training the MMBT model, we used the default settings for hyperparameters as in the original 
+  [Huggingface Implementation](https://github.com/huggingface/transformers/blob/master/examples/research_projects/mm-imdb/run_mmimdb.py)
+  
+* We trained with the batch size of 32 and in some cases where memory is insufficient, 16.  
+
+* We extended our training to 10.0 epochs instead of the default = 3.0 in the `run_mmimdb.py`. We noticed that our 
+model's validation starts to worsen (overfit) only after 6 epochs.
+
+
+
   
 ## Bibliography 
 

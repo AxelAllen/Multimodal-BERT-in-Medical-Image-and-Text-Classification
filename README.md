@@ -90,6 +90,26 @@ The experiments we ran on the model are as follows:
    
 In addition, we also present the *Integrated Gradient* to visualize and extract explanations from the images.
 
+### Notes on Implementation
+
+* We implemented our models in PyTorch and used Huggingface `BERT-base-uncased` model in all our BERT-based models.
+
+* For training the MMBT model, we used the default settings for hyperparameters as in the original
+  [Huggingface Implementation](https://github.com/huggingface/transformers/blob/master/examples/research_projects/mm-imdb/run_mmimdb.py)
+
+* For training the text-only model, we used the default settings for hyperparameters as in 
+  [Huggingace Example](https://github.com/huggingface/transformers/blob/master/examples/text-classification/run_glue_no_trainer.py)  
+  
+* We trained with the batch size of 32 and in some cases where memory is insufficient, 16, for the MMBT and text-only
+model.  
+
+* We extended our training for the MMBT model to 10.0 epochs instead of the default = 3.0 in Huggingface. 
+  We noticed that MMBT model's validation starts to worsen (overfit) only after 6 epochs.
+  
+* We trained the text only model to 4.0 epochs as recommended in the BERT paper by Devlin et al. (2019).
+
+* We followed the default hyparameter settings for DenseNet in fine-tuning the image-only model.
+
 [Back to Contents](#contents)
 
 ### Supervised Multimodal BiTransformers for Classifying Images and Text (MMBT)
@@ -324,7 +344,7 @@ accuracy. The results can be seen in the table below.
 #### Findings: Attention Mechanism Visualization
 
 From the results table in [Multimodal Corrections](#multimodal-corrections), it is apparent that there are cases where the text-only
-model makes false prediction when the MMBT model does not. We selected an example to visualize the attention heads for
+model makes false predictions when the MMBT model does not. We selected an example to visualize the attention heads for
 comparison between the text-only and the MMBT model.
 
 **Sample ID:** CXR2363 
