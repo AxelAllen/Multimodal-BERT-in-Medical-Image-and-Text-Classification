@@ -1,0 +1,17 @@
+name: pyLAP
+channels:
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.7
+  - pytorch
+  - torchaudio
+  - torchvision
+  - pip:
+    - bertviz
+    - folium==0.2.1
+    - jupyterlab
+    - notebook
+    - transformers==4.5.0
+    - urllib3==1.25.4
+    - wandb
