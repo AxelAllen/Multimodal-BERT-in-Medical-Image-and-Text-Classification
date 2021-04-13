@@ -1,4 +1,4 @@
-# Pre-Trained Multi-Modal Text and Image Classification in Sparse Medical Data Application
+# Multimodal BERT in Medical Image and Text Classification
 
 
 This work is part of the Software Project: "Language, Action and Perception" at Saarland Universitz, WS 2020-2021.
