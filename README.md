@@ -1,7 +1,7 @@
 # Multimodal BERT in Medical Image and Text Classification
 
 
-This work is part of the Software Project: "Language, Action and Perception" at Saarland Universitz, WS 2020-2021.
+This work is part of the Software Project: "Language, Action and Perception" at Saarland University, WS 2020-2021.
 
 This repository contains our implementation and a summary of our research findings.
 
