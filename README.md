@@ -162,10 +162,17 @@ For reference, here's also a link to the original dataset of the
 
 ### Instructions
 
-1. Please create a virtual environment with the provided .yml file `LAP_environment.yml`   
-   1.1 This `.yml` file was created on and for a Mac OS platform. If you are running a different system, this option
-   may not work.  
-   1.2 see [Alternative Instructions](#alternative-instructions) for replicating this project via Google Colab
+1. Please create a virtual environment with the provided .yml file `LAP_environment.yaml`   
+   1.1 This `.yaml` file was created on and for a conda environment on a Mac OSX-64 platform. If you are running a 
+   different system, this option may not work.  
+   1.2 We have also made a less specific `.yaml` file with only the necessary version requirements which is more likely
+   to work on a non-OSX-64 platform.  
+   1.3 Alternatively, you may also re-create an environment using conda or pip with on of the provided requirement files
+   listed below; the less specific version should work across platform:  
+        1.3.1 `requirements.txt` has all the builds and version information and should work on an OSX-64 platform  
+        1.3.2 `requirements_no_builds.txt` only has the version specifications for the modules and dependencies  
+        1.3.3 `requirements_bare.txt` only has the list of modules (no dependencies) with no version information  
+   1.4 see [Alternative Instructions](#alternative-instructions) for replicating this project via Google Colab
 2. Clone this repository
 3. Download image files according to the instructions in the *Dataset* section.
 4. The notebooks can be run in any order, with the following exceptions:  
