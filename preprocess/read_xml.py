@@ -6,7 +6,6 @@ dir_path = "./NLMCXR_reports/"
 impressions = {}
 findings = {}
 majors = {}
-both = {}
 
 # extract text fields from .xml files
 
@@ -19,7 +18,6 @@ for filename in listdir(dir_path):
 
 
 for filename in listdir(dir_path):
-    text = ''
     if filename.endswith('.xml'):
       mydoc = minidom.parse(dir_path+filename)
       items = mydoc.getElementsByTagName('AbstractText')
@@ -27,12 +25,9 @@ for filename in listdir(dir_path):
         if item.attributes['Label'].value == 'FINDINGS':
           if item.firstChild is not None:
             findings.update({filename: item.firstChild.data})
-            text += item.firstChild.data
         if item.attributes['Label'].value == 'IMPRESSION':
           if item.firstChild is not None:
             impressions.update({filename: item.firstChild.data})
-            text += ' '+item.firstChild.data
-    both.update({filename: text})
 
 
 with open('./files/impressions_files.txt', 'w', encoding='utf-8') as w:
@@ -42,11 +37,6 @@ with open('./files/impressions_files.txt', 'w', encoding='utf-8') as w:
 with open('./files/findings_files.txt', 'w', encoding='utf-8') as w:
   for f, fin in findings.items():
     w.write(f'{f}, {fin}\n')
-
-with open('./files/all_text_files.txt', 'w', encoding='utf-8') as w:
-  for f, txt in both.items():
-    w.write(f'{f}, {txt}\n')
-
 
 with open('./files/majors_files.txt', 'w', encoding='utf-8') as w:
   for f, m in majors.items():

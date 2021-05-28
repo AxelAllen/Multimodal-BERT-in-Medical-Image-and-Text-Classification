@@ -188,3 +188,9 @@ abnormal_extended_df = abnormal_extended_df.sort_values(by='xmlId',
                                                         np.argsort(index_natsorted(abnormal_extended_df['xmlId'])))
 abnormal_extended_df.to_csv('files/abnormal_extended.csv', index=False)
 print(abnormal_extended_df)
+
+labels = normal_df.append(ab_normal_df, ignore_index=True)
+labels.to_csv('files/labels.csv', index=False)
+
+labels_updated = normal_strict_df.append(abnormal_extended_df, ignore_index=True)
+labels_updated.to_csv('files/labels_updated.csv', index=False)
