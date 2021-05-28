@@ -8,8 +8,8 @@
 - normal.csv
 - abnormal_extended.csv
 
-0 = normal, 2403 samples. 
-1 = abnormal extended, 1519 samples. 
+0 = normal, 2403 samples.   
+1 = abnormal extended, 1519 samples.   
 
 ## Steps to run the script in this directory:
 1. `read_xml.py` reads the .xml report files and generate text files and map reports to images.
