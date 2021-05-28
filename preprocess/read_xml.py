@@ -5,7 +5,17 @@ from xml.dom import minidom
 dir_path = "./NLMCXR_reports/"
 impressions = {}
 findings = {}
+majors = {}
 both = {}
+
+# extract text fields from .xml files
+
+for filename in listdir(dir_path):
+    if filename.endswith('.xml'):
+      mydoc = minidom.parse(dir_path+filename)
+      major = mydoc.getElementsByTagName('major')
+      if major[0].firstChild is not None:
+        majors.update({filename: major[0].firstChild.data})
 
 
 for filename in listdir(dir_path):
@@ -36,4 +46,32 @@ with open('./files/findings_files.txt', 'w', encoding='utf-8') as w:
 with open('./files/all_text_files.txt', 'w', encoding='utf-8') as w:
   for f, txt in both.items():
     w.write(f'{f}, {txt}\n')
+
+
+with open('./files/majors_files.txt', 'w', encoding='utf-8') as w:
+  for f, m in majors.items():
+    w.write(f'{f}, {m}\n')
+
+# Map images to their corresponding .xml reports
+png = '.png'
+images = []
+
+for filename in listdir(dir_path):
+    if filename.endswith('.xml'):
+      mydoc = minidom.parse(dir_path+filename)
+      items = mydoc.getElementsByTagName('parentImage')
+      for item in items:
+          id = item.attributes['id'].value
+          id = id + png
+          images.append((filename, id))
+
+
+
+with open('./files/reports_to_images.csv', 'w', encoding='utf-8') as f:
+    csvWriter = csv.writer(f, delimiter=',',
+                          quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    csvWriter.writerow(['Report', 'Image'])
+    for tpl in images:
+        csvWriter.writerow([tpl[0], tpl[1]])
+
 
