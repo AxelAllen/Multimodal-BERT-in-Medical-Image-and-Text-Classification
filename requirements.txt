@@ -140,7 +140,7 @@ tqdm=4.60.0=pypi_0
 traitlets=5.0.5=pypi_0
 transformers=4.5.0=pypi_0
 typing_extensions=3.7.4.3=pyha847dfd_0
-urllib3=1.25.4=pypi_0
+urllib3=1.25.8=pypi_0
 wandb=0.10.25=pypi_0
 wcwidth=0.2.5=pypi_0
 webencodings=0.5.1=pypi_0
