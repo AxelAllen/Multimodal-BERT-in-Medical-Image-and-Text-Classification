@@ -7,6 +7,7 @@ impressions = {}
 findings = {}
 majors = {}
 
+
 # extract text fields from .xml files
 
 for filename in listdir(dir_path):
@@ -38,6 +39,7 @@ with open('./files/findings_files.txt', 'w', encoding='utf-8') as w:
   for f, fin in findings.items():
     w.write(f'{f}, {fin}\n')
 
+
 with open('./files/majors_files.txt', 'w', encoding='utf-8') as w:
   for f, m in majors.items():
     w.write(f'{f}, {m}\n')
@@ -63,5 +65,3 @@ with open('./files/reports_to_images.csv', 'w', encoding='utf-8') as f:
     csvWriter.writerow(['Report', 'Image'])
     for tpl in images:
         csvWriter.writerow([tpl[0], tpl[1]])
-
-

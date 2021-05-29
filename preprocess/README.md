@@ -1,3 +1,6 @@
+This directory contains various preprocessing scripts to extract the text and labels from the raw data.  
+
+
 # Labels
 
 0 = normal with stable, 3214 samples.   
@@ -11,6 +14,7 @@
 0 = normal, 2403 samples.   
 1 = abnormal extended, 1519 samples.   
 
+
 ## Steps to run the script in this directory:
 1. `read_xml.py` reads the .xml report files and generate text files and map reports to images.
 2. `preprocess_impressions.py` and `preprocess_major.py` preprocess the text to generate labels based on the 'impression' or 'major' metadata.
@@ -19,3 +23,4 @@
 5. `get_image_labels*.py` scripts generate .csv dataset files with various labeling schemes.
 
 Files in the **files/** directory can be generated from the raw data files by running the scripts in this directory.
+
