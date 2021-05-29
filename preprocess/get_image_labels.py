@@ -11,7 +11,7 @@ with open('./files/reports_to_images.csv', 'r') as csv_file:
         rep_to_img.append((report, img))
 
 
-
+## For impression label
 labels = []
 with open('./files/labels_updated.csv', 'r') as csv_file:
     csvReader = csv.DictReader(csv_file)

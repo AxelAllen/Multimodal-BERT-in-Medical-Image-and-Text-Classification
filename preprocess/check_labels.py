@@ -3,6 +3,10 @@ from os import listdir
 from xml.dom import minidom
 import csv
 
+'''
+In some cases the text field (Impression or Findings) is empty. 
+This script checks those cases so that they can be manually removed from the dataset.
+'''
 with open('./files/normal_updated.txt', 'r', encoding='utf-8') as f:
     normal = f.read().lower().split('\n')
 

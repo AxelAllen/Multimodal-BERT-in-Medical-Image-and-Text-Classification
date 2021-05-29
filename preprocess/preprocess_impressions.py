@@ -3,6 +3,47 @@ from collections import Counter
 from natsort import index_natsorted
 import numpy as np
 
+########################################################################################################################
+                                            ## Initial keyword search ##
+
+with open('./files/impressions_files.txt', 'r', encoding='utf-8') as r:
+    data = r.read().lower().split('\n')
+
+    files = [s.partition(', ')[0] for s in data]
+    impressions = [s.partition(', ')[2] for s in data]
+
+    norm = []
+    abnorm = []
+
+    #impressions = [x.replace('1.', '') for x in impressions]
+
+
+    for i, impr in enumerate(impressions):
+        if 'no ' in impr[:4]:
+            norm.append((i, impr))
+            continue
+        elif 'negative ' in impr[:9]:
+            norm.append((i, impr))
+            continue
+        elif any(key in impr for key in ['clear', 'negative', 'acute', 'no evidence', 'normal']):
+            norm.append((i, impr))
+            continue
+        elif any(key in impr for key in ['abnormal', 'borderline', 'cardio', 'hyper', 'pneumonia', 'bi', 'basilar', 'opac', 'pulmo', 'emphy', 'copd', 'scar', 'frac']):
+            abnorm.append((i, impr))
+            continue
+        elif any(key in impr for key in ['without', 'otherwise', 'stable', 'remarkable']):
+            norm.append((i, impr))
+            continue
+        elif any(key in impr for key in ['chronic', 'low', 'mild']):
+            abnorm.append((i, impr))
+            continue
+        else:
+            abnorm.append((i, impr))
+
+
+########################################################################################################################
+                            ## Apply multiple filters to initial categories ##
+
 ids = []
 text = []
 ab_ids = []
@@ -17,22 +58,23 @@ KEYWORDS = ['emphysema', 'cardiomegaly', 'borderline', 'mild', 'chronic', 'minim
             'aneurysmal', 'granuloma', 'fracture', 'severe', 'concerns', 'fibrosis', 'scarring', 'crowding', 'opacities',
             'persistent', 'ectatic', 'hyperinflation', 'moderate', 'opacity', 'calcified', 'effusions', 'edema',
             'continued', 'low lung volume', 'pacing lead', 'resection', 'dilated', 'left', 'right', 'bilateral',
-            'hyperexpanded', 'calcification', 'concerning', 'concern', 'enlargement', 'lines', 'tubes', 'Emphysema',
-            'Hyperexpanded', 'advanced', 'Advanced', 'tortuosity']
+            'hyperexpanded', 'calcification', 'concerning', 'concern', 'enlargement', 'lines', 'tubes', 'emphysema',
+            'advanced', 'tortuosity']
 
 
-with open('files/normal.txt', mode='r', encoding='utf-8') as f, open('files/abnormal.txt', mode='r', encoding='utf-8') as af:
-    for line in f:
-        xml, *label_text = line.split()
-        ids.append(xml)
-        normal_vocab_freq_dist.update(label_text)
-        text.append(' '.join(label_text))
+for ind, impr in norm:
+    xml = files[ind]
+    label_text = impr
+    ids.append(xml)
+    normal_vocab_freq_dist.update(label_text)
+    text.append(' '.join(label_text))
 
-    for line in af:
-        xml, *label_text = line.split()
-        ab_ids.append(xml)
-        ab_vocab_freq_dist.update(label_text)
-        ab_text.append(' '.join(label_text))
+for ind, impr in abnorm:
+    xml = files[ind]
+    label_text = impr
+    ab_ids.append(xml)
+    ab_vocab_freq_dist.update(label_text)
+    ab_text.append(' '.join(label_text))
 
 
 def first_filter_normal_label(a_string):
@@ -146,3 +188,9 @@ abnormal_extended_df = abnormal_extended_df.sort_values(by='xmlId',
                                                         np.argsort(index_natsorted(abnormal_extended_df['xmlId'])))
 abnormal_extended_df.to_csv('files/abnormal_extended.csv', index=False)
 print(abnormal_extended_df)
+
+labels = normal_df.append(ab_normal_df, ignore_index=True)
+labels.to_csv('files/labels.csv', index=False)
+
+labels_updated = normal_strict_df.append(abnormal_extended_df, ignore_index=True)
+labels_updated.to_csv('files/labels_updated.csv', index=False)
